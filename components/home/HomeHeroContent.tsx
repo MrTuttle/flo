@@ -4,7 +4,10 @@ import { useMotionValueEvent, useScroll } from "framer-motion";
 import WindowsSizeDetector, {
   useWindowSize,
 } from "../utlis/WindowsSizeDetector";
-
+import Image from "next/image";
+// import flo from "@/public/avatar/Florent-Vincerot-avatar-circle.png";
+import flo from "@/public/avatar/Florent-Vincerot-avatar.jpg";
+import HomeHeroContentLayout from "./HomeHeroContentLayout";
 const HomeHeroContent = () => {
   // const sticky = "sticky";
   const notSticky = "";
@@ -18,7 +21,7 @@ const HomeHeroContent = () => {
 
   // };
   useMotionValueEvent(scrollY, "change", (latest) => {
-    console.log("Page scroll: ", latest);
+    // console.log("Page scroll: ", latest);
     setSticky(latest);
   });
 
@@ -30,48 +33,11 @@ const HomeHeroContent = () => {
           : `relative mt-[100svh]`
       }`}
     >
-      <div className="flex gap-4 text-white ">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-          pariatur quae sint. Eos sunt veritatis cum! Delectus, vitae illum?
-          Molestiae delectus assumenda reiciendis incidunt cum. Praesentium
-          beatae quaerat dignissimos voluptas? Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Deserunt nam eaque debitis commodi est
-          unde voluptatum aspernatur, molestiae illum aliquid natus. Qui dicta,
-          provident aliquam quas laudantium dolorum. Vitae, neque.
-          <br />
-          <br />
-          <strong>
-            sticky value :<br />
-            {sticky}
-          </strong>
-          <br />
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-          pariatur quae sint. Eos sunt veritatis cum! Delectus, vitae illum?
-          Molestiae delectus assumenda reiciendis incidunt cum. Praesentium
-          beatae quaerat dignissimos voluptas? Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Deserunt nam eaque debitis commodi est
-          unde voluptatum aspernatur, molestiae illum aliquid natus. Qui dicta,
-          provident aliquam quas laudantium dolorum. Vitae, neque.
-          <br />
-          <br />
-          <strong>
-            window height <br />
-            value (-50) :<br /> {windowSize.height - 50}
-          </strong>
-        </p>{" "}
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-          pariatur quae sint. Eos sunt veritatis cum! Delectus, vitae illum?
-          Molestiae delectus assumenda reiciendis incidunt cum. Praesentium
-          beatae quaerat dignissimos voluptas? Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Deserunt nam eaque debitis commodi est
-          unde voluptatum aspernatur, molestiae illum aliquid natus. Qui dicta,
-          provident aliquam quas laudantium dolorum. Vitae, neque.
-        </p>
-      </div>
+      <HomeHeroContentLayout
+        sticky={sticky}
+        width={windowSize.width}
+        height={windowSize.height - 50}
+      />
     </div>
   );
 };

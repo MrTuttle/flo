@@ -107,14 +107,38 @@
   color: #0f0f0f;
 }
 .home-hero-content {
-  background-color: #2b11bf;
+  /* background-color: #2b11bf; */
+  background-color: rgb(15,164, 254);
   color: currentColor;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   height: 100svh;
-  padding: 1.6rem;
-  /* position: sticky; */
+  padding:0 1.6rem;
+  /* position: sticky; conditionnal sticky with state */
   /* top: 0; */
-  border: 1px solid red
+  /* border: 1px solid red */
+}
+@keyframes reveal {
+  from {
+    transform: translateY(200px);
+    /* transform: scale(0); */
+    /* opacity: 0; */
+
+  }
+  to {
+    transform: translateY(0px);
+    /* transform: scale(1); */
+    /* opacity: 1; */
+
+  }
+
+}
+/* see https: //scroll-driven-animations.style/ */
+.title {
+ animation: reveal ease-in-out; /*pas de durée, on vas se servir de animation-timeline*/
+ /* animation-timeline: scroll(); *//* tous les titres se jouent pendant la durée totale du scroll*/
+ animation-timeline: view(block);
+ animation-range-start: cover 0%;
+ animation-range-end: cover 45%;
 }
