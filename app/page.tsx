@@ -1,34 +1,65 @@
+"use client";
 import { ModeToggle } from "@/components/ui/ModeToggle";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import flo from "@/public/avatar/Florent-Vincerot-avatar.jpg";
+
 import HomeHeroContent from "@/components/home/HomeHeroContent";
-import WindowsSizeDetector from "@/components/utlis/WindowsSizeDetector";
+import WindowsSizeDetector, {
+  useWindowSize,
+} from "@/components/utlis/WindowsSizeDetector";
 import ParagrapheColones from "@/components/ui/ParagrapheColones";
 import TitleRevealCut from "@/components/ui/TitleRevealCut";
 import TitleCut from "@/components/ui/TitleCut";
+import { useEffect, useState } from "react";
+import { useMotionValueEvent, useScroll } from "framer-motion";
+import HeroContainer from "@/components/home/HeroContainer";
+import HeroUnderFrame from "@/components/home/HeroUnderFrame";
 
 export default function Home() {
+  // const { scrollY } = useScroll();
+
+  // const windowSize = useWindowSize();
+  // const [windowHeight, setWindowHeight] = useState(900);
+  // const [scrollYValue, setScrollYValue] = useState(0);
+  // useMotionValueEvent(scrollY, "change", (latest) => {
+  //   console.log("Page scroll: ", latest);
+  //   // setSticky(latest);
+  //   setScrollYValue(latest);
+  //   setWindowHeight(windowSize.height);
+  // });
+  // const giveHeight = useEffect(() => {
+  //   setWindowHeight(windowSize.height);
+
+  //   return () => {
+  //     // second
+  //     setWindowHeight(windowSize.height);
+  //     // <div className={`bg-white-500 h-[${windowSize.height}px]`}></div>;
+  //   };
+  // }, [windowSize.height]);
+
   return (
     <>
-      {/* <WindowsSizeDetector /> */}
-      {/* <div className="home-hero-curtain gutters bgwhite-fontblack">ghghghg</div> */}
-      {/* <div className="home-hero-visible"> */}{" "}
+      <WindowsSizeDetector />
       <div className="fixed z-50 top-0 right-0 p-4">
         <ModeToggle />
       </div>
-      <div className="home-hero-curtain bg-white dark:bg-darkflo h-[100svh]">
-        <div className="px-8">
-          {" "}
+
+      <HeroContainer classnameprops="flex flex-col justify-end bg-white dark:bg-darkflo w-full">
+        <div className="p-20">
           <h1 className=" text-4xl text-darkflo dark:text-white">My name is</h1>
           <h1 className="text-9xl text-darkflo dark:text-white font-black tracking-[-0.3rem]">
             FLO
           </h1>
         </div>
-      </div>
-      <HomeHeroContent />
-      {/* </div> */}
+      </HeroContainer>
+      {/* Important div for HeroContainer working */}
+      {/* a div element with svh height is required to correctly display following content */}
+
+      <div className="h-svh"></div>
+
       <ParagrapheColones>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+        xLorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
         pariatur quae sint. Eos sunt veritatis cum! Delectus, vitae illum?
         Molestiae delectus assumenda reiciendis incidunt cum. Praesentium beatae
         quaerat dignissimos voluptas? Lorem ipsum dolor sit amet consectetur
