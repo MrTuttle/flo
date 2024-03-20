@@ -18,7 +18,7 @@ const TitleCut = ({ children }: Props) => {
   return (
     <div
       ref={ref}
-      className="  overflow-hidden text-white text-4xl h-[2.7rem] sm:text-6xl sm:h-[4.2rem] md:text-7xl md:h-[5rem]"
+      className={`overflow-hidden text-4xl h-[2.7rem] sm:text-6xl sm:h-[4.2rem] md:text-7xl md:h-[5rem]`}
     >
       <h1
         style={{

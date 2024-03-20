@@ -1,5 +1,6 @@
 "use client";
 import { useLayoutEffect, useState } from "react";
+import ScrollPositionDetector from "./ScrollPositionDetector";
 
 export const useWindowSize = () => {
   const [windowSize, setWindowSize] = useState({ width: 0, height: 0 });
@@ -35,6 +36,7 @@ export default function WindowsSizeDetector() {
     // </div>
     <div className=" z-50 fixed bottom-0 right-0  bg-red-500 my-border-red w-auto p-4">
       <p>WINDOW SIZE</p>
+      <ScrollPositionDetector />
       <p>
         <span>Width: </span>
         {windowSize.width}

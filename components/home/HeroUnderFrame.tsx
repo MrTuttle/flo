@@ -5,7 +5,7 @@ import flo from "@/public/avatar/Florent-Vincerot-avatar.jpg";
 const HeroUnderFrame = () => {
   return (
     <>
-      <div className="flex gap-4 text-white">
+      <div className="flex gap-4 bg-bluflo text-white">
         <Image
           src={flo}
           alt="Portrait illustration de Florent Vincerot"

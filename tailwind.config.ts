@@ -19,8 +19,10 @@ const config = {
     },
     extend: {
       colors: {
-        bluflo: "#4ba2f7",
+        // bluflo: "#0DA4FF",
+        bluflo: "rgb(13,164,255)",
         darkflo: "rgb(69,7,26)",
+        greenflo: "rgb(164,247,106)",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
