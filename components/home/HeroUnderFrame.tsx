@@ -14,8 +14,8 @@ const HeroUnderFrame = () => {
           style={{ objectFit: "cover" }} // important to preserve ratio on mobile devices
         />
       </div>
-      <div className="h-svh border absolute flex justify-end text-4xl sm:text-5xl md:text-7xl px-10">
-        <div className="border w-2/3 h-1/3">
+      <div className="h-svh w-full absolute flex justify-center sm:justify-end text-4xl sm:text-5xl md:text-6xl lg:text-7xl px-10 text-white">
+        <div className="w-[16rem] mt-[15rem] sm:w-[20rem] sm:mt-[20rem] md:w-[24rem] md:mt-[15rem] h-1/3 lg:w-[30rem] xl:w-[40rem]">
           <h1>Développeur Front End</h1>
           <h1>Designer UX/UI</h1>
         </div>

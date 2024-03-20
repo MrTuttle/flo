@@ -49,7 +49,7 @@ const HeroContainer = ({ children, classnameprops }: Props) => {
                 ? { position: `fixed` }
                 : { top: `${windowHeight}px`, position: `absolute` }
             }
-            className="h-svh flex flex-col justify-end w-ful bg-bluflo"
+            className="h-svh flex flex-col justify-end w-full bg-bluflo"
           >
             <HeroUnderFrame />
           </div>
