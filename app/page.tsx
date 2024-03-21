@@ -69,7 +69,7 @@ export default function Home() {
         cum. Praesentium beatae quaerat dignissimos voluptas?
       </ParagrapheColones>
 
-      <div className=" bg-gray-500 text-white pt-20 px-20 md:px-30 lg:px-40 xl:px-80 flex flex-col justify-center gap-4 min-h-svh">
+      <div className=" bg-gray-500 text-white pt-20 px-10 py-10 md:px-30 lg:px-40 xl:px-80 flex flex-col justify-center gap-4 min-h-screen">
         <p className=" underline underline-offset-4 w-auto text-xs p-1 mb-5">
           TitleCut : JS safari friendly
         </p>
