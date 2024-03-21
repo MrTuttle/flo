@@ -41,7 +41,7 @@ export default function Home() {
 
   return (
     <>
-      <WindowsSizeDetector />
+      {/* <WindowsSizeDetector /> */}
       <div className="fixed z-50 top-0 right-0 p-4">
         <ModeToggle />
       </div>

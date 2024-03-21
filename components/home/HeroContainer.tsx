@@ -26,15 +26,7 @@ const HeroContainer = ({ children, classnameprops }: Props) => {
     setScrollYValue(latest);
     setWindowHeight(windowSize.height);
   });
-  // const giveHeight = useEffect(() => {
-  //   setWindowHeight(windowSize.height);
 
-  //   return () => {
-  //     // second
-  //     setWindowHeight(windowSize.height);
-  //     // <div className={`bg-white-500 h-[${windowSize.height}px]`}></div>;
-  //   };
-  // }, [windowSize.height]);
   const contentContainer = () => {
     return (
       <>
@@ -44,7 +36,7 @@ const HeroContainer = ({ children, classnameprops }: Props) => {
             style={
               // when scrollValue exeed windowHeight
               // whe define this h-svh div as absolute position
-              // with top as windowHeight value
+              // with top as windowHeight value -> svh or vh ? mobile version ?
               scrollYValue <= windowHeight
                 ? { position: `fixed` }
                 : { top: `${windowHeight}px`, position: `absolute` }
@@ -70,19 +62,6 @@ const HeroContainer = ({ children, classnameprops }: Props) => {
   };
 
   return <>{contentContainer()}</>;
-  // <div>
-  //   <div className={`bg-gray-500 h-[900px]`}>
-  //     <p>containerHeight : {windowSize.height}</p>
-  //     <p>{windowHeight}</p>
-  //     <p>scroll value : {scrollYValue}</p>
-  //     {contentContainer()}
-  //   </div>
-  //   <div className={`bg-orange-500 h-[${scrollYValue}px]`}>
-  //     <p>containerHeight : {windowSize.height}</p>
-  //     <p>{windowHeight}</p>
-  //     <p>scroll value : {scrollYValue}</p>
-  //   </div>
-  // </div>
 };
 
 export default HeroContainer;
