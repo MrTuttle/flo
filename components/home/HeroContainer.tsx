@@ -30,7 +30,7 @@ const HeroContainer = ({ children, classnameprops }: Props) => {
   const contentContainer = () => {
     return (
       <>
-        <div className="h-svh">
+        <div className="h-screen">
           <div
             // style={{ height: `90svh` }}
             style={
@@ -41,7 +41,7 @@ const HeroContainer = ({ children, classnameprops }: Props) => {
                 ? { position: `fixed` }
                 : { top: `${windowHeight}px`, position: `absolute` }
             }
-            className="h-svh flex flex-col justify-end w-full bg-bluflo"
+            className="h-screen flex flex-col justify-end w-full bg-bluflo"
           >
             <HeroUnderFrame />
           </div>

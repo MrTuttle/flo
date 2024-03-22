@@ -29,14 +29,50 @@ export default function WindowsSizeDetector() {
   // const { width, height } = useWindowSize();
   const windowSize = useWindowSize();
 
+  const screenTWcond = (width: number) => {
+    let message;
+    const twscreens = {
+      sm: 640,
+      md: 728,
+      lg: 1024,
+      xl: 1280,
+      xxl: 1536,
+    };
+    if (width < 640) {
+      message = "before sm";
+    }
+    if (width > 640 && width < 768) {
+      message = `sm: ${twscreens.sm}`;
+    }
+    if (width > 768 && width < 1024) {
+      message = `md: ${twscreens.md}`;
+    }
+    if (width > 1024 && width < 1280) {
+      message = `lg: ${twscreens.lg}`;
+    }
+    if (width > 1280 && width < 1536) {
+      message = `xl: ${twscreens.xl}`;
+    }
+    if (width > 1536) {
+      message = `2xl: ${twscreens.xxl}`;
+    }
+    return message;
+  };
+
   return (
     // <div>
     //   <p>Window Width: {width}</p>
     //   <p>Window Height: {height}</p>
     // </div>
-    <div className=" z-50 fixed bottom-0 right-0  bg-red-500 my-border-red w-auto p-4">
-      <p>WINDOW SIZE</p>
+    <div
+      style={{ position: "fixed", top: 20, right: 20, zIndex: 100 }}
+      className="text-white p-4 text-xs mix-blend-difference"
+    >
       <ScrollPositionDetector />
+      <p>
+        <br />
+      </p>
+      <p>WINDOW SIZE</p>
       <p>
         <span>Width: </span>
         {windowSize.width}
@@ -45,11 +81,8 @@ export default function WindowsSizeDetector() {
         <span>Height: </span>
         {windowSize.height}
       </p>
-      <p>
-        {windowSize.width < 768
-          ? "TW width < md (768px)"
-          : "TW width < lg (1024px)"}
-      </p>
+
+      <p>Tailwind screen : {screenTWcond(windowSize.width)}</p>
     </div>
   );
 }
