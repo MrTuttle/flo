@@ -127,6 +127,7 @@ export default function Home() {
             <Video
               videoUrl={
                 "https://res.cloudinary.com/dc8rzbrbr/video/upload/v1711397442/La-Baraka-2024-03-22-part1_ijyl8g.mp4"
+                // "https://res.cloudinary.com/dc8rzbrbr/video/upload/v1711397442/goldengate_c8a72q.mp4"
               }
             />
           </div>
@@ -134,7 +135,11 @@ export default function Home() {
       </div>
       <div className="flex flex-col justify-start items-start p-36">
         <div className=" w-2/3">
-          <Video videoUrl={"https://scrollyvideo.js.org/goldengate.mp4"} />
+          <Video
+            videoUrl={
+              "https://res.cloudinary.com/dc8rzbrbr/video/upload/v1711397442/goldengate_c8a72q.mp4"
+            }
+          />
         </div>
       </div>
       {/* <ScrollVideoCustom /> */}
