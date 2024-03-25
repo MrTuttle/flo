@@ -22,7 +22,7 @@ const HeroContainer = ({ children, classnameprops }: Props) => {
   const [scrollYValue, setScrollYValue] = useState(0);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-    console.log("Page scroll: ", latest);
+    // console.log("Page scroll: ", latest);
     setScrollYValue(latest);
     setWindowHeight(windowSize.height);
   });

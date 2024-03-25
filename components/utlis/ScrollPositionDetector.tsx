@@ -6,8 +6,7 @@ const ScrollPositionDetector = () => {
   const [latestScrollY, setLatestScrollY] = useState(0);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-    console.log("Page scroll: ", latest);
-    //  setSticky(latest);
+    // console.log("Page scroll: ", latest);
     setLatestScrollY(latest);
     return latest;
   });

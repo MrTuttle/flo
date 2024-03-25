@@ -17,6 +17,8 @@ import HeroContainer from "@/components/home/HeroContainer";
 import HeroUnderFrame from "@/components/home/HeroUnderFrame";
 import ScrollPositionDetector from "@/components/utlis/ScrollPositionDetector";
 import HeroCurtainContent from "@/components/home/HeroCurtainContent";
+import ScrollVideoCustom from "@/components/ui/ScrollVideoCustom";
+import { Video } from "@/components/ui/Video";
 
 export default function Home() {
   // const { scrollY } = useScroll();
@@ -76,7 +78,66 @@ export default function Home() {
           </p>
         </div>
       </div>
-
+      <div className=" bg-gray-500 text-white pt-20 px-10 py-10 md:px-30 lg:px-40 xl:px-80 flex flex-col justify-center gap-4 min-h-screen">
+        <p className=" underline underline-offset-4 w-auto text-xs p-1 mb-5">
+          TitleCut : JS safari friendly
+        </p>
+        <div>
+          <TitleCut>Mobile first,</TitleCut>
+          <TitleCut>l’accès direct au net,</TitleCut>
+          <TitleCut>c’est dans la poche!</TitleCut>
+        </div>
+        <div className="column-1 sm:columns-2 lg:columns-3 2xl:columns-4">
+          <p className="text-white">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+            pariatur quae sint. Eos sunt veritatis cum! Delectus, vitae illum?
+            Molestiae delectus assumenda reiciendis incidunt cum. Praesentium
+            beatae quaerat dignissimos voluptas? Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Nesciunt pariatur quae sint. Eos sunt
+            veritatis cum! Delectus, vitae illum? Molestiae delectus assumenda
+            reiciendis incidunt cum. Praesentium beatae quaerat dignissimos
+            voluptas?
+          </p>
+        </div>
+        <div className="py-20 flex gap-8 flex-wrap">
+          <div className="max-w-md">
+            {/* <Video videoUrl={"https://scrollyvideo.js.org/goldengate.mp4"} /> */}
+            <Video
+              videoUrl={
+                "https://res.cloudinary.com/dc8rzbrbr/video/upload/v1711397442/original-af2fee503aafeb0d84d5827e281ece79_w17ec3.mp4"
+              }
+            />
+          </div>
+          <div className="max-w-40">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+              pariatur quae sint.
+            </p>
+          </div>
+        </div>
+        <div className="py-20 flex flex-row justify-end gap-8 flex-wrap">
+          <div className="max-w-40">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+              pariatur quae sint.
+            </p>
+          </div>
+          <div className="w-[300px]">
+            {/* <Video videoUrl={"https://scrollyvideo.js.org/goldengate.mp4"} /> */}
+            <Video
+              videoUrl={
+                "https://res.cloudinary.com/dc8rzbrbr/video/upload/v1711397442/La-Baraka-2024-03-22-part1_ijyl8g.mp4"
+              }
+            />
+          </div>
+        </div>
+      </div>
+      <div className="flex flex-col justify-start items-start p-36">
+        <div className=" w-2/3">
+          <Video videoUrl={"https://scrollyvideo.js.org/goldengate.mp4"} />
+        </div>
+      </div>
+      {/* <ScrollVideoCustom /> */}
       {/* <ParagrapheColones>
         xLorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
         pariatur quae sint. Eos sunt veritatis cum! Delectus, vitae illum?
