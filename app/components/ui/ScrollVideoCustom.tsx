@@ -7,7 +7,7 @@ import React from "react";
 // or npm import ScrollyVideo from 'scrolly-video/dist/ScrollyVideo.esm.jsx';
 // ≈ 14.59 mb
 // import ScrollyVideo from "scrolly-video/dist/ScrollyVideo.cjs.jsx";
-import ScrollyVideo from "@/components/ui/ScrollyVideo/ScrollyVideo.jsx";
+import ScrollyVideo from "@/app/components/ui/ScrollyVideo/ScrollyVideo.jsx";
 
 const ScrollVideoCustom = () => {
   return (

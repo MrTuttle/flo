@@ -3,7 +3,7 @@
 import React from "react";
 import WindowsSizeDetector, {
   useWindowSize,
-} from "@/components/utlis/WindowsSizeDetector";
+} from "@/app/components/utlis/WindowsSizeDetector";
 import { useEffect, useState } from "react";
 import { useMotionValueEvent, useScroll } from "framer-motion";
 import HeroUnderFrame from "./HeroUnderFrame";

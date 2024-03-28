@@ -1,26 +1,36 @@
-"use client";
-import { ModeToggle } from "@/components/ui/ModeToggle";
-import { Button } from "@/components/ui/button";
+// "use client";
+import { ModeToggle } from "@/app/components/ui/ModeToggle";
+import { Button } from "@/app/components/ui/button";
 import Image from "next/image";
 import flo from "@/public/avatar/Florent-Vincerot-avatar.jpg";
 
-import HomeHeroContent from "@/components/home/HomeHeroContent";
+import HomeHeroContent from "@/app/components/home/HomeHeroContent";
 import WindowsSizeDetector, {
   useWindowSize,
-} from "@/components/utlis/WindowsSizeDetector";
-import ParagrapheColones from "@/components/ui/ParagrapheColones";
-import TitleRevealCut from "@/components/ui/TitleRevealCut";
-import TitleCut from "@/components/ui/TitleCut";
+} from "@/app/components/utlis/WindowsSizeDetector";
+import ParagrapheColones from "@/app/components/ui/ParagrapheColones";
+import TitleRevealCut from "@/app/components/ui/TitleRevealCut";
+import TitleCut from "@/app/components/ui/TitleCut";
 import { useEffect, useState } from "react";
 import { useMotionValueEvent, useScroll } from "framer-motion";
-import HeroContainer from "@/components/home/HeroContainer";
-import HeroUnderFrame from "@/components/home/HeroUnderFrame";
-import ScrollPositionDetector from "@/components/utlis/ScrollPositionDetector";
-import HeroCurtainContent from "@/components/home/HeroCurtainContent";
-import ScrollVideoCustom from "@/components/ui/ScrollVideoCustom";
-import { Video } from "@/components/ui/Video";
+import HeroContainer from "@/app/components/home/HeroContainer";
+import HeroUnderFrame from "@/app/components/home/HeroUnderFrame";
+import ScrollPositionDetector from "@/app/components/utlis/ScrollPositionDetector";
+import HeroCurtainContent from "@/app/components/home/HeroCurtainContent";
+import ScrollVideoCustom from "@/app/components/ui/ScrollVideoCustom";
+import { Video } from "@/app/components/ui/Video";
+import ListPost from "@/app/components/ui/ListPost";
+import prisma from "@/prisma/client";
 
-export default function Home() {
+// export default Home = async () {
+
+const Home = async () => {
+  const postis = await prisma.post.findFirst({
+    where: { published: true },
+    // clube179p0000jo56hhi7ccvu
+  });
+  const posts = await prisma.post.findMany();
+
   // const { scrollY } = useScroll();
 
   // const windowSize = useWindowSize();
@@ -76,6 +86,9 @@ export default function Home() {
             assumenda reiciendis incidunt cum. Praesentium beatae quaerat
             dignissimos voluptas?
           </p>
+        </div>
+        <div className="bg-gray-800 p-10">
+          <ListPost posts={posts} />
         </div>
       </div>
       <div className=" bg-gray-500 text-white pt-20 px-10 py-10 md:px-30 lg:px-40 xl:px-80 flex flex-col justify-center gap-4 min-h-screen">
@@ -266,4 +279,5 @@ export default function Home() {
       </main> */}
     </>
   );
-}
+};
+export default Home;
