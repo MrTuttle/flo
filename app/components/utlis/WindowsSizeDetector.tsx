@@ -65,7 +65,7 @@ export default function WindowsSizeDetector() {
     //   <p>Window Height: {height}</p>
     // </div>
     <div
-      style={{ position: "fixed", top: 20, right: 20, zIndex: 100 }}
+      style={{ position: "fixed", top: 100, right: 100, zIndex: 100 }}
       className="text-white p-4 text-xs mix-blend-difference"
     >
       <ScrollPositionDetector />
