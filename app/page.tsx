@@ -76,15 +76,14 @@ const Home = async () => {
           <TitleCut>agréables à consulter</TitleCut>
         </div>
         <div className="column-1 sm:columns-2 lg:columns-3 2xl:columns-4">
-          <p className="text-white">
-            xxxxx — Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Nesciunt pariatur quae sint. Eos sunt veritatis cum! Delectus, vitae
-            illum? Molestiae delectus assumenda reiciendis incidunt cum.
-            Praesentium beatae quaerat dignissimos voluptas? Lorem ipsum dolor
-            sit amet consectetur adipisicing elit. Nesciunt pariatur quae sint.
-            Eos sunt veritatis cum! Delectus, vitae illum? Molestiae delectus
-            assumenda reiciendis incidunt cum. Praesentium beatae quaerat
-            dignissimos voluptas?
+          <p className="text-white text-lg">
+            Développeur Front End et UX designer, on rôle consiste à répondre
+            aux besoins fonctionnels et techniques pour vos projets
+            d’application, pour cela j’assure le développement des outils à
+            partir des maquettes. L’objectif étant de simplifier et rendre
+            agréable l’expérience utilisateur sur les outils demandés. Ce qui
+            m’anime au quotidien c’est de concevoir des outils utiles, et donner
+            vie à vos données,
           </p>
         </div>
         <div className="bg-gray-800 p-10">

@@ -63,6 +63,11 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        grow: {
+          "0%": { transform: "scale(0) " },
+          // "50%": { opacity: ".2" },
+          "100%": { transform: "scale(1) " },
+        },
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -75,6 +80,7 @@ const config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        grow: "grow 0.5s cubic-bezier(0.4, 0, 0.6, 1)",
       },
     },
   },
