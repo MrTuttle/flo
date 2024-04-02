@@ -25,7 +25,7 @@ export const useWindowSize = () => {
 
 // export default useWindowSize;
 
-export default function WindowsSizeDetector() {
+export default function WindowsSizeDetectorFixed() {
   // const { width, height } = useWindowSize();
   const windowSize = useWindowSize();
 
@@ -65,29 +65,30 @@ export default function WindowsSizeDetector() {
     //   <p>Window Height: {height}</p>
     // </div>
     <div
-      style={
-        {
-          // position: "fixed",
-          // top: 100,
-          // right: 100,
-          // zIndex: 100,
-          // mixBlendMode: "difference",
-        }
-      }
-      className="font-medium backdrop-blur-xl sm:flex gap-4 mt-48 p-4 sm:pb-20 text-xs border-2 dark:bg-darkflo dark:text-bluflo"
+      style={{
+        position: "fixed",
+        top: 100,
+        right: 100,
+        zIndex: 100,
+        // mixBlendMode: "difference",
+      }}
+      className="text-white p-4 text-xs bg-black/80"
     >
-      <p>WINDOW SIZE</p>
       <ScrollPositionDetector />
       <p>
-        <span>Width </span>
+        <br />
+      </p>
+      <p>WINDOW SIZE</p>
+      <p>
+        <span>Width: </span>
         {windowSize.width}
       </p>
       <p>
-        <span>Height </span>
+        <span>Height: </span>
         {windowSize.height}
       </p>
 
-      <p>Tailwind screen {screenTWcond(windowSize.width)}</p>
+      <p>Tailwind screen : {screenTWcond(windowSize.width)}</p>
     </div>
   );
 }

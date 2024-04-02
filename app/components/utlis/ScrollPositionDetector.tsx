@@ -11,7 +11,12 @@ const ScrollPositionDetector = () => {
     return latest;
   });
 
-  return <p>Scroll : {latestScrollY}</p>;
+  return (
+    <p>
+      Scroll
+      <br /> {latestScrollY}
+    </p>
+  );
 };
 
 export default ScrollPositionDetector;

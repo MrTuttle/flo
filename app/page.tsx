@@ -55,18 +55,20 @@ const Home = async () => {
 
   return (
     <>
-      <WindowsSizeDetector />
+      {/* <WindowsSizeDetector /> */}
       <div className="fixed z-50 top-0 right-0 p-4">
         <ModeToggle />
       </div>
 
-      <HeroContainer classnameprops="flex flex-col justify-end bg-white dark:bg-darkflo w-full">
+      {/* <HeroContainer classnameprops="flex flex-col justify-end bg-white dark:bg-darkflo w-full">
         <HeroCurtainContent />
-      </HeroContainer>
+      </HeroContainer> */}
       {/* Important div for HeroContainer working */}
       {/* a div element with svh height is required to correctly display following content */}
 
-      <div className="h-screen"></div>
+      {/* <div className="h-screen"></div> */}
+      <Curtain />
+
       <div className=" bg-darkflo text-white pt-20 px-10 py-10 md:px-30 lg:px-40 xl:px-80 flex flex-col justify-center gap-4 min-h-screen">
         <p className=" underline underline-offset-4 w-auto text-xs p-1 mb-5">
           TitleCut : JS safari friendly

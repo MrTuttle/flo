@@ -4,7 +4,7 @@ const HeroCurtainContent = () => {
   const boxsizes = `6rem`;
   // const borders = `solid rgb(13,164,255) 4px`;
 
-  const boxesStyle = `animate-grow hover:transition-all ease-in-out hover:duration-500 flex border-[3px] w-[5rem] h-[5rem] sm:w-[7rem] sm:h-[7rem] border-darkflo dark:border-white items-center justify-center hover:bg-darkflo hover:border-[40px] dark:text-white hover:text-white dark:hover:bg-white dark:hover:text-darkflo cursor-pointer `;
+  const boxesStyle = `animate-grow hover:transition-all ease-in-out hover:duration-500 flex border-[3px] w-[5rem] h-[5rem] sm:w-[7rem] sm:h-[7rem] border-darkflo dark:border-white items-center justify-center hover:bg-darkflo hover:border-[40px] dark:text-white hover:text-white dark:hover:bg-white dark:hover:text-darkflo cursor-pointer dark:bg-darkflo `;
   const conditionnalBoxesStyle = `animate-grow hover:transition-all ease-in-out hover:duration-500 hidden sm:flex border-[3px] w-[5rem] h-[5rem] sm:w-[7rem] sm:h-[7rem] border-darkflo dark:border-white items-center justify-center`;
   const lineContainer = `font-semibold text-4xl sm:text-6xl flex gap-2 sm:gap-3`;
   const borders = `solid rgb(69,7,26) 4px`;
