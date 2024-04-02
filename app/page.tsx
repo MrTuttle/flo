@@ -21,6 +21,7 @@ import ScrollVideoCustom from "@/app/components/ui/ScrollVideoCustom";
 import { Video } from "@/app/components/ui/Video";
 import ListPost from "@/app/components/ui/ListPost";
 import prisma from "@/prisma/client";
+import Curtain from "./components/ui/Curtain";
 
 // export default Home = async () {
 
@@ -155,6 +156,7 @@ const Home = async () => {
         </div>
       </div>
       {/* <ScrollVideoCustom /> */}
+      <Curtain />
       {/* <ParagrapheColones>
         xLorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
         pariatur quae sint. Eos sunt veritatis cum! Delectus, vitae illum?
