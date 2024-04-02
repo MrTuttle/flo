@@ -27,9 +27,9 @@ const Curtain = () => {
         <div className="bg-sky-400 p-4 h-[100svh]">background</div>
         <div
           id="maskStayInPlaceContainer"
-          className="h-[200svh] absolute top-0 opacity-50"
+          className="h-[200svh] absolute top-0"
         >
-          <div className="bg-green-300 h-[100svh] w-[50vw]">ghjgj</div>
+          <div className="bg-white/80 h-[100svh] w-[50vw]">ghjgj</div>
           <div className="border h-[100svh] w-[50vw]">Dev</div>
         </div>
 
