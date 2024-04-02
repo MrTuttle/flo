@@ -15,6 +15,7 @@ const Curtain = () => {
           position: "relative", // to allow sticky for first child
           overflow: "clip", // forced default value
         }}
+        className="bg-darkflo" // prevent white space on IOS due to svh when adress bar goes back
       >
         <div
           // FIRST CONTAINER, height is defined by its childs
