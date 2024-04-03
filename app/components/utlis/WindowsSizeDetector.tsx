@@ -75,7 +75,7 @@ export default function WindowsSizeDetector() {
           // backdropFilter: "blur(16px)",
         }
       }
-      className="font-medium bg-bluflo/10  sm:flex gap-4 mt-40 sm:mt-48 p-4 sm:pb-20 text-xs border-2 dark:bg-darkflo dark:text-bluflo"
+      className="font-medium bg-bluflo/10  sm:flex gap-4 mt-4 sm:mt-48 p-4 sm:pb-20 text-xs border-2 dark:bg-darkflo dark:text-bluflo"
     >
       <p>WINDOW SIZE</p>
       <ScrollPositionDetector />

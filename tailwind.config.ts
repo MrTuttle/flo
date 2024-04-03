@@ -21,6 +21,7 @@ const config = {
       colors: {
         // bluflo: "#0DA4FF",
         bluflo: "rgb(13,164,255)",
+        grayflo: "rgb(193,193,193)",
         darkflo: "rgb(69,7,26)",
         greenflo: "rgb(164,247,106)",
         border: "hsl(var(--border))",

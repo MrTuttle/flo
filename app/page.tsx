@@ -68,6 +68,50 @@ const Home = async () => {
 
       {/* <div className="h-screen"></div> */}
       <Curtain />
+      <div className=" bg-grayflo text-white pt-20 px-10 py-10 md:px-30 lg:px-40 xl:px-80 flex flex-col justify-center gap-4 min-h-screen">
+        <p className=" underline underline-offset-4 w-auto text-xs p-1 mb-5">
+          TitleCut : JS safari friendly
+        </p>
+        <div>
+          <TitleCut>Mobile first,</TitleCut>
+          <TitleCut>l’accès direct au net,</TitleCut>
+          <TitleCut>c’est dans la poche!</TitleCut>
+        </div>
+        <div className="column-1 sm:columns-2 lg:columns-3 2xl:columns-4">
+          <p className="text-white">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+            pariatur quae sint. Eos sunt veritatis cum! Delectus, vitae illum?
+            Molestiae delectus assumenda reiciendis incidunt cum. Praesentium
+            beatae quaerat dignissimos voluptas? Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Nesciunt pariatur quae sint. Eos sunt
+            veritatis cum! Delectus, vitae illum? Molestiae delectus assumenda
+            reiciendis incidunt cum. Praesentium beatae quaerat dignissimos
+            voluptas?
+          </p>
+        </div>
+      </div>
+      <div className="bg-greenflo text-emerald-900 pt-20 px-10 py-10 md:px-30 lg:px-40 xl:px-80 flex flex-col justify-center gap-4 min-h-screen">
+        <p className=" underline underline-offset-4 w-auto text-emerald-950 text-xs p-1 mb-5">
+          TitleCut : JS safari friendly
+        </p>
+        <div>
+          <TitleCut>Mobile first,</TitleCut>
+          <TitleCut>l’accès direct au net,</TitleCut>
+          <TitleCut>c’est dans la poche!</TitleCut>
+        </div>
+        <div className="column-1 sm:columns-2 lg:columns-3 2xl:columns-4">
+          <p className="text-emerald-900">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+            pariatur quae sint. Eos sunt veritatis cum! Delectus, vitae illum?
+            Molestiae delectus assumenda reiciendis incidunt cum. Praesentium
+            beatae quaerat dignissimos voluptas? Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Nesciunt pariatur quae sint. Eos sunt
+            veritatis cum! Delectus, vitae illum? Molestiae delectus assumenda
+            reiciendis incidunt cum. Praesentium beatae quaerat dignissimos
+            voluptas?
+          </p>
+        </div>
+      </div>
 
       <div className=" bg-darkflo text-white pt-20 px-10 py-10 md:px-30 lg:px-40 xl:px-80 flex flex-col justify-center gap-4 min-h-screen">
         <p className=" underline underline-offset-4 w-auto text-xs p-1 mb-5">
@@ -136,6 +180,15 @@ const Home = async () => {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
               pariatur quae sint.
             </p>
+          </div>
+          <div className="w-[600px]">
+            {/* <Video videoUrl={"https://scrollyvideo.js.org/goldengate.mp4"} /> */}
+            <Video
+              videoUrl={
+                "https://res.cloudinary.com/dc8rzbrbr/video/upload/v1711397442/Square_eagevr.mp4"
+                // "https://res.cloudinary.com/dc8rzbrbr/video/upload/v1711397442/goldengate_c8a72q.mp4"
+              }
+            />
           </div>
           <div className="w-[300px]">
             {/* <Video videoUrl={"https://scrollyvideo.js.org/goldengate.mp4"} /> */}

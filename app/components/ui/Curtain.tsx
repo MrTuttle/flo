@@ -4,6 +4,7 @@ import HeroCurtainContent from "../home/HeroCurtainContent";
 import TitleCut from "./TitleCut";
 import WindowsSizeDetector from "../utlis/WindowsSizeDetector";
 import WindowsSizeDetectorFixed from "../utlis/WindowsSizeDetectorFixed";
+import HeroUnderFrameVid from "../home/HeroUnderFrameVid";
 
 const Curtain = () => {
   return (
@@ -33,9 +34,10 @@ const Curtain = () => {
               height: "100vh",
               width: "100svw",
             }}
-            className="bg-bluflo"
+            className="bg-grayflo"
           >
-            <HeroUnderFrame />
+            {/* <HeroUnderFrame /> */}
+            <HeroUnderFrameVid />
           </div>
         </div>
         <div
@@ -58,14 +60,14 @@ const Curtain = () => {
           <div // second child
             className="h-[150vh] w-full absolute flex justify-center sm:justify-end text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white dark:text-darkflo"
           >
-            <div className=" leading-[1.15] w-[18rem] mt-[4rem] sm:w-[20rem] sm:mt-[20rem] md:w-[20rem] md:mt-[15rem] sm:mr-[5%] md:mr-[15%] lg:w-[25rem] lg:mr-[10%] xl:mr-[18%]">
+            <div className="leading-[1.15] w-[18rem] mt-[4rem] sm:w-[20rem] sm:mt-[20rem] md:w-[20rem] md:mt-[15rem] sm:mr-[5%] md:mr-[15%] lg:w-[25rem] lg:mr-[10%] xl:mr-[18%]">
               {/* <TitleCut>Développeur</TitleCut>
               <TitleCut>Front End</TitleCut>
               <TitleCut>Designer</TitleCut>
               <TitleCut>UX/UI</TitleCut> */}
-              <h1 className=" opacity-0">Développeur Front End</h1>
-              <h1 className="opacity-0">Designer UX/UI</h1>
-              <WindowsSizeDetector />
+              {/* <h1 className=" opacity-0">Développeur Front End</h1> */}
+              {/* <h1 className="opacity-0">Designer UX/UI</h1> */}
+              {/* <WindowsSizeDetector /> */}
               {/* <WindowsSizeDetectorFixed /> */}
             </div>
           </div>
