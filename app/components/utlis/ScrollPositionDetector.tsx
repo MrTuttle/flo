@@ -13,8 +13,7 @@ const ScrollPositionDetector = () => {
 
   return (
     <p>
-      Scroll
-      <br /> {latestScrollY}
+      <span>Scroll </span> {latestScrollY}
     </p>
   );
 };

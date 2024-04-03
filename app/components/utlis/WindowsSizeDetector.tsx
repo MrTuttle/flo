@@ -39,7 +39,7 @@ export default function WindowsSizeDetector() {
       xxl: 1536,
     };
     if (width < 640) {
-      message = "before sm";
+      message = "before sm (<640px)";
     }
     if (width > 640 && width < 768) {
       message = `sm: ${twscreens.sm}`;
@@ -72,9 +72,10 @@ export default function WindowsSizeDetector() {
           // right: 100,
           // zIndex: 100,
           // mixBlendMode: "difference",
+          // backdropFilter: "blur(16px)",
         }
       }
-      className="font-medium backdrop-blur-xl sm:flex gap-4 mt-40 sm:mt-48 p-4 sm:pb-20 text-xs border-2 dark:bg-darkflo dark:text-bluflo"
+      className="font-medium bg-bluflo/10  sm:flex gap-4 mt-40 sm:mt-48 p-4 sm:pb-20 text-xs border-2 dark:bg-darkflo dark:text-bluflo"
     >
       <p>WINDOW SIZE</p>
       <ScrollPositionDetector />

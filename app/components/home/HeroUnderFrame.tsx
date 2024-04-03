@@ -15,7 +15,7 @@ const HeroUnderFrame = () => {
         />
       </div>
       <div className=" dark:text-darkflo text-white h-svh w-full absolute flex justify-center sm:justify-end text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
-        <div className="leading-[1.15] w-[18rem] mt-[7.1rem] sm:w-[20rem] sm:mt-[20.1rem] md:w-[20rem] md:mt-[15.1rem] sm:mr-[5%] md:mr-[15%] lg:w-[25rem] lg:mr-[10%] xl:mr-[18%]">
+        <div className="leading-[1.15] w-[18rem] mt-[3rem] sm:w-[20rem] sm:mt-[20.1rem] md:w-[20rem] md:mt-[15.1rem] sm:mr-[5%] md:mr-[15%] lg:w-[25rem] lg:mr-[10%] xl:mr-[18%]">
           <h1>Développeur Front End</h1>
           <h1>Designer UX/UI</h1>
         </div>

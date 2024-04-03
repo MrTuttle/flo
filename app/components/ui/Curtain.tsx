@@ -11,11 +11,11 @@ const Curtain = () => {
       <div
         // global container to define global behavior
         style={{
-          height: "200svh", // 200svh height to allow internal scroll, increase it for a longer scroll time
+          height: "200vh", // 200vh height to allow internal scroll, increase it for a longer scroll time
           position: "relative", // to allow sticky for first child
           overflow: "clip", // forced default value
         }}
-        className="bg-darkflo" // prevent white space on IOS due to svh when adress bar goes back
+        className="bg-darkflo" // prevent white space on IOS due to vh when adress bar goes back
       >
         <div
           // FIRST CONTAINER, height is defined by its childs
@@ -30,7 +30,7 @@ const Curtain = () => {
               display: "flex",
               flexDirection: "column",
               justifyContent: "end", // to fix content at the bottom
-              height: "100svh",
+              height: "100vh",
               width: "100svw",
             }}
             className="bg-bluflo"
@@ -48,17 +48,17 @@ const Curtain = () => {
         >
           <div
             // first child
-            className="bg-white h-[100svh] w-[100vw]"
+            className="bg-white h-[100vh] w-[100vw]"
           >
-            <div className="flex flex-col justify-end items-center h-[100svh] ">
+            <div className="flex flex-col justify-end items-center h-[100vh] ">
               <HeroCurtainContent />
             </div>
           </div>
 
           <div // second child
-            className="h-[150svh] w-full absolute flex justify-center sm:justify-end text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white dark:text-darkflo"
+            className="h-[150vh] w-full absolute flex justify-center sm:justify-end text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white dark:text-darkflo"
           >
-            <div className=" leading-[1.15] w-[18rem] mt-[9rem] sm:w-[20rem] sm:mt-[20rem] md:w-[20rem] md:mt-[15rem] sm:mr-[5%] md:mr-[15%] lg:w-[25rem] lg:mr-[10%] xl:mr-[18%]">
+            <div className=" leading-[1.15] w-[18rem] mt-[4rem] sm:w-[20rem] sm:mt-[20rem] md:w-[20rem] md:mt-[15rem] sm:mr-[5%] md:mr-[15%] lg:w-[25rem] lg:mr-[10%] xl:mr-[18%]">
               {/* <TitleCut>Développeur</TitleCut>
               <TitleCut>Front End</TitleCut>
               <TitleCut>Designer</TitleCut>
