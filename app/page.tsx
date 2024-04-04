@@ -68,28 +68,143 @@ const Home = async () => {
 
       {/* <div className="h-screen"></div> */}
       <Curtain />
-      <div className=" bg-grayflo text-white pt-20 px-10 py-10 md:px-30 lg:px-40 xl:px-80 flex flex-col justify-center gap-4 min-h-screen">
-        <p className=" underline underline-offset-4 w-auto text-xs p-1 mb-5">
-          TitleCut : JS safari friendly
-        </p>
-        <div>
-          <TitleCut>Mobile first,</TitleCut>
-          <TitleCut>l’accès direct au net,</TitleCut>
-          <TitleCut>c’est dans la poche!</TitleCut>
+      <section className=" bg-grayflo text-white dark:text-darkflo px-6 py-60 flex flex-col justify-center items-center gap-4 min-h-screen">
+        <div className="">
+          <div className=" xl:ml-[25%] py-20">
+            <p className=" underline underline-offset-4 w-auto text-xs p-1 mb-5">
+              TitleCut : JS safari friendly
+            </p>
+            <div style={{ gridColumn: "2/5" }}>
+              <TitleCut>J’imagine & conçois,</TitleCut>
+              <TitleCut>pour vous des interfaces</TitleCut>
+              <TitleCut>agréables à consulter</TitleCut>
+            </div>
+          </div>
+
+          <div className=" mt-10 w-full flex justify-end text-md font-light gap-6 flex-wrap lg:flex-nowrap">
+            <div className=" min-h-[55.vh] max-h-[95vh] ">
+              {/* <Video videoUrl={"https://scrollyvideo.js.org/goldengate.mp4"} /> */}
+
+              <video
+                // width="320"
+                // height="240"
+                // controls
+                autoPlay
+                loop
+                muted
+                preload="auto" // none, metadata, auto
+                playsInline
+                // className="w-full"
+                style={{
+                  // position: "absolute",
+                  // top: "0",
+                  // left: "0",
+                  height: "100%",
+                  width: "100%",
+                  objectFit: "cover",
+                }}
+              >
+                <source
+                  src={
+                    "https://res.cloudinary.com/dc8rzbrbr/video/upload/v1711397442/original-af2fee503aafeb0d84d5827e281ece79_w17ec3.mp4"
+                  }
+                  type="video/mp4"
+                />
+                <track
+                // src="/path/to/captions.vtt"
+                // kind="subtitles"
+                // srcLang="en"
+                // label="English"
+                />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div className="w-[65%] sm:w-[33.3%] lg:w-[25%] xl:w-[16.3%]">
+              <p>
+                En ligne de mire… <br />
+                toujours simplifier et rendre l’expérience utilisateur la plus
+                agréable possible.
+              </p>
+              <p>
+                Ce qui m’anime, au quotidien c’est de trouver la meilleur façon
+                de donner vie à vos données.
+                {/* Passé par les écoles d’Art, les Agences de publicité, et geek depuis
+            le berceau, je suis un codeur graphiste, ou un graphiste qui code.
+            Besoins des derniers rafinemments d’interfaces pour votre site
+            mobile ? J’ai les bonnes réponses pour vous. Besoin de marquer votre
+            public avec une identité produit innovante ? J’ai l’expérience qu’il
+          vous faut. */}
+                {/* Designer graphique de formation, passé par les écoles d’Art, je suis
+            monté en compétences au fil de ma carrière en me spécialisant dans
+          le design numérique et dans le développement d’interfaces web. */}
+              </p>
+            </div>
+          </div>
         </div>
-        <div className="column-1 sm:columns-2 lg:columns-3 2xl:columns-4">
-          <p className="text-white">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-            pariatur quae sint. Eos sunt veritatis cum! Delectus, vitae illum?
-            Molestiae delectus assumenda reiciendis incidunt cum. Praesentium
-            beatae quaerat dignissimos voluptas? Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Nesciunt pariatur quae sint. Eos sunt
-            veritatis cum! Delectus, vitae illum? Molestiae delectus assumenda
-            reiciendis incidunt cum. Praesentium beatae quaerat dignissimos
-            voluptas?
+      </section>
+      <section className=" bg-violet-800 text-grayflo dark:text-grayflo px-6 py-6 flex flex-col justify-center items-center gap-4 min-h-screen">
+        <div className="border w-full">
+          <div className=" xl:ml-[25%] py-20">
+            <p className=" underline underline-offset-4 w-auto text-xs p-1 mb-5">
+              TitleCut : JS safari friendly
+            </p>
+            <div style={{ gridColumn: "2/5" }}>
+              <TitleCut>Des composants</TitleCut>
+              <TitleCut>pour réveiller</TitleCut>
+              <TitleCut>vos interfaces</TitleCut>
+            </div>
+          </div>
+          <div className="border text-xl h-[88.33vw] sm:h-[62vw]">
+            <ul className=" h-[100%] grid grid-cols-2 sm:grid-cols-3 md:grid-col-3 gap-6 text-violet-800 *:border *:border-grayflo *:rounded-xl *:p-2 *:bg-grayflo">
+              <li className="">React</li>
+              <li>Tailwind</li>
+              <li>Next JS</li>
+              <li>R&R</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <div className=" bg-grayflo text-white dark:text-darkflo pt-20 px-10 py-10 md:px-30 lg:px-40 flex flex-col justify-center items-center gap-4 min-h-screen">
+        <div className="max-w-screen-xl">
+          <p className=" underline underline-offset-4 w-auto text-xs p-1 mb-5">
+            TitleCut : JS safari friendly
           </p>
+          <div>
+            <TitleCut>J’imagine & conçois,</TitleCut>
+            <TitleCut>pour vous des interfaces</TitleCut>
+            <TitleCut>agréables à consulter</TitleCut>
+          </div>
+
+          <div className="mt-10 flex items-center text-2xl gap-8 flex-wrap lg:flex-nowrap">
+            <div className="lg:w-9/12">
+              {/* <Video videoUrl={"https://scrollyvideo.js.org/goldengate.mp4"} /> */}
+              <Video
+                videoUrl={
+                  "https://res.cloudinary.com/dc8rzbrbr/video/upload/v1711397442/original-af2fee503aafeb0d84d5827e281ece79_w17ec3.mp4"
+                }
+              />
+            </div>
+            <p className="w-4/12 2xl:w-2/12">
+              En ligne de mire… toujours simplifier et rendre l’expérience
+              utilisateur la plus agréable possible. <br />
+              <br />
+              Ce qui m’anime, au quotidien c’est de trouver la meilleur façon de
+              donner vie à vos données.
+              {/* Passé par les écoles d’Art, les Agences de publicité, et geek depuis
+            le berceau, je suis un codeur graphiste, ou un graphiste qui code.
+            Besoins des derniers rafinemments d’interfaces pour votre site
+            mobile ? J’ai les bonnes réponses pour vous. Besoin de marquer votre
+            public avec une identité produit innovante ? J’ai l’expérience qu’il
+            vous faut. */}
+              {/* Designer graphique de formation, passé par les écoles d’Art, je suis
+            monté en compétences au fil de ma carrière en me spécialisant dans
+            le design numérique et dans le développement d’interfaces web. */}
+            </p>
+          </div>
         </div>
       </div>
+
       <div className="bg-greenflo text-emerald-900 pt-20 px-10 py-10 md:px-30 lg:px-40 xl:px-80 flex flex-col justify-center gap-4 min-h-screen">
         <p className=" underline underline-offset-4 w-auto text-emerald-950 text-xs p-1 mb-5">
           TitleCut : JS safari friendly

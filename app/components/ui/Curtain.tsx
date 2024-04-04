@@ -30,11 +30,11 @@ const Curtain = () => {
             style={{
               display: "flex",
               flexDirection: "column",
-              justifyContent: "end", // to fix content at the bottom
+              // justifyContent: "end", // end to fix content at the bottom
               height: "100vh",
               width: "100svw",
             }}
-            className="bg-grayflo"
+            className="bg-grayflo justify-end items-center sm:justify-center sm:items-start"
           >
             {/* <HeroUnderFrame /> */}
             <HeroUnderFrameVid />
@@ -45,7 +45,7 @@ const Curtain = () => {
           id="maskStayInPlaceContainer"
           style={{
             position: "absolute", // absolute positionning to mask first container
-            top: "-10rem", // -100px to let see a small portion of illustration
+            top: "0rem", // -100px to let see a small portion of illustration
           }}
         >
           <div
