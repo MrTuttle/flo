@@ -77,7 +77,7 @@ const Home = async () => {
             <div style={{ gridColumn: "2/5" }}>
               <TitleCut>J’imagine & conçois,</TitleCut>
               <TitleCut>pour vous des interfaces</TitleCut>
-              <TitleCut>agréables à consulterr</TitleCut>
+              <TitleCut>agréables à consulter</TitleCut>
             </div>
           </div>
 
@@ -143,8 +143,8 @@ const Home = async () => {
         </div>
       </section>
       <section className=" bg-violet-800 text-grayflo dark:text-grayflo px-6 py-6 flex flex-col justify-center items-center gap-4 min-h-screen">
-        <div className="border w-full">
-          <div className=" xl:ml-[25%] py-20">
+        <div className=" w-full xl:w-[75%]">
+          <div className=" xl:ml-[34.5%] py-20">
             <p className=" underline underline-offset-4 w-auto text-xs p-1 mb-5">
               TitleCut : JS safari friendly
             </p>
@@ -154,8 +154,8 @@ const Home = async () => {
               <TitleCut>vos interfaces</TitleCut>
             </div>
           </div>
-          <div className="border text-xl h-[88.33vw] sm:h-[62vw]">
-            <ul className=" h-[100%] grid grid-cols-2 sm:grid-cols-3 md:grid-col-3 gap-6 text-violet-800 *:border *:border-grayflo *:rounded-3xl *:p-6 *:bg-grayflo">
+          <div className=" text-xl h-[88.33vw] sm:h-[62vw]">
+            <ul className=" h-[100%] xl:h-[75%] grid grid-cols-2 sm:grid-cols-3 md:grid-col-3 gap-6 text-violet-800 *:border *:border-grayflo *:rounded-3xl *:p-6 *:bg-grayflo">
               <li className="">React</li>
               <li>Tailwind</li>
               <li>Next JS</li>
