@@ -77,12 +77,12 @@ const Home = async () => {
             <div style={{ gridColumn: "2/5" }}>
               <TitleCut>J’imagine & conçois,</TitleCut>
               <TitleCut>pour vous des interfaces</TitleCut>
-              <TitleCut>agréables à consulter</TitleCut>
+              <TitleCut>agréables à consulterr</TitleCut>
             </div>
           </div>
 
           <div className=" mt-10 w-full flex justify-end text-md font-light gap-6 flex-wrap lg:flex-nowrap">
-            <div className=" min-h-[55.vh] max-h-[95vh] ">
+            <div className=" min-h-[55.vh] max-h-[95vh] rounded-3xl overflow-hidden">
               {/* <Video videoUrl={"https://scrollyvideo.js.org/goldengate.mp4"} /> */}
 
               <video
@@ -155,7 +155,7 @@ const Home = async () => {
             </div>
           </div>
           <div className="border text-xl h-[88.33vw] sm:h-[62vw]">
-            <ul className=" h-[100%] grid grid-cols-2 sm:grid-cols-3 md:grid-col-3 gap-6 text-violet-800 *:border *:border-grayflo *:rounded-xl *:p-2 *:bg-grayflo">
+            <ul className=" h-[100%] grid grid-cols-2 sm:grid-cols-3 md:grid-col-3 gap-6 text-violet-800 *:border *:border-grayflo *:rounded-3xl *:p-6 *:bg-grayflo">
               <li className="">React</li>
               <li>Tailwind</li>
               <li>Next JS</li>
