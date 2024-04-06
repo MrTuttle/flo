@@ -150,8 +150,8 @@ const Home = async () => {
             </p>
             <div style={{ gridColumn: "2/5" }}>
               <TitleCut>Des composants</TitleCut>
-              <TitleCut>pour réveiller</TitleCut>
-              <TitleCut>vos interfaces</TitleCut>
+              <TitleCut>modulaires</TitleCut>
+              <TitleCut>pour vos interfaces</TitleCut>
             </div>
           </div>
           <div className=" text-xl h-[88.33vw] sm:h-[62vw]">

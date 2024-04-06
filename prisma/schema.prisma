@@ -8,14 +8,7 @@ datasource db {
   directUrl = env("POSTGRES_URL_NON_POOLING")
 }
 
-model Post {
-  id        String  @id @default(cuid())
-  title     String
-  content   String?
-  published Boolean @default(false)
-  authorId  String?
-  author    User?   @relation(fields: [authorId], references: [id])
-}
+// next auth
 
 model Account {
   id                String  @id @default(cuid())
@@ -60,4 +53,83 @@ model VerificationToken {
   expires    DateTime
 
   @@unique([identifier, token])
+}
+
+// flo
+model Post {
+  id        String  @id @default(cuid())
+  title     String
+  content   String?
+  published Boolean @default(false)
+  authorId  String?
+  author    User?   @relation(fields: [authorId], references: [id])
+}
+
+// la baraka
+model Room {
+  id               Int           @id @default(autoincrement())
+  title            String        @db.VarChar(255)
+  description      String        @db.Text
+  createdAt        DateTime      @default(now())
+  updatedAt        DateTime      @updatedAt
+  price            Float
+  assignedRoom     Image[]
+  reservationDates Reservation[]
+}
+
+model UserRoom {
+  id               Int           @id @default(autoincrement())
+  firstName        String?
+  name             String?
+  email            String?       @unique
+  phone            String
+  emailVerified    DateTime?
+  reservationDates Reservation[]
+
+  @@index([id])
+}
+
+model Reservation {
+  id                   Int      @id @default(autoincrement())
+  checkIn              DateTime @db.Date
+  checkOut             DateTime @db.Date
+  status               Status   @default(VACANT)
+  assignedToRoomId     Int
+  assignedToUserRoomId Int
+  assignedToRoom       Room     @relation(fields: [assignedToRoomId], references: [id])
+  assignedToUserRoom   UserRoom @relation(fields: [assignedToUserRoomId], references: [id])
+  // Room                 Room?    @relation(fields: [roomId], references: [id])
+  // roomId               Int?
+
+  @@unique([assignedToRoomId, assignedToUserRoomId])
+  @@index([assignedToUserRoomId])
+}
+
+enum Status {
+  OCCUPIED
+  VACANT
+  IN_PROGRESS
+}
+
+model Image {
+  id               Int     @id @default(autoincrement())
+  publicId         String  @db.VarChar(255)
+  alt              String  @db.VarChar(255)
+  cover            Boolean @default(false)
+  assignedToRoomId Int
+  assignedToRoom   Room    @relation(fields: [assignedToRoomId], references: [id])
+  assignedToMenuId Int?
+  assignedToMenu   Menu?   @relation(fields: [assignedToMenuId], references: [id])
+
+  @@index([assignedToRoomId])
+}
+
+model Menu {
+  id           Int      @id @default(autoincrement())
+  title        String   @db.VarChar(255)
+  price        Float
+  description  String   @db.Text
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  assignedMenu Image[]
 }
