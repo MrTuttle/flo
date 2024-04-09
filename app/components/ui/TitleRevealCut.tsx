@@ -1,4 +1,5 @@
 import React from "react";
+// NOT SAFARI COMPATIBLE AT THIS TIME //
 
 interface Props {
   children: string;
