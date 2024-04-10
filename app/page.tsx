@@ -23,6 +23,21 @@ import ListPost from "@/app/components/ui/ListPost";
 import prisma from "@/prisma/client";
 import Curtain from "./components/ui/Curtain";
 
+import { TbBrandNextjs } from "react-icons/tb";
+import { SiNextdotjs } from "react-icons/si";
+import SpanLogo from "./components/ui/SpanLogo";
+import { TbBrandTypescript } from "react-icons/tb";
+import { SiReact } from "react-icons/si";
+import { SiTailwindcss } from "react-icons/si";
+import { SiRubyonrails } from "react-icons/si";
+import { RiJavascriptFill } from "react-icons/ri";
+import { SiTypescript } from "react-icons/si";
+import { SiJavascript } from "react-icons/si";
+import { SiPostgresql } from "react-icons/si";
+import { SiVercel } from "react-icons/si";
+import { SiGithub } from "react-icons/si";
+import { SiLinkedin } from "react-icons/si";
+
 // export default Home = async () {
 
 const Home = async () => {
@@ -68,7 +83,108 @@ const Home = async () => {
 
       {/* <div className="h-screen"></div> */}
       <Curtain />
-      <section className=" bg-grayflo text-white dark:text-darkflo px-6 py-60 flex flex-col justify-center items-center gap-4 min-h-screen">
+      <section className=" bg-grayflo text-white dark:text-darkflo px-6 flex flex-col justify-center items-center gap-4 min-h-screen">
+        <div className=" bg-greenflo w-full">
+          <div className=" xl:ml-[25%] py-20">
+            <p className="underline-offset-4 w-auto text-xs p-1 mb-5">
+              Developper & creator
+            </p>
+            <div style={{ gridColumn: "2/5" }} className="">
+              <TitleCut>J’imagine & conçois,</TitleCut>
+              <TitleCut>pour vous des interfaces</TitleCut>
+              <TitleCut>agréables à consulter</TitleCut>
+            </div>
+          </div>
+          <div className="mb-40 xl:ml-[25%] xl:mr-[25%] text-xl font-light leading-10">
+            <p className=" ">
+              Développeur spécialisé{" "}
+              <SpanLogo>
+                <span className="pr-2">
+                  <SiJavascript />
+                </span>
+                <span className="text-white">Javascript</span>
+              </SpanLogo>{" "}
+              je construis et déploie vos applications en m’appuyant sur{" "}
+              <SpanLogo>
+                <span className="pr-2">
+                  <SiReact />
+                </span>
+                <span className="text-white">React</span>
+              </SpanLogo>{" "}
+              &{" "}
+              <SpanLogo>
+                <span className="pr-2">
+                  <SiTypescript />
+                </span>
+                <span className="text-white">typescript.</span>
+              </SpanLogo>{" "}
+              Pour la partie SCSS, je me sers de{" "}
+              <SpanLogo>
+                <span className="pr-2">
+                  <SiTailwindcss />
+                </span>
+                <span className="text-white">Tailwind</span>
+              </SpanLogo>{" "}
+              comme base de production.
+            </p>
+            <p>
+              <br />
+              Pour le backend, après avoir initialement été formé dans les
+              règles de l’art à l’environnement
+              <SpanLogo>
+                <span className="pr-2">
+                  <SiRubyonrails />
+                </span>
+                <span className="text-white">Ruby on Rails</span>
+              </SpanLogo>
+              , je me suis converti depuis un an à la souplesse et la rapidité
+              de développement de{" "}
+              <SpanLogo>
+                <span className="pr-2">
+                  <SiNextdotjs />
+                </span>
+                <span className="text-white">Next JS.</span>
+              </SpanLogo>
+            </p>{" "}
+          </div>
+        </div>
+      </section>
+      <section className=" bg-grayflo text-darkflo dark:text-grayflo px-6 flex flex-col justify-center items-center gap-4 min-h-screen">
+        <div className=" bg-white dark:bg-violet-800 w-full">
+          <div className=" xl:ml-[25%] py-20">
+            <p className="underline-offset-4 w-auto text-xs p-1 mb-5">
+              Developper & creator
+            </p>
+            <div
+              style={{ gridColumn: "2/5" }}
+              className="text-violet-800 dark:text-grayflo"
+            >
+              <TitleCut>Designer UI/UX</TitleCut>
+              <TitleCut>ou product designer</TitleCut>
+              <TitleCut> ?</TitleCut>
+            </div>
+          </div>
+          <div className="mb-40 xl:ml-[25%] xl:mr-[25%] text-xl font-light leading-10">
+            <p>
+              {/* Passé par les écoles d’Art, les Agences
+              de publicité, et geek depuis le berceau, je suis un codeur
+              graphiste, ou un graphiste qui code. Besoins des derniers
+              rafinemments d’interfaces pour votre site mobile ? J’ai les bonnes
+              réponses pour vous. Besoin de marquer votre public avec une
+              identité produit innovante ? J’ai l’expérience qu’il vous faut. */}
+              Designer graphique de formation, passé par les écoles d’Art, je
+              suis monté en compétences au fil de ma carrière en me spécialisant
+              dans le design numérique et dans le développement d’interfaces
+              web. Si j’ai les compétences pour marquer émotionnellement le
+              public avec une identité d’entreprise. Ce qui m’anime, au
+              quotidien c’est de trouver la meilleur façon de donner vie à vos
+              données, dans des interfaces fluides, épurées et facile à
+              comprendre. L’ergonomie avant tout !.
+            </p>{" "}
+          </div>
+        </div>
+      </section>
+      {/* <section className=" bg-grayflo text-white dark:text-darkflo px-6 flex flex-col justify-center items-center gap-4 min-h-screen">
         <div className="">
           <div className=" xl:ml-[25%] py-20">
             <p className=" underline underline-offset-4 w-auto text-xs p-1 mb-5">
@@ -81,10 +197,8 @@ const Home = async () => {
             </div>
           </div>
 
-          <div className=" mt-10 w-full flex justify-end text-md font-light gap-6 flex-wrap lg:flex-nowrap">
+          <div className="pb-60 mt-10 w-full flex justify-end text-md font-light gap-6 flex-wrap lg:flex-nowrap">
             <div className=" min-h-[55.vh] max-h-[95vh] rounded-3xl overflow-hidden">
-              {/* <Video videoUrl={"https://scrollyvideo.js.org/goldengate.mp4"} /> */}
-
               <video
                 // width="320"
                 // height="240"
@@ -128,21 +242,12 @@ const Home = async () => {
               <p>
                 Ce qui m’anime, au quotidien c’est de trouver la meilleur façon
                 de donner vie à vos données.
-                {/* Passé par les écoles d’Art, les Agences de publicité, et geek depuis
-            le berceau, je suis un codeur graphiste, ou un graphiste qui code.
-            Besoins des derniers rafinemments d’interfaces pour votre site
-            mobile ? J’ai les bonnes réponses pour vous. Besoin de marquer votre
-            public avec une identité produit innovante ? J’ai l’expérience qu’il
-          vous faut. */}
-                {/* Designer graphique de formation, passé par les écoles d’Art, je suis
-            monté en compétences au fil de ma carrière en me spécialisant dans
-          le design numérique et dans le développement d’interfaces web. */}
               </p>
             </div>
           </div>
         </div>
-      </section>
-      <section className=" bg-violet-800 text-grayflo dark:text-grayflo px-6 py-6 flex flex-col justify-center items-center gap-4 min-h-screen">
+      </section> */}
+      {/* <section className=" bg-violet-800 text-grayflo dark:text-grayflo px-6 py-6 flex flex-col justify-center items-center gap-4 min-h-screen">
         <div className=" w-full xl:w-[75%]">
           <div className=" xl:ml-[34.5%] py-20">
             <p className=" underline underline-offset-4 w-auto text-xs p-1 mb-5">
@@ -163,9 +268,9 @@ const Home = async () => {
             </ul>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <div className="bg-greenflo text-emerald-900 pt-20 px-10 py-10 md:px-30 lg:px-40 xl:px-80 flex flex-col justify-center gap-4 min-h-screen">
+      {/* <div className="bg-greenflo text-emerald-900 pt-20 px-10 py-10 md:px-30 lg:px-40 xl:px-80 flex flex-col justify-center gap-4 min-h-screen">
         <p className=" underline underline-offset-4 w-auto text-emerald-950 text-xs p-1 mb-5">
           TitleCut : JS safari friendly
         </p>
@@ -186,9 +291,9 @@ const Home = async () => {
             voluptas?
           </p>
         </div>
-      </div>
+      </div> */}
 
-      <div className=" bg-darkflo text-white pt-20 px-10 py-10 md:px-30 lg:px-40 xl:px-80 flex flex-col justify-center gap-4 min-h-screen">
+      {/* <div className=" bg-darkflo text-white pt-20 px-10 py-10 md:px-30 lg:px-40 xl:px-80 flex flex-col justify-center gap-4 min-h-screen">
         <p className=" underline underline-offset-4 w-auto text-xs p-1 mb-5">
           TitleCut : JS safari friendly
         </p>
@@ -211,8 +316,8 @@ const Home = async () => {
         <div className="bg-gray-800 p-10">
           <ListPost posts={posts} />
         </div>
-      </div>
-      <div className=" bg-gray-500 text-white pt-20 px-10 py-10 md:px-30 lg:px-40 xl:px-80 flex flex-col justify-center gap-4 min-h-screen">
+      </div> */}
+      {/* <div className=" bg-gray-500 text-white pt-20 px-10 py-10 md:px-30 lg:px-40 xl:px-80 flex flex-col justify-center gap-4 min-h-screen">
         <p className=" underline underline-offset-4 w-auto text-xs p-1 mb-5">
           TitleCut : JS safari friendly
         </p>
@@ -235,7 +340,6 @@ const Home = async () => {
         </div>
         <div className="py-20 flex gap-8 flex-wrap">
           <div className="max-w-md">
-            {/* <Video videoUrl={"https://scrollyvideo.js.org/goldengate.mp4"} /> */}
             <Video
               videoUrl={
                 "https://res.cloudinary.com/dc8rzbrbr/video/upload/v1711397442/original-af2fee503aafeb0d84d5827e281ece79_w17ec3.mp4"
@@ -257,26 +361,22 @@ const Home = async () => {
             </p>
           </div>
           <div className="w-[600px]">
-            {/* <Video videoUrl={"https://scrollyvideo.js.org/goldengate.mp4"} /> */}
             <Video
               videoUrl={
                 "https://res.cloudinary.com/dc8rzbrbr/video/upload/v1711397442/Square_eagevr.mp4"
-                // "https://res.cloudinary.com/dc8rzbrbr/video/upload/v1711397442/goldengate_c8a72q.mp4"
               }
             />
           </div>
           <div className="w-[300px]">
-            {/* <Video videoUrl={"https://scrollyvideo.js.org/goldengate.mp4"} /> */}
             <Video
               videoUrl={
                 "https://res.cloudinary.com/dc8rzbrbr/video/upload/v1711397442/La-Baraka-2024-03-22-part1_ijyl8g.mp4"
-                // "https://res.cloudinary.com/dc8rzbrbr/video/upload/v1711397442/goldengate_c8a72q.mp4"
               }
             />
           </div>
         </div>
-      </div>
-      <div className="flex flex-col justify-start items-start p-36">
+      </div> */}
+      {/* <div className="flex flex-col justify-start items-start p-36">
         <div className=" w-2/3">
           <Video
             videoUrl={
@@ -284,8 +384,8 @@ const Home = async () => {
             }
           />
         </div>
-      </div>
-      <ScrollVideoCustom />
+      </div> */}
+      {/* <ScrollVideoCustom /> */}
       {/* <ParagrapheColones>
         xLorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
         pariatur quae sint. Eos sunt veritatis cum! Delectus, vitae illum?
@@ -296,10 +396,8 @@ const Home = async () => {
         cum. Praesentium beatae quaerat dignissimos voluptas?
       </ParagrapheColones> */}
 
-      <div className="bg-bluflo text-white pt-20 px-10 py-10 md:px-30 lg:px-40 xl:px-80 flex flex-col justify-center gap-4 min-h-screen">
-        {/* <div className="text-white text-4xl sm:text-6xl md:text-7xl sm:pb-20">
-          <h1>Mobile first, l’accès direct au net, c’est dans la poche! </h1>
-        </div> */}
+      {/* <div className="bg-bluflo text-white pt-20 px-10 py-10 md:px-30 lg:px-40 xl:px-80 flex flex-col justify-center gap-4 min-h-screen">
+
         <p className=" underline underline-offset-4 w-auto text-xs p-1 mb-5">
           TitleCut : JS safari friendly
         </p>
@@ -321,7 +419,7 @@ const Home = async () => {
             voluptas?
           </p>
         </div>
-      </div>
+      </div> */}
       {/* <div className="z-50 absolute bg-slate-200 w-2/3 h-50 p-8">hjhjhjhjh</div>
       <main className=" flex min-h-screen flex-col items-center justify-between">
         <div className="h-[120vh] z-10 border border-green-500 w-2/3">
