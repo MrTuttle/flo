@@ -70,108 +70,154 @@ const Home = async () => {
 
   return (
     <>
-      {/* <WindowsSizeDetector /> */}
-      <div className="fixed z-50 top-0 right-0 p-4">
-        <ModeToggle />
-      </div>
+      <div // this div is just to define darkmode colors without touch tailwins shadcn variables
+        className="bg-grayflo dark:bg-violet-950 dark:text-grayflo"
+      >
+        {/* <WindowsSizeDetector /> */}
+        <div className="fixed z-50 top-0 right-0 p-4">
+          <ModeToggle />
+        </div>
 
-      {/* <HeroContainer classnameprops="flex flex-col justify-end bg-white dark:bg-darkflo w-full">
+        {/* <HeroContainer classnameprops="flex flex-col justify-end bg-white dark:bg-darkflo w-full">
         <HeroCurtainContent />
       </HeroContainer> */}
-      {/* Important div for HeroContainer working */}
-      {/* a div element with svh height is required to correctly display following content */}
+        {/* Important div for HeroContainer working */}
+        {/* a div element with svh height is required to correctly display following content */}
 
-      {/* <div className="h-screen"></div> */}
-      <Curtain />
-      <section className=" bg-grayflo text-white dark:text-darkflo px-6 flex flex-col justify-center items-center gap-4 min-h-screen">
-        <div className=" bg-greenflo w-full">
-          <div className=" xl:ml-[25%] py-20">
-            <p className="underline-offset-4 w-auto text-xs p-1 mb-5">
-              Developper & creator
-            </p>
-            <div style={{ gridColumn: "2/5" }} className="">
-              <TitleCut>J’imagine & conçois,</TitleCut>
-              <TitleCut>pour vous des interfaces</TitleCut>
-              <TitleCut>agréables à consulter</TitleCut>
+        {/* <div className="h-screen"></div> */}
+        <Curtain />
+        <section className=" bg-grayflo text-white dark:text-darkflo px-6 flex flex-col justify-center items-center gap-4 min-h-screen">
+          <div className=" bg-greenflo w-full">
+            <div className=" xl:ml-[25%] py-20">
+              <p className="underline-offset-4 w-auto text-xs p-1 mb-5">
+                Developper & creator
+              </p>
+              <div style={{ gridColumn: "2/5" }} className="">
+                <TitleCut>J’imagine & conçois,</TitleCut>
+                <TitleCut>pour vous des interfaces</TitleCut>
+                <TitleCut>agréables à consulter</TitleCut>
+              </div>
+            </div>
+            <div className="mb-40 xl:ml-[25%] xl:mr-[25%] text-xl font-light leading-10">
+              <p className=" ">
+                Développeur spécialisé{" "}
+                <SpanLogo>
+                  <span className="pr-2">
+                    <SiJavascript />
+                  </span>
+                  <span className="text-white">Javascript</span>
+                </SpanLogo>{" "}
+                je construis et déploie vos applications en m’appuyant sur{" "}
+                <SpanLogo>
+                  <span className="pr-2">
+                    <SiReact />
+                  </span>
+                  <span className="text-white">React</span>
+                </SpanLogo>{" "}
+                &{" "}
+                <SpanLogo>
+                  <span className="pr-2">
+                    <SiTypescript />
+                  </span>
+                  <span className="text-white">typescript.</span>
+                </SpanLogo>{" "}
+                Pour la partie SCSS, je me sers de{" "}
+                <SpanLogo>
+                  <span className="pr-2">
+                    <SiTailwindcss />
+                  </span>
+                  <span className="text-white">Tailwind</span>
+                </SpanLogo>{" "}
+                comme base de production.
+              </p>
+              <p>
+                <br />
+                Pour le backend, après avoir initialement été formé dans les
+                règles de l’art à l’environnement
+                <SpanLogo>
+                  <span className="pr-2">
+                    <SiRubyonrails />
+                  </span>
+                  <span className="text-white">Ruby on Rails</span>
+                </SpanLogo>
+                , je me suis converti depuis un an à la souplesse et la rapidité
+                de développement de{" "}
+                <SpanLogo>
+                  <span className="pr-2">
+                    <SiNextdotjs />
+                  </span>
+                  <span className="text-white">Next JS.</span>
+                </SpanLogo>
+              </p>{" "}
             </div>
           </div>
-          <div className="mb-40 xl:ml-[25%] xl:mr-[25%] text-xl font-light leading-10">
-            <p className=" ">
-              Développeur spécialisé{" "}
-              <SpanLogo>
-                <span className="pr-2">
-                  <SiJavascript />
-                </span>
-                <span className="text-white">Javascript</span>
-              </SpanLogo>{" "}
-              je construis et déploie vos applications en m’appuyant sur{" "}
-              <SpanLogo>
-                <span className="pr-2">
-                  <SiReact />
-                </span>
-                <span className="text-white">React</span>
-              </SpanLogo>{" "}
-              &{" "}
-              <SpanLogo>
-                <span className="pr-2">
-                  <SiTypescript />
-                </span>
-                <span className="text-white">typescript.</span>
-              </SpanLogo>{" "}
-              Pour la partie SCSS, je me sers de{" "}
-              <SpanLogo>
-                <span className="pr-2">
-                  <SiTailwindcss />
-                </span>
-                <span className="text-white">Tailwind</span>
-              </SpanLogo>{" "}
-              comme base de production.
-            </p>
-            <p>
-              <br />
-              Pour le backend, après avoir initialement été formé dans les
-              règles de l’art à l’environnement
-              <SpanLogo>
-                <span className="pr-2">
-                  <SiRubyonrails />
-                </span>
-                <span className="text-white">Ruby on Rails</span>
-              </SpanLogo>
-              , je me suis converti depuis un an à la souplesse et la rapidité
-              de développement de{" "}
-              <SpanLogo>
-                <span className="pr-2">
-                  <SiNextdotjs />
-                </span>
-                <span className="text-white">Next JS.</span>
-              </SpanLogo>
-            </p>{" "}
-          </div>
-        </div>
-      </section>
-      <section className=" bg-grayflo text-darkflo dark:text-grayflo px-6 flex flex-col justify-center items-center gap-4 min-h-screen">
-        <div className=" bg-white dark:bg-violet-800 w-full">
-          <div className=" xl:ml-[25%] py-20">
-            <p className="underline-offset-4 w-auto text-xs p-1 mb-5">
-              Developper & creator
-            </p>
-            <div
-              style={{ gridColumn: "2/5" }}
-              className="text-violet-800 dark:text-grayflo"
-            >
-              <TitleCut>Designer UI/UX</TitleCut>
-              <TitleCut>ou product designer</TitleCut>
-              <TitleCut> ?</TitleCut>
+        </section>
+        <section className=" bg-grayflo text-darkflo dark:text-grayflo px-6 flex flex-col justify-center items-center gap-4 min-h-screen">
+          <div className=" bg-white dark:bg-violet-800 w-full">
+            <div className=" xl:ml-[25%] py-20">
+              <p className="underline-offset-4 w-auto text-xs p-1 mb-5">
+                Developper & creator
+              </p>
+              <div
+                style={{ gridColumn: "2/5" }}
+                className="text-violet-800 dark:text-grayflo"
+              >
+                <TitleCut>Designer UI/UX</TitleCut>
+                <TitleCut>ou product designer</TitleCut>
+                <TitleCut> ?</TitleCut>
+              </div>
             </div>
-          </div>
-          <div className="mb-40 xl:ml-[25%] xl:mr-[25%] text-xl font-light leading-10">
-            <p>
-              {/* Passé par les écoles d’Art, les Agences
+            <div className="mb-40 xl:ml-[25%] xl:mr-[25%] text-xl font-light leading-10">
+              <p>
+                {/* Passé par les écoles d’Art, les Agences
               de publicité, et geek depuis le berceau, je suis un codeur
               graphiste, ou un graphiste qui code. Besoins des derniers
               rafinemments d’interfaces pour votre site mobile ? J’ai les bonnes
               réponses pour vous. Besoin de marquer votre public avec une
               identité produit innovante ? J’ai l’expérience qu’il vous faut. */}
+                Designer graphique de formation, passé par les écoles d’Art, je
+                suis monté en compétences au fil de ma carrière en me
+                spécialisant dans le design numérique et dans le développement
+                d’interfaces web. Si j’ai les compétences pour marquer
+                émotionnellement le public avec une identité d’entreprise. Ce
+                qui m’anime, au quotidien c’est de trouver la meilleur façon de
+                donner vie à vos données, dans des interfaces fluides, épurées
+                et facile à comprendre. L’ergonomie avant tout !.
+              </p>{" "}
+            </div>
+          </div>
+        </section>
+        <section className="px-6 mx-6 min-h-svh bg-white dark:bg-violet-800  flex flex-col items-center text-xl font-light leading-10">
+          <div
+            id="therow"
+            className=" my-auto p-6 gap-6 flex flex-wrap justify-between mx-auto max-w-none w-full "
+          >
+            {/* <div className=" md:hidden text-violet-800 dark:text-grayflo w-full lg:ml-[25%]">
+            <TitleCut>Designer UI/UX</TitleCut>
+            <TitleCut>ou product designer</TitleCut>
+            <TitleCut> ?</TitleCut>
+          </div> */}
+            <div id="colone1" className="">
+              <div className="">
+                <TitleCut>Designer UI/UX</TitleCut>
+                <TitleCut>ou product</TitleCut>
+                <TitleCut>designer ?</TitleCut>
+                {/* <div id="detail">
+                <div id="itemwrapper">
+                  <p>Title</p>
+                  <p>
+                    Product / launch
+                    <br />
+                    positioning / brand
+                  </p>
+                </div>
+              </div> */}
+              </div>
+            </div>
+            <div
+              id="colone2"
+              className="flex  grow-0 shrink-0 basis-full lg:basis-5/12"
+            >
               Designer graphique de formation, passé par les écoles d’Art, je
               suis monté en compétences au fil de ma carrière en me spécialisant
               dans le design numérique et dans le développement d’interfaces
@@ -180,11 +226,53 @@ const Home = async () => {
               quotidien c’est de trouver la meilleur façon de donner vie à vos
               données, dans des interfaces fluides, épurées et facile à
               comprendre. L’ergonomie avant tout !.
-            </p>{" "}
+            </div>
           </div>
-        </div>
-      </section>
-      {/* <section className=" bg-grayflo text-white dark:text-darkflo px-6 flex flex-col justify-center items-center gap-4 min-h-screen">
+        </section>
+        <section className="px-6 mx-6 min-h-svh bg-white dark:bg-grayflo dark:text-violet-800  flex flex-col items-center text-xl font-light leading-10">
+          <div
+            id="therow"
+            className="my-auto p-6 gap-6 flex flex-wrap justify-between mx-auto max-w-none w-full "
+          >
+            {/* <div className=" md:hidden text-violet-800 dark:text-grayflo w-full lg:ml-[25%]">
+            <TitleCut>Designer UI/UX</TitleCut>
+            <TitleCut>ou product designer</TitleCut>
+            <TitleCut> ?</TitleCut>
+          </div> */}
+            <div id="colone1" className="">
+              <div className="">
+                <TitleCut>Designer UI/UX</TitleCut>
+                <TitleCut>ou product</TitleCut>
+                <TitleCut>designer ?</TitleCut>
+                {/* <div id="detail">
+                <div id="itemwrapper">
+                  <p>Title</p>
+                  <p>
+                    Product / launch
+                    <br />
+                    positioning / brand
+                  </p>
+                </div>
+              </div> */}
+              </div>
+            </div>
+            <div
+              id="colone2"
+              className="flex  grow-0 shrink-0 basis-full lg:basis-5/12"
+            >
+              Designer graphique de formation, passé par les écoles d’Art, je
+              suis monté en compétences au fil de ma carrière en me spécialisant
+              dans le design numérique et dans le développement d’interfaces
+              web. Si j’ai les compétences pour marquer émotionnellement le
+              public avec une identité d’entreprise. Ce qui m’anime, au
+              quotidien c’est de trouver la meilleur façon de donner vie à vos
+              données, dans des interfaces fluides, épurées et facile à
+              comprendre. L’ergonomie avant tout !.
+            </div>
+          </div>
+        </section>
+
+        {/* <section className=" bg-grayflo text-white dark:text-darkflo px-6 flex flex-col justify-center items-center gap-4 min-h-screen">
         <div className="">
           <div className=" xl:ml-[25%] py-20">
             <p className=" underline underline-offset-4 w-auto text-xs p-1 mb-5">
@@ -247,7 +335,7 @@ const Home = async () => {
           </div>
         </div>
       </section> */}
-      {/* <section className=" bg-violet-800 text-grayflo dark:text-grayflo px-6 py-6 flex flex-col justify-center items-center gap-4 min-h-screen">
+        {/* <section className=" bg-violet-800 text-grayflo dark:text-grayflo px-6 py-6 flex flex-col justify-center items-center gap-4 min-h-screen">
         <div className=" w-full xl:w-[75%]">
           <div className=" xl:ml-[34.5%] py-20">
             <p className=" underline underline-offset-4 w-auto text-xs p-1 mb-5">
@@ -270,7 +358,7 @@ const Home = async () => {
         </div>
       </section> */}
 
-      {/* <div className="bg-greenflo text-emerald-900 pt-20 px-10 py-10 md:px-30 lg:px-40 xl:px-80 flex flex-col justify-center gap-4 min-h-screen">
+        {/* <div className="bg-greenflo text-emerald-900 pt-20 px-10 py-10 md:px-30 lg:px-40 xl:px-80 flex flex-col justify-center gap-4 min-h-screen">
         <p className=" underline underline-offset-4 w-auto text-emerald-950 text-xs p-1 mb-5">
           TitleCut : JS safari friendly
         </p>
@@ -293,7 +381,7 @@ const Home = async () => {
         </div>
       </div> */}
 
-      {/* <div className=" bg-darkflo text-white pt-20 px-10 py-10 md:px-30 lg:px-40 xl:px-80 flex flex-col justify-center gap-4 min-h-screen">
+        {/* <div className=" bg-darkflo text-white pt-20 px-10 py-10 md:px-30 lg:px-40 xl:px-80 flex flex-col justify-center gap-4 min-h-screen">
         <p className=" underline underline-offset-4 w-auto text-xs p-1 mb-5">
           TitleCut : JS safari friendly
         </p>
@@ -317,7 +405,7 @@ const Home = async () => {
           <ListPost posts={posts} />
         </div>
       </div> */}
-      {/* <div className=" bg-gray-500 text-white pt-20 px-10 py-10 md:px-30 lg:px-40 xl:px-80 flex flex-col justify-center gap-4 min-h-screen">
+        {/* <div className=" bg-gray-500 text-white pt-20 px-10 py-10 md:px-30 lg:px-40 xl:px-80 flex flex-col justify-center gap-4 min-h-screen">
         <p className=" underline underline-offset-4 w-auto text-xs p-1 mb-5">
           TitleCut : JS safari friendly
         </p>
@@ -376,7 +464,7 @@ const Home = async () => {
           </div>
         </div>
       </div> */}
-      {/* <div className="flex flex-col justify-start items-start p-36">
+        {/* <div className="flex flex-col justify-start items-start p-36">
         <div className=" w-2/3">
           <Video
             videoUrl={
@@ -385,8 +473,8 @@ const Home = async () => {
           />
         </div>
       </div> */}
-      {/* <ScrollVideoCustom /> */}
-      {/* <ParagrapheColones>
+        {/* <ScrollVideoCustom /> */}
+        {/* <ParagrapheColones>
         xLorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
         pariatur quae sint. Eos sunt veritatis cum! Delectus, vitae illum?
         Molestiae delectus assumenda reiciendis incidunt cum. Praesentium beatae
@@ -396,7 +484,7 @@ const Home = async () => {
         cum. Praesentium beatae quaerat dignissimos voluptas?
       </ParagrapheColones> */}
 
-      {/* <div className="bg-bluflo text-white pt-20 px-10 py-10 md:px-30 lg:px-40 xl:px-80 flex flex-col justify-center gap-4 min-h-screen">
+        {/* <div className="bg-bluflo text-white pt-20 px-10 py-10 md:px-30 lg:px-40 xl:px-80 flex flex-col justify-center gap-4 min-h-screen">
 
         <p className=" underline underline-offset-4 w-auto text-xs p-1 mb-5">
           TitleCut : JS safari friendly
@@ -420,7 +508,7 @@ const Home = async () => {
           </p>
         </div>
       </div> */}
-      {/* <div className="z-50 absolute bg-slate-200 w-2/3 h-50 p-8">hjhjhjhjh</div>
+        {/* <div className="z-50 absolute bg-slate-200 w-2/3 h-50 p-8">hjhjhjhjh</div>
       <main className=" flex min-h-screen flex-col items-center justify-between">
         <div className="h-[120vh] z-10 border border-green-500 w-2/3">
           <ModeToggle />
@@ -438,7 +526,9 @@ const Home = async () => {
             // style={{ objectFit: "cover" }}
           ></Image>
         </div>
+
       </main> */}
+      </div>
     </>
   );
 };
