@@ -75,20 +75,24 @@ export default function WindowsSizeDetector() {
           // backdropFilter: "blur(16px)",
         }
       }
-      className="font-medium sm:bg-grayflo  sm:flex gap-4 mt-4 sm:mt-5 sm:p-4 sm:pb-20 text-xs dark:text-darkflo rounded-2xl"
+      className="font-medium sm:bg-grayflo  flex flex-col gap-4 mt-4 sm:mt-5 sm:p-4 sm:pb-20 text-xs dark:text-darkflo rounded-2xl"
     >
       <p>WINDOW SIZE</p>
-      <ScrollPositionDetector />
-      <p>
-        <span>Width </span>
-        {windowSize.width}
-      </p>
-      <p>
-        <span>Height </span>
-        {windowSize.height}
-      </p>
-
-      <p>Tailwind screen {screenTWcond(windowSize.width)}</p>
+      <div className="flex gap-4">
+        <div className="flex flex-col flex-none">
+          <span>Width </span>
+          <span>{windowSize.width}</span>
+        </div>
+        <div className="flex flex-col flex-none">
+          <span>Height </span>
+          <span>{windowSize.height}</span>
+        </div>
+        <div className="flex flex-col flex-none">
+          <span>Breakpoint</span>
+          <span>{screenTWcond(windowSize.width)}</span>
+        </div>
+        <ScrollPositionDetector />
+      </div>
     </div>
   );
 }

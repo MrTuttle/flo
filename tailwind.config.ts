@@ -18,6 +18,10 @@ const config = {
       },
     },
     extend: {
+      aspectRatio: {
+        cardGoldNumberV: "0.618",
+        cardGoldNumberH: "1.618",
+      },
       colors: {
         // bluflo: "#0DA4FF",
         bluflo: "rgb(13,164,255)",
@@ -62,6 +66,7 @@ const config = {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+        32: "2rem",
       },
       keyframes: {
         grow: {

@@ -12,9 +12,10 @@ const ScrollPositionDetector = () => {
   });
 
   return (
-    <p>
-      <span>Scroll </span> {latestScrollY}
-    </p>
+    <div className="flex flex-col flex-none">
+      <span>Scroll</span>
+      <span className="line-clamp-1">{latestScrollY}</span>
+    </div>
   );
 };
 

@@ -37,6 +37,7 @@ import { SiPostgresql } from "react-icons/si";
 import { SiVercel } from "react-icons/si";
 import { SiGithub } from "react-icons/si";
 import { SiLinkedin } from "react-icons/si";
+import { CardPokemon } from "./components/ui/CardPokemon";
 
 // export default Home = async () {
 
@@ -96,6 +97,13 @@ const Home = async () => {
                 <TitleCut>Tu cherches</TitleCut>
                 <TitleCut>un dev front ?</TitleCut>
               </div>
+              {/* <div className="relative overflow-hidden w-full max-w-[360px] aspect-cardGoldNumberV rounded-32 bg-white/50 bg-blend-overlay">
+                <div className="absolute overflow-hidden inset-4 rounded-32 bg-blue-400 flex flex-col">
+                  <div className=" flex-1 bg-slate-100 bg-[url(https://res.cloudinary.com/dc8rzbrbr/image/upload/v1712906688/Front-end_jay6bc.png)] bg-cover"></div>
+                  <div className=" flex-1 bg-slate-200"></div>
+                </div>
+              </div> */}
+              <CardPokemon />
             </div>
             <div
               id="colone2"
