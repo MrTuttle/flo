@@ -6,9 +6,9 @@ interface SpanLogoProps {
 
 const SpanLogo = ({ children }: SpanLogoProps) => {
   return (
-    <div className=" bg-black/50 inline-flex px-2 py-1 rounded items-center font-mono text-sm">
+    <span className=" bg-neutral-500 inline-flex mx-1 px-2 py-1 rounded items-center font-mono text-sm">
       {children}
-    </div>
+    </span>
   );
 };
 

@@ -71,7 +71,7 @@ const Home = async () => {
   return (
     <>
       <div // this div is just to define darkmode colors without touch tailwins shadcn variables
-        className="bg-grayflo dark:bg-violet-950 dark:text-grayflo"
+        className="bg-grayflo dark:bg-grayflo dark:text-grayflo"
       >
         {/* <WindowsSizeDetector /> */}
         <div className="fixed z-50 top-0 right-0 p-4">
@@ -86,7 +86,217 @@ const Home = async () => {
 
         {/* <div className="h-screen"></div> */}
         <Curtain />
-        <section className=" bg-grayflo text-white dark:text-darkflo px-6 flex flex-col justify-center items-center gap-4 min-h-screen">
+        <section className="section-loud rounded-3xl p-6 sm:m-6 min-h-svh bg-greenflo text-neutral-500 dark:bg-darkflo dark:text-grayflo  flex flex-col items-center text-xl font-light leading-10">
+          <div
+            id="therow"
+            className=" my-auto gap-6 flex flex-wrap justify-between mx-auto max-w-none w-full "
+          >
+            <div id="colone1" className="ml-[10%]">
+              <div className="">
+                <TitleCut>Tu cherches</TitleCut>
+                <TitleCut>un dev front ?</TitleCut>
+              </div>
+            </div>
+            <div
+              id="colone2"
+              className="flex  grow-0 shrink-0 basis-full lg:basis-5/12"
+            >
+              <div className=" ">
+                Coucou ! c’est moi qu’il te faut !<br />
+                Développeur spécialisé{" "}
+                <SpanLogo>
+                  <span className="pr-2 text-greenflo dark:text-grayflo">
+                    <SiJavascript />
+                  </span>
+                  <div className="text-white">Javascript</div>
+                </SpanLogo>{" "}
+                je conçois et développe des composants d’interface réutilisable
+                en m’appuyant sur{" "}
+                <SpanLogo>
+                  <span className="pr-2 text-greenflo dark:text-grayflo">
+                    <SiTypescript />
+                  </span>
+                  <span className="text-white">typescript</span>
+                </SpanLogo>{" "}
+                et{" "}
+                <SpanLogo>
+                  <span className="pr-2 text-greenflo dark:text-grayflo">
+                    <SiReact />
+                  </span>
+                  <span className="text-white">React</span>
+                </SpanLogo>{" "}
+                accompagné de{" "}
+                <SpanLogo>
+                  <span className="pr-2 text-greenflo dark:text-grayflo">
+                    <SiTailwindcss />
+                  </span>
+                  <span className="text-white">Tailwind</span>
+                </SpanLogo>{" "}
+                pour gérer l’affichage et les animations de bases.
+                <br />
+                Pour le backend, j’ai été formé dans les règles de l’art à
+                l’environnement{" "}
+                <SpanLogo>
+                  <span className="pr-2 text-greenflo dark:text-grayflo">
+                    <SiRubyonrails />
+                  </span>
+                  <span className="text-white">Ruby on Rails</span>
+                </SpanLogo>{" "}
+                au Wagon à Lyon, je saurais donc trouver facilement mon chemin
+                dans vos applications Ruby.
+                <br /> J’utilise également{" "}
+                <SpanLogo>
+                  <span className="pr-2 text-greenflo dark:text-grayflo">
+                    <SiNextdotjs />
+                  </span>
+                  <span className="text-white">Next JS</span>
+                </SpanLogo>{" "}
+                qui progresse à toute vitesse et permet de développer un backend
+                pour React très rapidement.
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="section-light rounded-3xl p-6 sm:m-6 min-h-svh bg-white text-neutral-500 dark:bg-greenflo dark:text-darkflo  flex flex-col items-center text-xl font-light leading-10">
+          <div
+            id="therow"
+            className=" my-auto gap-6 flex lg:flex-row-reverse flex-wrap justify-between mx-auto max-w-none w-full "
+          >
+            <div
+              id="colone1"
+              className="lg:mr-[10%] lg:w-[56.5%] xl:w-[44%] 2xl:w-[35%] "
+            >
+              <div className="">
+                <TitleCut>Designer UI/UX</TitleCut>
+                <TitleCut>ou product</TitleCut>
+                <TitleCut>designer ?</TitleCut>
+              </div>
+            </div>
+            <div
+              id="colone2"
+              className="flex lg:ml-[10%]  grow-0 shrink-0 basis-full md:basis-8/12 xl:basis-4/12 2xl:basis-5/12"
+            >
+              Designer graphique de formation, passé par les écoles d’Art, je
+              suis monté en compétences au fil de ma carrière en me spécialisant
+              dans le design numérique et dans le développement d’interfaces
+              web. Si j’ai les compétences pour marquer émotionnellement le
+              public avec une identité d’entreprise. Ce qui m’anime, au
+              quotidien c’est de trouver la meilleur façon de donner vie à vos
+              données, dans des interfaces fluides, épurées et facile à
+              comprendre. L’ergonomie avant tout !.
+            </div>
+          </div>
+        </section>
+        <section className="section-accent rounded-3xl p-6 sm:m-6 min-h-svh bg-neutral-300 text-darkflo dark:bg-neutral-500 dark:text-greenflo  flex flex-col items-center text-xl font-light leading-10">
+          <div
+            id="therow"
+            className="my-auto gap-6 flex flex-wrap justify-between mx-auto max-w-none w-full "
+          >
+            <div id="colone1" className="lg:ml-[10%]">
+              <div className="">
+                <TitleCut>Designer UI/UX</TitleCut>
+                <TitleCut>ou product</TitleCut>
+                <TitleCut>designer ?</TitleCut>
+              </div>
+            </div>
+            <div
+              id="colone2"
+              className="flex  grow-0 shrink-0 basis-full lg:basis-5/12"
+            >
+              Designer graphique de formation, passé par les écoles d’Art, je
+              suis monté en compétences au fil de ma carrière en me spécialisant
+              dans le design numérique et dans le développement d’interfaces
+              web. Si j’ai les compétences pour marquer émotionnellement le
+              public avec une identité d’entreprise. Ce qui m’anime, au
+              quotidien c’est de trouver la meilleur façon de donner vie à vos
+              données, dans des interfaces fluides, épurées et facile à
+              comprendre. L’ergonomie avant tout !.
+            </div>
+          </div>
+        </section>
+        {/* <section className="section-loud p-6 sm:mx-6 min-h-svh bg-neutral-500 text-greenflo dark:bg-neutral-500 dark:text-grayflo  flex flex-col items-center text-xl font-light leading-10">
+          <div
+            id="therow"
+            className=" my-auto gap-6 flex flex-wrap justify-between mx-auto max-w-none w-full "
+          >
+            <div id="colone1" className="">
+              <div className="">
+                <TitleCut>Designer UI/UX</TitleCut>
+                <TitleCut>ou product</TitleCut>
+                <TitleCut>designer ?</TitleCut>
+              </div>
+            </div>
+            <div
+              id="colone2"
+              className="flex  grow-0 shrink-0 basis-full lg:basis-5/12"
+            >
+              Designer graphique de formation, passé par les écoles d’Art, je
+              suis monté en compétences au fil de ma carrière en me spécialisant
+              dans le design numérique et dans le développement d’interfaces
+              web. Si j’ai les compétences pour marquer émotionnellement le
+              public avec une identité d’entreprise. Ce qui m’anime, au
+              quotidien c’est de trouver la meilleur façon de donner vie à vos
+              données, dans des interfaces fluides, épurées et facile à
+              comprendre. L’ergonomie avant tout !.
+            </div>
+          </div>
+        </section>
+        <section className="section-light p-6 sm:mx-6 min-h-svh bg-white text-neutral-500 dark:bg-grayflo dark:text-violet-800  flex flex-col items-center text-xl font-light leading-10">
+          <div
+            id="therow"
+            className="my-auto gap-6 flex flex-wrap justify-between mx-auto max-w-none w-full "
+          >
+            <div id="colone1" className="">
+              <div className="">
+                <TitleCut>Designer UI/UX</TitleCut>
+                <TitleCut>ou product</TitleCut>
+                <TitleCut>designer ?</TitleCut>
+              </div>
+            </div>
+            <div
+              id="colone2"
+              className="flex  grow-0 shrink-0 basis-full lg:basis-5/12"
+            >
+              Designer graphique de formation, passé par les écoles d’Art, je
+              suis monté en compétences au fil de ma carrière en me spécialisant
+              dans le design numérique et dans le développement d’interfaces
+              web. Si j’ai les compétences pour marquer émotionnellement le
+              public avec une identité d’entreprise. Ce qui m’anime, au
+              quotidien c’est de trouver la meilleur façon de donner vie à vos
+              données, dans des interfaces fluides, épurées et facile à
+              comprendre. L’ergonomie avant tout !.
+            </div>
+          </div>
+        </section>
+        <section className="section-accent p-6 sm:mx-6 min-h-svh bg-greenflo text-neutral-500 dark:bg-violet-800 dark:text-grayflo  flex flex-col items-center text-xl font-light leading-10">
+          <div
+            id="therow"
+            className="my-auto gap-6 flex flex-wrap justify-between mx-auto max-w-none w-full "
+          >
+            <div id="colone1" className="">
+              <div className="">
+                <TitleCut>Designer UI/UX</TitleCut>
+                <TitleCut>ou product</TitleCut>
+                <TitleCut>designer ?</TitleCut>
+              </div>
+            </div>
+            <div
+              id="colone2"
+              className="flex  grow-0 shrink-0 basis-full lg:basis-5/12"
+            >
+              Designer graphique de formation, passé par les écoles d’Art, je
+              suis monté en compétences au fil de ma carrière en me spécialisant
+              dans le design numérique et dans le développement d’interfaces
+              web. Si j’ai les compétences pour marquer émotionnellement le
+              public avec une identité d’entreprise. Ce qui m’anime, au
+              quotidien c’est de trouver la meilleur façon de donner vie à vos
+              données, dans des interfaces fluides, épurées et facile à
+              comprendre. L’ergonomie avant tout !.
+            </div>
+          </div>
+        </section> */}
+
+        {/* <section className=" bg-grayflo text-white dark:text-darkflo px-6 flex flex-col justify-center items-center gap-4 min-h-screen">
           <div className=" bg-greenflo w-full">
             <div className=" xl:ml-[25%] py-20">
               <p className="underline-offset-4 w-auto text-xs p-1 mb-5">
@@ -169,12 +379,7 @@ const Home = async () => {
             </div>
             <div className="mb-40 xl:ml-[25%] xl:mr-[25%] text-xl font-light leading-10">
               <p>
-                {/* Passé par les écoles d’Art, les Agences
-              de publicité, et geek depuis le berceau, je suis un codeur
-              graphiste, ou un graphiste qui code. Besoins des derniers
-              rafinemments d’interfaces pour votre site mobile ? J’ai les bonnes
-              réponses pour vous. Besoin de marquer votre public avec une
-              identité produit innovante ? J’ai l’expérience qu’il vous faut. */}
+
                 Designer graphique de formation, passé par les écoles d’Art, je
                 suis monté en compétences au fil de ma carrière en me
                 spécialisant dans le design numérique et dans le développement
@@ -186,91 +391,7 @@ const Home = async () => {
               </p>{" "}
             </div>
           </div>
-        </section>
-        <section className="px-6 mx-6 min-h-svh bg-white dark:bg-violet-800  flex flex-col items-center text-xl font-light leading-10">
-          <div
-            id="therow"
-            className=" my-auto p-6 gap-6 flex flex-wrap justify-between mx-auto max-w-none w-full "
-          >
-            {/* <div className=" md:hidden text-violet-800 dark:text-grayflo w-full lg:ml-[25%]">
-            <TitleCut>Designer UI/UX</TitleCut>
-            <TitleCut>ou product designer</TitleCut>
-            <TitleCut> ?</TitleCut>
-          </div> */}
-            <div id="colone1" className="">
-              <div className="">
-                <TitleCut>Designer UI/UX</TitleCut>
-                <TitleCut>ou product</TitleCut>
-                <TitleCut>designer ?</TitleCut>
-                {/* <div id="detail">
-                <div id="itemwrapper">
-                  <p>Title</p>
-                  <p>
-                    Product / launch
-                    <br />
-                    positioning / brand
-                  </p>
-                </div>
-              </div> */}
-              </div>
-            </div>
-            <div
-              id="colone2"
-              className="flex  grow-0 shrink-0 basis-full lg:basis-5/12"
-            >
-              Designer graphique de formation, passé par les écoles d’Art, je
-              suis monté en compétences au fil de ma carrière en me spécialisant
-              dans le design numérique et dans le développement d’interfaces
-              web. Si j’ai les compétences pour marquer émotionnellement le
-              public avec une identité d’entreprise. Ce qui m’anime, au
-              quotidien c’est de trouver la meilleur façon de donner vie à vos
-              données, dans des interfaces fluides, épurées et facile à
-              comprendre. L’ergonomie avant tout !.
-            </div>
-          </div>
-        </section>
-        <section className="px-6 mx-6 min-h-svh bg-white dark:bg-grayflo dark:text-violet-800  flex flex-col items-center text-xl font-light leading-10">
-          <div
-            id="therow"
-            className="my-auto p-6 gap-6 flex flex-wrap justify-between mx-auto max-w-none w-full "
-          >
-            {/* <div className=" md:hidden text-violet-800 dark:text-grayflo w-full lg:ml-[25%]">
-            <TitleCut>Designer UI/UX</TitleCut>
-            <TitleCut>ou product designer</TitleCut>
-            <TitleCut> ?</TitleCut>
-          </div> */}
-            <div id="colone1" className="">
-              <div className="">
-                <TitleCut>Designer UI/UX</TitleCut>
-                <TitleCut>ou product</TitleCut>
-                <TitleCut>designer ?</TitleCut>
-                {/* <div id="detail">
-                <div id="itemwrapper">
-                  <p>Title</p>
-                  <p>
-                    Product / launch
-                    <br />
-                    positioning / brand
-                  </p>
-                </div>
-              </div> */}
-              </div>
-            </div>
-            <div
-              id="colone2"
-              className="flex  grow-0 shrink-0 basis-full lg:basis-5/12"
-            >
-              Designer graphique de formation, passé par les écoles d’Art, je
-              suis monté en compétences au fil de ma carrière en me spécialisant
-              dans le design numérique et dans le développement d’interfaces
-              web. Si j’ai les compétences pour marquer émotionnellement le
-              public avec une identité d’entreprise. Ce qui m’anime, au
-              quotidien c’est de trouver la meilleur façon de donner vie à vos
-              données, dans des interfaces fluides, épurées et facile à
-              comprendre. L’ergonomie avant tout !.
-            </div>
-          </div>
-        </section>
+        </section> */}
 
         {/* <section className=" bg-grayflo text-white dark:text-darkflo px-6 flex flex-col justify-center items-center gap-4 min-h-screen">
         <div className="">
