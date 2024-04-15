@@ -3,6 +3,12 @@ import { ModeToggle } from "@/app/components/ui/ModeToggle";
 import { Button } from "@/app/components/ui/button";
 import Image from "next/image";
 import flo from "@/public/avatar/Florent-Vincerot-avatar.jpg";
+import { Inter } from "next/font/google";
+import { Outfit } from "next/font/google";
+import { Space_Grotesk } from "next/font/google";
+const inter = Inter({ subsets: ["latin"], display: "swap" });
+const outfit = Outfit({ subsets: ["latin"], display: "swap" });
+const space_grotesk = Space_Grotesk({ subsets: ["latin"], display: "swap" });
 
 import HomeHeroContent from "@/app/components/home/HomeHeroContent";
 import WindowsSizeDetector, {
@@ -87,7 +93,94 @@ const Home = async () => {
 
         {/* <div className="h-screen"></div> */}
         <Curtain />
-        <section className="section-loud rounded-3xl p-6 sm:m-6 min-h-svh bg-greenflo text-neutral-500 dark:bg-darkflo dark:text-grayflo  flex flex-col items-center text-xl font-light leading-10">
+        <section className="pb-52 rounded-3xl p-6 sm:m-6  text-darkflo dark:text-grayflo  flex flex-col items-center text-lg leading-[2.4rem]">
+          <div className="flex">
+            <div className="basis-3/12"></div>
+            <div className="basis-8/12">
+              <TitleCut># Dev. </TitleCut>
+              <div className=" font-mono mt-5 relative ">
+                <div className="text-xs absolute -translate-x-[100%] -left-14 translate-y-3">
+                  2022 | TODAY
+                </div>
+                Développeur spécialisé{" "}
+                <SpanLogo>
+                  <span className="pr-2 text-greenflo dark:text-grayflo">
+                    <SiJavascript />
+                  </span>
+                  <div className="text-white">Javascript</div>
+                </SpanLogo>{" "}
+                je conçois et développe des composants d’interface réutilisable
+                en m’appuyant sur{" "}
+                <SpanLogo>
+                  <span className="pr-2 text-greenflo dark:text-grayflo">
+                    <SiTypescript />
+                  </span>
+                  <span className="text-white">typescript</span>
+                </SpanLogo>{" "}
+                et{" "}
+                <SpanLogo>
+                  <span className="pr-2 text-greenflo dark:text-grayflo">
+                    <SiReact />
+                  </span>
+                  <span className="text-white">React</span>
+                </SpanLogo>{" "}
+                accompagné de{" "}
+                <SpanLogo>
+                  <span className="pr-2 text-greenflo dark:text-grayflo">
+                    <SiTailwindcss />
+                  </span>
+                  <span className="text-white">Tailwind</span>
+                </SpanLogo>{" "}
+                pour gérer l’affichage et les animations de bases.
+                <br />
+                Ces connaissances javascript / Typescript me permettent
+                également m’adapter rapidement à d’autres frameworks comme
+                Angular ou Vue JS. <br />
+                Pour le backend, j’ai été formé dans les règles de l’art à
+                l’environnement{" "}
+                <SpanLogo>
+                  <span className="pr-2 text-greenflo dark:text-grayflo">
+                    <SiRubyonrails />
+                  </span>
+                  <span className="text-white">Ruby on Rails</span>
+                </SpanLogo>{" "}
+                au Wagon à Lyon. J’utilise également{" "}
+                <SpanLogo>
+                  <span className="pr-2 text-greenflo dark:text-grayflo">
+                    <SiNextdotjs />
+                  </span>
+                  <span className="text-white">Next JS</span>
+                </SpanLogo>{" "}
+                qui progresse à toute vitesse et me permet de développer un
+                backend pour React très rapidement.
+              </div>
+            </div>
+            <div className="basis-2/12"></div>
+          </div>
+        </section>
+        <section className="pb-52 rounded-3xl p-6 sm:m-6  text-darkflo dark:text-grayflo  flex flex-col items-center text-lg leading-[2.4rem]">
+          <div className="flex">
+            <div className="basis-3/12"></div>
+            <div className="basis-8/12">
+              <TitleCut># Designer UI/UX</TitleCut>
+              <div className=" font-mono mt-5 relative ">
+                <div className="text-xs absolute -translate-x-[100%] sm:-left-14 translate-y-3 -rotate-90 sm:rotate-0 -left-0 top-9 sm:top-0">
+                  2009 | TODAY
+                </div>
+                Initialement formé aux arts graphiques j’ai été en charge des
+                interfaces et de l’expérience utilisateur d’une cinquantaine de
+                sites web. En veille constante pour ne rien rater des nouvelles
+                tendances en design d’interface, je peux concevoir des maquettes
+                pour vos projets numériques avec Figma, sketch ou Adobe XD. Pour
+                les contenus, je maîtrise les outils graphiques de la suite
+                Adobe dont After effect pour le motion design.
+              </div>
+            </div>
+            <div className="basis-2/12"></div>
+          </div>
+        </section>
+
+        {/* <section className="section-loud rounded-3xl p-6 sm:m-6 min-h-svh bg-greenflo text-neutral-500 dark:bg-darkflo dark:text-grayflo  flex flex-col items-center text-xl font-light leading-10">
           <div
             id="therow"
             className=" my-auto gap-6 flex flex-wrap justify-between mx-auto max-w-none w-full "
@@ -97,12 +190,7 @@ const Home = async () => {
                 <TitleCut>Tu cherches</TitleCut>
                 <TitleCut>un dev front ?</TitleCut>
               </div>
-              {/* <div className="relative overflow-hidden w-full max-w-[360px] aspect-cardGoldNumberV rounded-32 bg-white/50 bg-blend-overlay">
-                <div className="absolute overflow-hidden inset-4 rounded-32 bg-blue-400 flex flex-col">
-                  <div className=" flex-1 bg-slate-100 bg-[url(https://res.cloudinary.com/dc8rzbrbr/image/upload/v1712906688/Front-end_jay6bc.png)] bg-cover"></div>
-                  <div className=" flex-1 bg-slate-200"></div>
-                </div>
-              </div> */}
+
               <CardPokemon />
             </div>
             <div
@@ -164,35 +252,34 @@ const Home = async () => {
               </div>
             </div>
           </div>
-        </section>
-        <section className="section-light rounded-3xl p-6 sm:m-6 min-h-svh bg-white text-neutral-500 dark:bg-greenflo dark:text-darkflo  flex flex-col items-center text-xl font-light leading-10">
-          <div
-            id="therow"
-            className=" my-auto gap-6 flex lg:flex-row-reverse flex-wrap justify-between mx-auto max-w-none w-full "
-          >
-            <div
-              id="colone1"
-              className="lg:mr-[10%] lg:w-[56.5%] xl:w-[44%] 2xl:w-[35%] "
-            >
-              <div className="">
-                <TitleCut>Designer UI/UX</TitleCut>
-                <TitleCut>ou product</TitleCut>
-                <TitleCut>designer ?</TitleCut>
-              </div>
-            </div>
+        </section> */}
+        <section className="section-light rounded-3xl p-6 sm:m-6 min-h-svh text-neutral-500 dark:bg-greenflo dark:text-darkflo  flex flex-col items-center text-xl font-light leading-10">
+          <div id="therow" className="flex justify-between border *:border  ">
             <div
               id="colone2"
-              className="flex lg:ml-[10%]  grow-0 shrink-0 basis-full md:basis-8/12 xl:basis-4/12 2xl:basis-5/12"
+              className="flex flex-col gap-4 w-[25%] h-[10%] mx-10 sticky"
             >
-              Designer graphique de formation, passé par les écoles d’Art, je
-              suis monté en compétences au fil de ma carrière en me spécialisant
-              dans le design numérique et dans le développement d’interfaces
-              web. Si j’ai les compétences pour marquer émotionnellement le
-              public avec une identité d’entreprise. Ce qui m’anime, au
-              quotidien c’est de trouver la meilleur façon de donner vie à vos
-              données, dans des interfaces fluides, épurées et facile à
-              comprendre. L’ergonomie avant tout !.
+              <div className="h-auto">
+                After few years in Album Agency, I grow as artistic director. My
+                work involves developing brands, advertising concepts,
+                illustrations, creating digital customer experiences and
+                animating motion design. At this time, I discover basics of
+                javascript coding and use it to optimise complex motion design
+                animation.
+              </div>
             </div>
+            <div id="colone1" className="w-[50%]">
+              <div className="">
+                <ScrollVideoCustom />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="rounded-3xl sm:m-6 min-h-svh  text-darkflo dark:bg-neutral-500 dark:text-greenflo  flex flex-col items-center text-xl font-light leading-10">
+          <div className=" w-full flex gap-4">
+            <div className=""></div>
+            <CardPokemon />
+            <CardPokemon />
           </div>
         </section>
         <section className="section-accent rounded-3xl p-6 sm:m-6 min-h-svh bg-neutral-300 text-darkflo dark:bg-neutral-500 dark:text-greenflo  flex flex-col items-center text-xl font-light leading-10">
@@ -202,23 +289,20 @@ const Home = async () => {
           >
             <div id="colone1" className="lg:ml-[10%]">
               <div className="">
-                <TitleCut>Designer UI/UX</TitleCut>
-                <TitleCut>ou product</TitleCut>
-                <TitleCut>designer ?</TitleCut>
+                <TitleCut>Graphic</TitleCut>
+                <TitleCut>designer</TitleCut>
               </div>
             </div>
             <div
               id="colone2"
               className="flex  grow-0 shrink-0 basis-full lg:basis-5/12"
             >
-              Designer graphique de formation, passé par les écoles d’Art, je
-              suis monté en compétences au fil de ma carrière en me spécialisant
-              dans le design numérique et dans le développement d’interfaces
-              web. Si j’ai les compétences pour marquer émotionnellement le
-              public avec une identité d’entreprise. Ce qui m’anime, au
-              quotidien c’est de trouver la meilleur façon de donner vie à vos
-              données, dans des interfaces fluides, épurées et facile à
-              comprendre. L’ergonomie avant tout !.
+              Graphic Designer at Album Agency, My role encompassed high-end
+              image retouching, print design and creating brand and marketing
+              concepts for hard-to-explain B2B products. This is where I learned
+              to pay attention to detail and how to execute flawless print
+              designs. I evolves with UI /UX design responsibilities and learn
+              CSS code with the developing team.
             </div>
           </div>
         </section>

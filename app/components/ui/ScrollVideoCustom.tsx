@@ -10,13 +10,20 @@ import React from "react";
 import ScrollyVideo from "@/app/components/ui/ScrollyVideo/ScrollyVideo.jsx";
 
 const ScrollVideoCustom = () => {
-  return (
-    <div className="p-10 h-2/3">
-      <h1>My scroll video</h1>
+  const src1 =
+    "https://res.cloudinary.com/dc8rzbrbr/video/upload/v1711397442/original-af2fee503aafeb0d84d5827e281ece79_w17ec3.mp4";
+  const src2 = "https://scrollyvideo.js.org/goldengate.mp4";
+  const src3 =
+    "https://res.cloudinary.com/dc8rzbrbr/video/upload/v1711397442/La-Baraka-2024-03-22-part1_ijyl8g.mp4";
 
+  return (
+    <div className=" h-2/3">
       <div
-        className={"scrolly-container"}
-        style={{ height: "600vh", border: "solid red 1px" }}
+        // className={"scrolly-container"}
+        style={{
+          height: "400vh",
+          // border: "solid red 1px"
+        }}
       >
         <ScrollyVideo
           // play between height: "300vh" & frameThreshold to set time playing
@@ -29,7 +36,7 @@ const ScrollVideoCustom = () => {
           useWebCodecs={true}
           videoPercentage={0}
           debug={true}
-          src="https://scrollyvideo.js.org/goldengate.mp4"
+          src={src3}
         />
       </div>
       <p>gh</p>

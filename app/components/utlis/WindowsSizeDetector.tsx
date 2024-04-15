@@ -75,23 +75,28 @@ export default function WindowsSizeDetector() {
           // backdropFilter: "blur(16px)",
         }
       }
-      className="font-medium sm:bg-grayflo  flex flex-col gap-4 mt-4 sm:mt-5 sm:p-4 sm:pb-20 text-xs dark:text-darkflo rounded-2xl"
+      className="font-mono mt-4 sm:mt-5 sm:pb-10 text-xs mix-blend-difference sm:mix-blend-normal sm:text-darkflo"
     >
-      <p>WINDOW SIZE</p>
-      <div className="flex gap-4">
-        <div className="flex flex-col flex-none">
-          <span>Width </span>
-          <span>{windowSize.width}</span>
+      <div className="border dark:border-white dark:text-white sm:dark:text-darkflo sm:dark:border-darkflo sm:border-darkflo p-2 ">
+        <p>WINDOW SIZES</p>
+        <hr className=" my-1 dark:border-white sm:dark:border-darkflo sm:border-darkflo" />
+        <div className=" flex gap-4 *:flex *:flex-col ">
+          <div className=" flex-1/4">
+            <span>Width </span>
+            <span>{windowSize.width}</span>
+          </div>
+          <div className="flex-1/4">
+            <span>Height </span>
+            <span>{windowSize.height}</span>
+          </div>
+          <div className="flex-1/4">
+            <span>Breakpoint </span>
+            <span>{screenTWcond(windowSize.width)}</span>
+          </div>
+          <div className="w-[11ch]">
+            <ScrollPositionDetector />
+          </div>
         </div>
-        <div className="flex flex-col flex-none">
-          <span>Height </span>
-          <span>{windowSize.height}</span>
-        </div>
-        <div className="flex flex-col flex-none">
-          <span>Breakpoint</span>
-          <span>{screenTWcond(windowSize.width)}</span>
-        </div>
-        <ScrollPositionDetector />
       </div>
     </div>
   );

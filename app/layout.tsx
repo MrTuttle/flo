@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={outfit.className}>
+      <body className={space_grotesk.className}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
