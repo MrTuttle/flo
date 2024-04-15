@@ -154,8 +154,6 @@ const Home = async () => {
                 </SpanLogo>{" "}
                 qui progresse à toute vitesse et me permet de développer un
                 backend pour React très rapidement.
-                <a href="https://github.com/MrTuttle">lien</a>
-                <Link href="https://github.com/MrTuttle">Git</Link>
               </div>
             </div>
             <div className="basis-2/12"></div>
