@@ -44,6 +44,7 @@ import { SiVercel } from "react-icons/si";
 import { SiGithub } from "react-icons/si";
 import { SiLinkedin } from "react-icons/si";
 import { CardPokemon } from "./components/ui/CardPokemon";
+import Link from "next/link";
 
 // export default Home = async () {
 
@@ -93,7 +94,7 @@ const Home = async () => {
 
         {/* <div className="h-screen"></div> */}
         <Curtain />
-        <section className="pb-52 rounded-3xl p-6 sm:m-6  text-darkflo dark:text-grayflo  flex flex-col items-center text-lg leading-[2.4rem]">
+        <section className="pb-52 rounded-3xl p-6 sm:m-6  text-darkflo  flex flex-col items-center text-lg leading-[2.4rem]">
           <div className="flex">
             <div className="basis-3/12"></div>
             <div className="basis-8/12">
@@ -153,12 +154,14 @@ const Home = async () => {
                 </SpanLogo>{" "}
                 qui progresse à toute vitesse et me permet de développer un
                 backend pour React très rapidement.
+                <a href="https://github.com/MrTuttle">lien</a>
+                <Link href="https://github.com/MrTuttle">Git</Link>
               </div>
             </div>
             <div className="basis-2/12"></div>
           </div>
         </section>
-        <section className="pb-52 rounded-3xl p-6 sm:m-6  text-darkflo dark:text-grayflo  flex flex-col items-center text-lg leading-[2.4rem]">
+        <section className="pb-52 rounded-3xl p-6 sm:m-6  text-darkflo  flex flex-col items-center text-lg leading-[2.4rem]">
           <div className="flex">
             <div className="basis-3/12"></div>
             <div className="basis-8/12">
@@ -253,7 +256,7 @@ const Home = async () => {
             </div>
           </div>
         </section> */}
-        <section className="section-light rounded-3xl p-6 sm:m-6 min-h-svh text-neutral-500 dark:bg-greenflo dark:text-darkflo  flex flex-col items-center text-xl font-light leading-10">
+        {/* <section className="section-light rounded-3xl p-6 sm:m-6 min-h-svh text-neutral-500 dark:bg-greenflo dark:text-darkflo  flex flex-col items-center text-xl font-light leading-10">
           <div id="therow" className="flex justify-between border *:border  ">
             <div
               id="colone2"
@@ -274,15 +277,47 @@ const Home = async () => {
               </div>
             </div>
           </div>
-        </section>
-        <section className="rounded-3xl sm:m-6 min-h-svh  text-darkflo dark:bg-neutral-500 dark:text-greenflo  flex flex-col items-center text-xl font-light leading-10">
-          <div className=" w-full flex gap-4">
-            <div className=""></div>
-            <CardPokemon />
-            <CardPokemon />
+        </section> */}
+
+        <section className="section-accent rounded-3xl p-6 sm:m-6 min-h-svh bg-neutral-300 text-darkflo dark:bg-neutral-500 dark:text-greenflo  flex flex-col items-center text-xl font-light leading-10">
+          <div
+            id="therow"
+            className=" my-auto flex flex-wrap justify-between mx-auto max-w-none w-full "
+          >
+            <div id="colone1" className="w-full sm:w-2/4 flex justify-center">
+              <CardPokemon />
+              {/* <div className="">
+                <TitleCut>Graphic</TitleCut>
+                <TitleCut>designer</TitleCut>
+              </div> */}
+            </div>
+            <div
+              id="colone2"
+              className="flex flex-col justify-center w-full px-4 xl:pr-[10%]   sm:w-2/4"
+            >
+              Voici pour une première approche pour présenter mes compétences.
+              <br />
+              Ce site utilise Tailwind, React et Next JS. Il est hébergé chez
+              Vercel en déploiement continu et peut être mis à jour à tout
+              moment de la journée.
+              <br />A venir une section pour présenter mes travaux…
+              <div className="mt-10 flex gap-2  *:rounded-xl *:flex *:justify-center *:items-center ">
+                <Link href="https://github.com/MrTuttle">
+                  <div className=" transition-transform hover:scale-125">
+                    <SiGithub />
+                  </div>
+                </Link>
+                <Link href="https://linkedin.com/in/florent-vincerot/">
+                  <div className=" text-[1.3rem] transition-transform hover:scale-125">
+                    <SiLinkedin />
+                  </div>
+                </Link>
+              </div>
+            </div>
           </div>
         </section>
-        <section className="section-accent rounded-3xl p-6 sm:m-6 min-h-svh bg-neutral-300 text-darkflo dark:bg-neutral-500 dark:text-greenflo  flex flex-col items-center text-xl font-light leading-10">
+        <div className=" h-[5vh]"></div>
+        {/* <section className="section-accent rounded-3xl p-6 sm:m-6 min-h-svh bg-neutral-300 text-darkflo dark:bg-neutral-500 dark:text-greenflo  flex flex-col items-center text-xl font-light leading-10">
           <div
             id="therow"
             className="my-auto gap-6 flex flex-wrap justify-between mx-auto max-w-none w-full "
@@ -305,7 +340,7 @@ const Home = async () => {
               CSS code with the developing team.
             </div>
           </div>
-        </section>
+        </section> */}
         {/* <section className="section-loud p-6 sm:mx-6 min-h-svh bg-neutral-500 text-greenflo dark:bg-neutral-500 dark:text-grayflo  flex flex-col items-center text-xl font-light leading-10">
           <div
             id="therow"
