@@ -97,7 +97,7 @@ const Home = async () => {
         <section className="pb-52 rounded-3xl p-6 sm:m-6  text-darkflo  flex flex-col items-center text-lg leading-[2.4rem]">
           <div className="flex">
             <div className="basis-3/12"></div>
-            <div className="basis-8/12">
+            <div className="pl-10 sm:pl-0 sm:basis-8/12">
               <TitleCut># Dev. </TitleCut>
               <div className=" font-mono mt-5 relative ">
                 <div className="text-xs absolute -translate-x-[100%] -left-14 translate-y-3">
@@ -162,7 +162,7 @@ const Home = async () => {
         <section className="pb-52 rounded-3xl p-6 sm:m-6  text-darkflo  flex flex-col items-center text-lg leading-[2.4rem]">
           <div className="flex">
             <div className="basis-3/12"></div>
-            <div className="basis-8/12">
+            <div className="pl-10 sm:pl-0 sm:basis-8/12">
               <TitleCut># Designer UI/UX</TitleCut>
               <div className=" font-mono mt-5 relative ">
                 <div className="text-xs absolute -translate-x-[100%] sm:-left-14 translate-y-3 -rotate-90 sm:rotate-0 -left-0 top-9 sm:top-0">
