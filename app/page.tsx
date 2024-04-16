@@ -98,7 +98,12 @@ const Home = async () => {
           <div className="flex">
             <div className="basis-3/12"></div>
             <div className="pl-10 sm:pl-0 sm:basis-8/12">
-              <TitleCut># Dev. </TitleCut>
+              <TitleCut>
+                <>
+                  <span className="text-greenflo"># </span>Dev.
+                </>
+              </TitleCut>
+
               <div className=" font-mono mt-5 relative ">
                 <div className="text-xs absolute -translate-x-[100%] sm:-left-14 translate-y-3 -rotate-90 sm:rotate-0 -left-0 top-9 sm:top-0">
                   2022 | TODAY
@@ -163,7 +168,16 @@ const Home = async () => {
           <div className="flex">
             <div className="basis-3/12"></div>
             <div className="pl-10 sm:pl-0 sm:basis-8/12">
-              <TitleCut># Designer UI/UX</TitleCut>
+              <TitleCut>
+                <>
+                  <span className="text-greenflo"># </span>Designer
+                </>
+              </TitleCut>
+              <TitleCut>
+                <>
+                  <span className="pl-[1.8rem]">UI / UX</span>
+                </>
+              </TitleCut>
               <div className=" font-mono mt-5 relative ">
                 <div className="text-xs absolute -translate-x-[100%] sm:-left-14 translate-y-3 -rotate-90 sm:rotate-0 -left-0 top-9 sm:top-0">
                   2009 | TODAY
@@ -185,8 +199,16 @@ const Home = async () => {
           <div className="flex">
             <div className="basis-3/12"></div>
             <div className="pl-10 sm:pl-0 sm:basis-8/12">
-              <TitleCut># Art </TitleCut>
-              <TitleCut># Director </TitleCut>
+              <TitleCut>
+                <>
+                  <span className="text-greenflo"># </span>Art
+                </>
+              </TitleCut>
+              <TitleCut>
+                <>
+                  <span className="pl-[1.8rem]">director </span>
+                </>
+              </TitleCut>
               <div className=" font-mono mt-5 relative ">
                 <div className="text-xs absolute -translate-x-[100%] sm:-left-14 translate-y-3 -rotate-90 sm:rotate-0 -left-0 top-9 sm:top-0">
                   2009 | 2022
@@ -317,16 +339,30 @@ const Home = async () => {
               className="flex flex-col justify-center w-full px-4 xl:pr-[10%]   sm:w-2/4"
             >
               {" "}
-              <div className=" font-medium">
-                <TitleCut>work in progress</TitleCut>
-                <TitleCut>in progress</TitleCut>
+              <div className=" font-medium pt-10 pb-5">
+                <TitleCut>
+                  <>
+                    <span className="text-white"># </span>
+                    work
+                  </>
+                </TitleCut>
+                <TitleCut>
+                  <span className="pl-[1.8rem]">in progress</span>
+                </TitleCut>
               </div>
-              Merci d’avoir scrollé jusqu’ici, ce site est une première approche
-              pour présenter mes compétences.
-              <br />A venir une section pour présenter mes travaux…
-              <br />
-              Vous pouvez me contacter en suivant un des liens Linkedin, ou
-              Github, ci-dessous…
+              <p className="relative indent-[2rem]">
+                <span className="absolute origin-bottom-right animate-coucou inline-block -left-[2rem] translate-x-full">
+                  👋
+                </span>
+                <span className="">Merci d’avoir scrollé jusqu’ici.</span>
+                <br />
+                Ce site est une première approche pour présenter mes
+                compétences.
+                <br />A venir une section pour présenter mes travaux…
+                <br />
+                Vous pouvez me contacter en suivant un des liens Linkedin, ou
+                Github, ci-dessous…
+              </p>
               <hr className="mt-8 mb-1 border-darkflo" />
               <div className=" flex gap-2  *:rounded-xl *:flex *:justify-center *:items-center ">
                 <Link href="https://github.com/MrTuttle">

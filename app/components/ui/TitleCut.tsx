@@ -2,9 +2,12 @@
 
 import React, { useEffect, useRef } from "react";
 import { useInView } from "framer-motion";
+import { JSX } from "react";
 
 interface Props {
-  children: string;
+  // children: string;
+  // children: string | JSX.Element | JSX.Element[] | () => JSX.Element;
+  children: string | JSX.Element;
 }
 
 const TitleCut = ({ children }: Props) => {

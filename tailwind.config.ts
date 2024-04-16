@@ -1,3 +1,4 @@
+import { color } from "framer-motion";
 import type { Config } from "tailwindcss";
 
 const config = {
@@ -82,11 +83,21 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        wiggle: {
+          "0%, 100%": { transform: "rotate(-3deg)" },
+          "50%": { transform: "rotate(3deg)" },
+        },
+        coucou: {
+          "0%, 100%": { transform: "rotate(-10deg)" },
+          "50%": { transform: "rotate(10deg)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         grow: "grow 0.5s cubic-bezier(0.4, 0, 0.6, 1)",
+        wiggle: "wiggle 1s ease-in-out infinite",
+        coucou: "coucou 1s ease-in-out infinite",
       },
     },
   },
