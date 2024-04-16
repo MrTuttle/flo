@@ -100,7 +100,7 @@ const Home = async () => {
             <div className="pl-10 sm:pl-0 sm:basis-8/12">
               <TitleCut># Dev. </TitleCut>
               <div className=" font-mono mt-5 relative ">
-                <div className="text-xs absolute -translate-x-[100%] -left-14 translate-y-3">
+                <div className="text-xs absolute -translate-x-[100%] sm:-left-14 translate-y-3 -rotate-90 sm:rotate-0 -left-0 top-9 sm:top-0">
                   2022 | TODAY
                 </div>
                 Développeur spécialisé{" "}
@@ -172,9 +172,32 @@ const Home = async () => {
                 interfaces et de l’expérience utilisateur d’une cinquantaine de
                 sites web. En veille constante pour ne rien rater des nouvelles
                 tendances en design d’interface, je peux concevoir des maquettes
-                pour vos projets numériques avec Figma, sketch ou Adobe XD. Pour
-                les contenus, je maîtrise les outils graphiques de la suite
-                Adobe dont After effect pour le motion design.
+                pour vos projets numériques avec Figma, sketch ou Adobe XD, de
+                plus, je parle couramment le CSS. Pour les contenus, je maîtrise
+                les outils graphiques de la suite Adobe dont After effect pour
+                le motion design.
+              </div>
+            </div>
+            <div className="basis-2/12"></div>
+          </div>
+        </section>
+        <section className="pb-52 rounded-3xl p-6 sm:m-6  text-darkflo  flex flex-col items-center text-lg leading-[2.4rem]">
+          <div className="flex">
+            <div className="basis-3/12"></div>
+            <div className="pl-10 sm:pl-0 sm:basis-8/12">
+              <TitleCut># Art </TitleCut>
+              <TitleCut># Director </TitleCut>
+              <div className=" font-mono mt-5 relative ">
+                <div className="text-xs absolute -translate-x-[100%] sm:-left-14 translate-y-3 -rotate-90 sm:rotate-0 -left-0 top-9 sm:top-0">
+                  2009 | 2022
+                </div>
+                Directeur Artistique chez Album, mon travail à consisté à
+                développer l’image de PME/PMI, développer des concepts
+                publicitaires, créer ou adapter des illustrations et les
+                décliner en animations Motion Design, créer des expérience
+                digitales et des interfaces utilisateurs. C’est au cours de ces
+                projets et des collaborations avec les développeurs que j’ai pu
+                acquérir les bases du développement javascript, HTML et CSS.
               </div>
             </div>
             <div className="basis-2/12"></div>
