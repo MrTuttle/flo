@@ -316,13 +316,19 @@ const Home = async () => {
               id="colone2"
               className="flex flex-col justify-center w-full px-4 xl:pr-[10%]   sm:w-2/4"
             >
-              Voici pour une première approche pour présenter mes compétences.
-              <br />
-              Ce site utilise Tailwind, React et Next JS. Il est hébergé chez
-              Vercel en déploiement continu et peut être mis à jour à tout
-              moment de la journée.
+              {" "}
+              <div className=" font-medium">
+                <TitleCut>work in progress</TitleCut>
+                <TitleCut>in progress</TitleCut>
+              </div>
+              Merci d’avoir scrollé jusqu’ici, ce site est une première approche
+              pour présenter mes compétences.
               <br />A venir une section pour présenter mes travaux…
-              <div className="mt-10 flex gap-2  *:rounded-xl *:flex *:justify-center *:items-center ">
+              <br />
+              Vous pouvez me contacter en suivant un des liens Linkedin, ou
+              Github, ci-dessous…
+              <hr className="mt-8 mb-1 border-darkflo" />
+              <div className=" flex gap-2  *:rounded-xl *:flex *:justify-center *:items-center ">
                 <Link href="https://github.com/MrTuttle">
                   <div className=" transition-transform hover:scale-125">
                     <SiGithub />
@@ -333,6 +339,11 @@ const Home = async () => {
                     <SiLinkedin />
                   </div>
                 </Link>
+                <div className="text-xs py-4 ml-4">
+                  Ce site utilise Tailwind, React et Next JS. Il est hébergé
+                  chez Vercel en déploiement continu et peut être mis à jour à
+                  tout moment de la journée.
+                </div>
               </div>
             </div>
           </div>
