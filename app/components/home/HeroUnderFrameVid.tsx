@@ -7,6 +7,7 @@ import { Video } from "../ui/Video";
 import { SiGithub } from "react-icons/si";
 import { SiLinkedin } from "react-icons/si";
 import Link from "next/link";
+import FloShadow from "@/public/avatar/floShadow.png";
 
 const HeroUnderFrameVid = () => {
   return (

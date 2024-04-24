@@ -6,6 +6,7 @@ import flo from "@/public/avatar/Florent-Vincerot-avatar.jpg";
 import { Inter } from "next/font/google";
 import { Outfit } from "next/font/google";
 import { Space_Grotesk } from "next/font/google";
+import FloShadow from "@/public/avatar/FloShadow.svg";
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 const outfit = Outfit({ subsets: ["latin"], display: "swap" });
 const space_grotesk = Space_Grotesk({ subsets: ["latin"], display: "swap" });
@@ -336,9 +337,8 @@ const Home = async () => {
             </div>
             <div
               id="colone2"
-              className="flex flex-col justify-center w-full px-4 xl:pr-[10%]   sm:w-2/4"
+              className=" flex flex-col justify-center w-full px-4 xl:pr-[10%]   sm:w-2/4"
             >
-              {" "}
               <div className=" font-medium pt-10 pb-5">
                 <TitleCut>
                   <>
@@ -350,19 +350,32 @@ const Home = async () => {
                   <span className="pl-[1.8rem]">in progress</span>
                 </TitleCut>
               </div>
-              <p className="relative indent-[2rem]">
-                <span className="absolute origin-bottom-right animate-coucou inline-block -left-[2rem] translate-x-full">
-                  👋
-                </span>
-                <span className="">Merci d’avoir scrollé jusqu’ici.</span>
-                <br />
-                Ce site est une première approche pour présenter mes
-                compétences.
-                <br />A venir une section pour présenter mes travaux…
-                <br />
-                Vous pouvez me contacter en suivant un des liens Linkedin, ou
-                Github, ci-dessous…
-              </p>
+
+              <div className="relative">
+                <div className="z-50 w-[50%] absolute bottom-0 right-0 translate-x-[50%]">
+                  <Image
+                    src={FloShadow}
+                    alt="flo"
+                    sizes="100vw"
+                    className=" w-full h-auto object-cover"
+                  />
+                </div>
+                <div>
+                  <p className="relative indent-[2rem]">
+                    <span className="absolute origin-bottom-right animate-coucou inline-block -left-[2rem] translate-x-full">
+                      👋
+                    </span>
+                    <span className="">Merci d’avoir scrollé jusqu’ici.</span>
+                    <br />
+                    Ce site est une première approche pour présenter mes
+                    compétences.
+                    <br />A venir une section pour présenter mes travaux…
+                    <br />
+                    Vous pouvez me contacter en suivant un des liens Linkedin,
+                    ou Github, ci-dessous…
+                  </p>
+                </div>
+              </div>
               <hr className="mt-8 mb-1 border-darkflo" />
               <div className=" flex gap-2  *:rounded-xl *:flex *:justify-center *:items-center ">
                 <Link href="https://github.com/MrTuttle">
