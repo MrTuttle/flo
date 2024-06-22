@@ -392,6 +392,7 @@ const Home = async () => {
                   Ce site utilise Tailwind, React et Next JS. Il est hébergé
                   chez Vercel en déploiement continu et peut être mis à jour à
                   tout moment de la journée.
+                  <Link href="/pageSandbox">sanbox</Link>
                 </div>
               </div>
             </div>
