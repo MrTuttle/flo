@@ -92,7 +92,7 @@ const PageSandbox = () => {
       >
         <div className=" mt-8 2xl:mt-14 first:mt-0 p-8">
           <div className="bg-stone-50 dark:bg-stone-600 rounded-2xl h-svh flex flex-col flex-wrap gap-y-4 2xl:gap-y-6 -mx-2 2xl:-mx-3 justify-center text-center">
-            <h1 className="text-stone-400 text-8xl">
+            <h1 className="text-stone-400 text-5xl md:text-8xl">
               This is my <br />
               sandbox page
             </h1>
@@ -100,7 +100,7 @@ const PageSandbox = () => {
               <FiCodesandbox />
             </div>
 
-            <p className="text-4xl">
+            <p className="text-xl md:text-4xl">
               it contains some of
               <br />
               my interfaces <br />
@@ -108,8 +108,8 @@ const PageSandbox = () => {
             </p>
           </div>
         </div>
-        <h2 className="text-center text-4xl pt-20">Mon offre de services</h2>
-        <h3 className="text-center text-2xl pt-20">
+        <h2 className="text-center text-4xl pt-20">Dev front stack</h2>
+        <h3 className="text-center text-2xl pt-3">
           (L’occasion de coder un joli système de cartes aux animations fluides)
         </h3>
         <SectionCards id="front">
@@ -161,8 +161,8 @@ const PageSandbox = () => {
           </IconCard>
         </SectionCards>
         <h2 className="text-center text-4xl pt-20">Design</h2>
-        <h3 className="text-center text-2xl pt-20">
-          (C’est par là que je suis doucement venu au code)
+        <h3 className="text-center text-2xl pt-3">
+          C’est par là que je suis doucement venu au code
         </h3>
         <SectionCards>
           <IconCard
@@ -181,7 +181,7 @@ const PageSandbox = () => {
           </IconCard>
         </SectionCards>
       </div>
-      <div className="mt-8 2xl:mt-14 first:mt-0 p-8">
+      {/* <div className="mt-8 2xl:mt-14 first:mt-0 p-8">
         <ul className="flex flex-wrap gap-y-4 2xl:gap-y-6 -mx-2 2xl:-mx-3">
           <li className="group/item hover:cursor-pointer w-full px-2 2xl:px-3 md:w-1/2 lg:w-1/4 grow">
             <div className="p-6 rounded-xl h-full flex flex-col md:p-12 justify-between dark:bg-darkhot dark:hover:bg-neutral-800/95 hover:bg-gray-100/80 dark:text-white text-gray-800 transition-colors ease-in-out duration-300">
@@ -191,7 +191,7 @@ const PageSandbox = () => {
             </div>
           </li>
         </ul>
-      </div>
+      </div> */}
     </div>
   );
 };
