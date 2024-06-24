@@ -6,12 +6,31 @@ import { SiGithub } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
 import { SiTailwindcss } from "react-icons/si";
 import { SiTypescript } from "react-icons/si";
+import { SiAdobeaftereffects } from "react-icons/si";
+import { SiAdobeillustrator } from "react-icons/si";
+import { SiAdobephotoshop } from "react-icons/si";
+import { SiFigma } from "react-icons/si";
+import { RxSketchLogo } from "react-icons/rx";
+
 import { link } from "fs";
+// import type { IconType } from "../lib/index";
+import type { IconType } from "react-icons";
 
 type Props = {
   children: ReactNode;
   titre?: string;
-  icon: "git" | "next" | "react" | "tailwind" | "none";
+  icon:
+    | "git"
+    | "next"
+    | "react"
+    | "tailwind"
+    | "ae"
+    | "ai"
+    | "psd"
+    | "ts"
+    | "figma"
+    | "sketch"
+    | "none";
   linkName?: string;
   linkUrl?: string;
 };
@@ -21,6 +40,51 @@ const ItemReact = () => {
     <div className=" group-hover/item:scale-150 ease-in-out duration-300 rounded-lg w-12 h-12 mb-12 dark:bg-teal-500/20 bg-teal-500 dark:text-teal-500 text-gray-100 flex items-center justify-center">
       <SiReact className="text-[2rem] group-hover/item:rotate-180 ease-in-out duration-300" />
     </div>
+  );
+};
+const ItemSiAdobeaftereffects = () => {
+  return (
+    <>
+      <div className="flex gap-1 group-hover/item:gap-8 ease-in-out duration-300 ">
+        <div className=" group-hover/item:scale-150 ease-in-out duration-300 delay-0 rounded-lg w-12 h-12 mb-12 dark:bg-violet-500/20 bg-violet-500 dark:text-violet-500 text-gray-100 flex items-center justify-center">
+          <SiAdobeaftereffects className="text-[2rem] group-hover/item:scale-110 ease-in duration-[300ms] delay-0" />
+        </div>
+        <div className=" group-hover/item:scale-150 ease-in-out duration-300 delay-75 rounded-lg w-12 h-12 mb-12 dark:bg-orange-500/20 bg-orange-500 dark:text-orange-500 text-gray-100 flex items-center justify-center">
+          <SiAdobeillustrator className="text-[2rem] group-hover/item:scale-110 ease-in duration-[300ms] delay-75" />
+        </div>
+        <div className=" group-hover/item:scale-150 ease-in-out duration-300 delay-150 rounded-lg w-12 h-12 mb-12 dark:bg-blue-500/20 bg-blue-500 dark:text-blue-500 text-gray-100 flex items-center justify-center">
+          <SiAdobephotoshop className="text-[2rem] group-hover/item:scale-110 ease-in duration-[300ms] delay-150" />
+        </div>
+      </div>
+    </>
+  );
+};
+const ItemSiAdobeillustrator = () => {
+  return (
+    <div className=" group-hover/item:scale-150 ease-in-out duration-300 rounded-lg w-12 h-12 mb-12 dark:bg-teal-500/20 bg-teal-500 dark:text-teal-500 text-gray-100 flex items-center justify-center">
+      <SiAdobeillustrator className="text-[2rem] group-hover/item:rotate-180 ease-in-out duration-300" />
+    </div>
+  );
+};
+const ItemSiAdobephotoshop = () => {
+  return (
+    <div className=" group-hover/item:scale-150 ease-in-out duration-300 rounded-lg w-12 h-12 mb-12 dark:bg-teal-500/20 bg-teal-500 dark:text-teal-500 text-gray-100 flex items-center justify-center">
+      <SiAdobephotoshop className="text-[2rem] group-hover/item:rotate-180 ease-in-out duration-300" />
+    </div>
+  );
+};
+const ItemSiFigma = () => {
+  return (
+    <>
+      <div className="flex gap-1 group-hover/item:gap-8 ease-in-out duration-300 ">
+        <div className=" group-hover/item:scale-150 ease-in-out duration-300 delay-0 rounded-lg w-12 h-12 mb-12 dark:bg-emerald-500/20 bg-emerald-500 dark:text-emerald-500 text-gray-100 flex items-center justify-center">
+          <SiFigma className="text-[2rem] group-hover/item:scale-110 ease-in duration-[300ms] delay-0" />
+        </div>
+        <div className=" group-hover/item:scale-150 ease-in-out duration-300 delay-150 rounded-lg w-12 h-12 mb-12 dark:bg-yellow-500/20 bg-yellow-500 dark:text-yellow-500 text-gray-100 flex items-center justify-center">
+          <RxSketchLogo className="text-[2rem] group-hover/item:scale-110 ease-in duration-[300ms] delay-150" />
+        </div>
+      </div>
+    </>
   );
 };
 const ItemTbBrandNextjs = () => {
@@ -61,14 +125,19 @@ export const IconCard = ({
             {icon === "react" && <ItemReact />}
             {icon === "next" && <ItemTbBrandNextjs />}
             {icon === "tailwind" && <ItemSiTailwindcss />}
-            {icon === "none" && null}
+            {icon === "ae" && <ItemSiAdobeaftereffects />}
+            {icon === "psd" && <ItemSiAdobephotoshop />}
+            {icon === "ai" && <ItemSiAdobeillustrator />}
+            {/* {icon === "ts" && <ItemSiTypescript />} */}
+            {icon === "figma" && <ItemSiFigma />}
+            {/* {icon === "sketch" && <ItemSiSketch />} */}
 
             <h3 className=" capitalize font-headings tracking-tight scroll-mt-[120px] text-xl 2xl:2xl font-medium wrap-balance group-hover/item:-translate-y-1 ease-in-out duration-300">
               {titre}
             </h3>
           </div>
           <div className="font-copy text-base 2xl:text-md font-medium print:text-[12px] print:text-justify mt-4 max-w-[46em] group-hover/item:-translate-y-1 ease-in-out duration-300">
-            <p className=" line-clamp-5 my-6 first:mt-0 last:mb-0 print:my-2 text-gray-500 group-hover/item:text-gray-400">
+            <p className=" line-clamp-5 my-6 first:mt-0 last:mb-0 print:my-2 text-gray-500 dark:text-gray-400/80 group-hover/item:dark:text-gray-400">
               {children}
             </p>
           </div>

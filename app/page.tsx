@@ -44,6 +44,8 @@ import { SiPostgresql } from "react-icons/si";
 import { SiVercel } from "react-icons/si";
 import { SiGithub } from "react-icons/si";
 import { SiLinkedin } from "react-icons/si";
+import { FiCodesandbox } from "react-icons/fi";
+
 import { CardPokemon } from "./components/ui/CardPokemon";
 import Link from "next/link";
 
@@ -392,8 +394,10 @@ const Home = async () => {
                   Ce site utilise Tailwind, React et Next JS. Il est hébergé
                   chez Vercel en déploiement continu et peut être mis à jour à
                   tout moment de la journée.
-                  <Link href="/pageSandbox">sanbox</Link>
                 </div>
+                <Link href="/sandbox" className="gap-1">
+                  <FiCodesandbox /> sandbox
+                </Link>
               </div>
             </div>
           </div>
