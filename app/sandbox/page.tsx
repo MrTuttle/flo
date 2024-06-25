@@ -109,8 +109,13 @@ const PageSandbox = () => {
           </div>
         </div>
         <h2 className="text-center text-4xl pt-20">Dev front stack</h2>
-        <h3 className="text-center text-2xl pt-3">
-          (L’occasion de coder un joli système de cartes aux animations fluides)
+        <h3 className="text-center text-2xl pt-3 px-8">
+          Le cartes sont idéales pour présenter des contenus courts et
+          structurés. Elles sont souvent utilisées pour afficher des
+          informations sous forme de liste, de galerie ou de tableau. J’ai
+          aporté a celle ci un soin particulier aux effets de survol. Connectées
+          à une base de données, ces cartes acceptent plusieurs paramètres :
+          titre, description, image, lien...
         </h3>
         <SectionCards id="front">
           <IconCard
@@ -161,8 +166,11 @@ const PageSandbox = () => {
           </IconCard>
         </SectionCards>
         <h2 className="text-center text-4xl pt-20">Design</h2>
-        <h3 className="text-center text-2xl pt-3">
-          C’est par là que je suis doucement venu au code
+        <h3 className="text-center text-2xl pt-3 px-8">
+          Plusieurs icones sont possibles pour attirer l’attention. <br />
+          La définition d’un système de couleur cohérent que l’on retrouvera
+          tout au long du site est essentielle. Il facilite entre autre un
+          meilleur contrôle du mode sombre.
         </h3>
         <SectionCards>
           <IconCard
