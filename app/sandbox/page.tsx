@@ -7,6 +7,18 @@ import { IconCard } from "../components/ui/cards/IconCard";
 import { MyFormControl } from "../components/ui/forms/MyFormControl";
 import ItemNav from "../components/ui/nav/ItemNav";
 import { FiCodesandbox } from "react-icons/fi";
+import { Badge } from "@/components/ui/badge";
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer";
+import { Button } from "@/components/ui/button";
 
 const PageSandbox = () => {
   const [menuHeight, setMenuHeight] = useState(false);
@@ -104,7 +116,7 @@ const PageSandbox = () => {
               it contains some of
               <br />
               my interfaces <br />
-              experimentations & trainings
+              experimentations & trainings <Badge>NEW</Badge>
             </p>
           </div>
         </div>
@@ -117,6 +129,66 @@ const PageSandbox = () => {
           à une base de données, ces cartes acceptent plusieurs paramètres :
           titre, description, image, lien...
         </h3>
+        <div className="mt-8 2xl:mt-14 first:mt-0 p-8 border flex justify-center">
+          <Drawer shouldScaleBackground={true}>
+            <DrawerTrigger asChild>
+              <Button variant="outline">Open Drawer</Button>
+            </DrawerTrigger>
+            <DrawerContent>
+              <SectionCards id="front">
+                <IconCard
+                  icon="react"
+                  titre="Développement front"
+                  linkName="Lien"
+                  linkUrl="#"
+                >
+                  Avec Javascript et React, je conçois des composants
+                  d’interface modulaire et réutilisables au typage fort
+                  (Typescript).
+                </IconCard>
+                <IconCard
+                  icon="next"
+                  titre="Développement Backend"
+                  linkName="Lien"
+                  linkUrl="#"
+                >
+                  {" "}
+                  Compatibles avec tous type de routers (PHP, Rails...) c’est
+                  avec Next JS router que je connecte mes composants au back
+                  end. Prérendu serveur et optimisation SEO en prime.
+                </IconCard>
+                <IconCard
+                  icon="tailwind"
+                  titre="Optimisation SCSS"
+                  linkName="Lien"
+                  linkUrl="#"
+                >
+                  {" "}
+                  Pour faire une interface impecable, il faut une bonne
+                  connaissance du code CSS. Aujourd’hui c’est Tailwind qui me
+                  permet d’en exploiter au mieux les possibilité. organisation
+                  rapide et optimale. Je peux aussi mettre en place une
+                  bibliothèque SCSS sur mesure.
+                </IconCard>
+                <IconCard
+                  icon="git"
+                  titre="Intégration continue"
+                  linkName="lien github"
+                >
+                  Je pratique le CI/CD avec Git et Vercel, c’est à dire
+                  l’intégration et le déploiement continue du code. Le code est
+                  systématiquemet versionné sur Git.
+                </IconCard>
+              </SectionCards>
+              <DrawerFooter>
+                <DrawerClose>
+                  <Button variant="outline">Fermer</Button>
+                </DrawerClose>
+              </DrawerFooter>
+            </DrawerContent>
+          </Drawer>
+        </div>
+
         <SectionCards id="front">
           <IconCard
             icon="react"
@@ -189,6 +261,28 @@ const PageSandbox = () => {
           </IconCard>
         </SectionCards>
       </div>
+      <div className="mt-8 2xl:mt-14 first:mt-0 p-8 border flex justify-center">
+        <Drawer direction="left">
+          <DrawerTrigger>
+            <Button variant="outline">Contact</Button>
+          </DrawerTrigger>
+          <DrawerContent className="bg-white flex flex-col rounded-t-[10px] h-full w-[75%] mt-24 fixed bottom-0 right-0">
+            <DrawerHeader>
+              <DrawerTitle>Are you absolutely sure?</DrawerTitle>
+              <DrawerDescription>
+                This action cannot be undone.
+              </DrawerDescription>
+            </DrawerHeader>
+            <DrawerFooter>
+              <Button>Submit</Button>
+              <DrawerClose>
+                <Button variant="outline">Cancel</Button>
+              </DrawerClose>
+            </DrawerFooter>
+          </DrawerContent>
+        </Drawer>
+      </div>
+
       {/* <div className="mt-8 2xl:mt-14 first:mt-0 p-8">
         <ul className="flex flex-wrap gap-y-4 2xl:gap-y-6 -mx-2 2xl:-mx-3">
           <li className="group/item hover:cursor-pointer w-full px-2 2xl:px-3 md:w-1/2 lg:w-1/4 grow">

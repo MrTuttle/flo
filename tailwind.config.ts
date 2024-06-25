@@ -1,14 +1,13 @@
-import { color } from "framer-motion";
-import type { Config } from "tailwindcss";
+import type { Config } from "tailwindcss"
 
 const config = {
   darkMode: ["class"],
   content: [
-    "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
-  ],
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
+	],
   prefix: "",
   theme: {
     container: {
@@ -19,17 +18,7 @@ const config = {
       },
     },
     extend: {
-      aspectRatio: {
-        cardGoldNumberV: "0.618",
-        cardGoldNumberH: "1.618",
-      },
       colors: {
-        // bluflo: "#0DA4FF",
-        bluflo: "rgb(13,164,255)",
-        grayflo: "rgb(193,193,193)",
-        darkflo: "rgb(69,7,26)",
-        greenflo: "rgb(164,247,106)",
-        darkhot: "rgb(31,31,31)",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -68,14 +57,8 @@ const config = {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
-        32: "2rem",
       },
       keyframes: {
-        grow: {
-          "0%": { transform: "scale(0) " },
-          // "50%": { opacity: ".2" },
-          "100%": { transform: "scale(1) " },
-        },
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -84,25 +67,14 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        wiggle: {
-          "0%, 100%": { transform: "rotate(-3deg)" },
-          "50%": { transform: "rotate(3deg)" },
-        },
-        coucou: {
-          "0%, 100%": { transform: "rotate(-10deg)" },
-          "50%": { transform: "rotate(10deg)" },
-        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        grow: "grow 0.5s cubic-bezier(0.4, 0, 0.6, 1)",
-        wiggle: "wiggle 1s ease-in-out infinite",
-        coucou: "coucou 1s ease-in-out infinite",
       },
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config;
+} satisfies Config
 
-export default config;
+export default config
