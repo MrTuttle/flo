@@ -9,18 +9,22 @@ import { SiLinkedin } from "react-icons/si";
 import Link from "next/link";
 import FloShadow from "@/public/avatar/floShadow.png";
 
+type HeroUnderFrameVidProps = {
+  // src: string;
+  // alt: string;
+  width?: string;
+  height?: string;
+};
+
 const HeroUnderFrameVid = () => {
+  const darkmodeSrc =
+    "https://res.cloudinary.com/dc8rzbrbr/video/upload/v1720106984/Square-stone_cvs9hu.mov";
+  const lightmodeSrc =
+    "https://res.cloudinary.com/dc8rzbrbr/video/upload/v1720106966/Square-light_o5nb9y.mov";
+
   return (
     <>
-      <div className=" bg-grayflo">
-        {/* <Image
-          src={flo}
-          alt="Portrait illustration de Florent Vincerot"
-          sizes="100"
-          className="transition-all sm:w-2/3 max-w-3xl xl:ml-[5%] 2xl:ml-[10%]"
-          style={{ objectFit: "cover" }} // important to preserve ratio on mobile devices
-        /> */}
-
+      <div className="dark:hidden bg-grayflo flex items-center justify-center">
         <video
           width="320"
           height="240"
@@ -33,13 +37,30 @@ const HeroUnderFrameVid = () => {
           className=" transition-all w-full sm:w-2/4 md:w-2/3 xl:ml-[5%] 2xl:ml-[20%]"
           style={{ objectFit: "cover" }} // important to preserve ratio on mobile devices
         >
-          <source
-            src={
-              // "https://res.cloudinary.com/dc8rzbrbr/video/upload/v1711397442/Square_eagevr.mp4"
-              "https://res.cloudinary.com/dc8rzbrbr/video/upload/v1711397442/Square_2_q7oi21.mp4"
-            }
-            type="video/mp4"
+          <source src={lightmodeSrc} type="video/mp4" />
+          <track
+          // src="/path/to/captions.vtt"
+          // kind="subtitles"
+          // srcLang="en"
+          // label="English"
           />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div className="hidden dark:flex bg-grayflo items-center justify-center">
+        <video
+          width="320"
+          height="240"
+          // controls
+          autoPlay
+          loop
+          muted
+          preload="auto" // none, metadata, auto
+          playsInline
+          className=" transition-all w-full sm:w-2/4 md:w-2/3 xl:ml-[5%] 2xl:ml-[20%]"
+          style={{ objectFit: "cover" }} // important to preserve ratio on mobile devices
+        >
+          <source src={darkmodeSrc} type="video/mp4" />
           <track
           // src="/path/to/captions.vtt"
           // kind="subtitles"
