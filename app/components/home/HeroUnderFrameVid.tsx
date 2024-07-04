@@ -24,7 +24,7 @@ const HeroUnderFrameVid = () => {
 
   return (
     <>
-      <div className="dark:hidden bg-grayflo flex items-center justify-center">
+      <div className=" dark:hidden bg-grayflo flex items-center justify-center">
         <video
           width="320"
           height="240"
@@ -34,7 +34,7 @@ const HeroUnderFrameVid = () => {
           muted
           preload="auto" // none, metadata, auto
           playsInline
-          className=" transition-all w-full sm:w-2/4 md:w-2/3 xl:ml-[5%] 2xl:ml-[20%]"
+          className=" transition-all w-full sm:w-2/4 md:w-2/3"
           style={{ objectFit: "cover" }} // important to preserve ratio on mobile devices
         >
           <source src={lightmodeSrc} type="video/mp4" />
@@ -47,7 +47,7 @@ const HeroUnderFrameVid = () => {
           Your browser does not support the video tag.
         </video>
       </div>
-      <div className="hidden dark:flex bg-grayflo items-center justify-center">
+      <div className="hidden dark:flex dark:items-center dark:justify-center">
         <video
           width="320"
           height="240"
@@ -57,7 +57,7 @@ const HeroUnderFrameVid = () => {
           muted
           preload="auto" // none, metadata, auto
           playsInline
-          className=" transition-all w-full sm:w-2/4 md:w-2/3 xl:ml-[5%] 2xl:ml-[20%]"
+          className="transition-all w-full sm:w-2/4 md:w-2/3"
           style={{ objectFit: "cover" }} // important to preserve ratio on mobile devices
         >
           <source src={darkmodeSrc} type="video/mp4" />

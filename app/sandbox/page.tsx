@@ -22,6 +22,7 @@ import {
 } from "@/components/ui/drawer";
 import { Button } from "@/components/ui/button";
 import HeroUnderFrameVid from "../components/home/HeroUnderFrameVid";
+import TitleCut from "../components/ui/TitleCut";
 
 const PageSandbox = () => {
   const [menuHeight, setMenuHeight] = useState(false);
@@ -105,8 +106,8 @@ const PageSandbox = () => {
             : { paddingTop: "6rem", transform: "scale(1)" }
         }
       >
-        <div className=" mt-8 2xl:mt-14 first:mt-0 p-8">
-          <div className="bg-stone-50 dark:bg-stone-600 rounded-2xl p-4 h-svh flex flex-col flex-wrap gap-y-4 2xl:gap-y-6 -mx-2 2xl:-mx-3 justify-center text-center">
+        <div className="p-8 flex justify-center">
+          <div className="bg-stone-50 max-w-7xl dark:bg-stone-600 rounded-2xl p-4 h-svh flex flex-col flex-wrap gap-y-4 2xl:gap-y-6 -mx-2 2xl:-mx-3 justify-center text-center">
             <div className="w-4/12 mx-auto">
               <HeroUnderFrameVid />
             </div>
@@ -131,11 +132,22 @@ const PageSandbox = () => {
             </p>
           </div>
         </div>
-
-        <div className=" flex justify-center text-4xl pt-20 pb-8">
-          <FiCodesandbox />
+        <div className="mt-28">
+          <TitleCut>
+            <div className=" flex justify-center text-4xl">
+              <FiCodesandbox />
+            </div>
+          </TitleCut>
+          <TitleCut>
+            <h2 className="text-center text-4xl">My Dev Stack</h2>
+          </TitleCut>
+          <TitleCut>
+            <p className="text-center p-4 text-xl dark:text-gray-400">
+              My developper stack allows me to quickly build SaaS <br />
+              or website with a total control on the interface{" "}
+            </p>
+          </TitleCut>
         </div>
-        <h2 className="text-center text-4xl">My Dev Stack</h2>
 
         <SectionCards id="front">
           <IconCard
@@ -207,10 +219,24 @@ const PageSandbox = () => {
             </DrawerContent>
           </Drawer>
         </div>
-        <div className=" flex justify-center text-4xl pt-20 pb-8">
-          <GrPaint />
+
+        <div className="mt-28">
+          <TitleCut>
+            <div className=" flex justify-center text-4xl">
+              <GrPaint />
+            </div>
+          </TitleCut>
+          <TitleCut>
+            <h2 className="text-center text-4xl">My Design Stack</h2>
+          </TitleCut>
+          <TitleCut>
+            <p className="text-center p-4 text-xl dark:text-gray-400">
+              These tools allow me to create and design visual content. <br />
+              Draw prototypes and manage design systems. Draw all I want and
+              know how to animate it as vectorial images.
+            </p>
+          </TitleCut>
         </div>
-        <h2 className="text-center text-4xl">My Design Stack</h2>
         <SectionCards>
           <IconCard
             icon="ae"
