@@ -29,11 +29,11 @@ const PageSandbox = () => {
   const [menuOpenF, setMenuOpenF] = useState(false);
   return (
     <div // this div is just to define darkmode colors without touch tailwins shadcn variables
-      className=" bg-gray-50 dark:bg-black dark:text-grayflo"
+      className=" bg-gray-50 dark:bg-black "
     >
-      <div className=" fixed flex justify-center backdrop-blur-xl   z-50 top-0 right-0 w-full ease-in-out duration-300">
-        <div className="flex flex-col w-full max-w-7xl overflow-hidden  transition-all ease-in-out duration-1000">
-          <div className="  py-2 flex justify-between text-base ">
+      <div className="  fixed flex justify-center backdrop-blur-xl   z-50 top-0 right-0 w-full ease-in-out duration-300">
+        <div className=" px-7 flex flex-col w-full max-w-7xl overflow-hidden  transition-all ease-in-out duration-1000">
+          <div className="   py-2 flex justify-between text-base ">
             <div>Logo</div>
             <div className=" relative">
               <ul
@@ -103,32 +103,33 @@ const PageSandbox = () => {
                 transform: "scale(0.90)",
                 filter: "blur(24px)",
               }
-            : { paddingTop: "6rem", transform: "scale(1)" }
+            : { paddingTop: "4rem", transform: "scale(1)" }
         }
       >
-        <div className="p-8 flex justify-center">
-          <div className="bg-stone-50 max-w-7xl dark:bg-stone-600 rounded-2xl p-4 h-svh flex flex-col flex-wrap gap-y-4 2xl:gap-y-6 -mx-2 2xl:-mx-3 justify-center text-center">
-            <div className="w-4/12 mx-auto">
+        <div className="px-8 flex justify-center">
+          {/* <div className=" bg-stone-50 max-w-7xl dark:bg-stone-600 rounded-2xl p-4 h-svh flex flex-col flex-wrap gap-y-4 2xl:gap-y-6 -mx-2 2xl:-mx-3 justify-center text-center"> */}
+          <div className="min-h-[90svh] bg-stone-50 max-w-7xl dark:bg-stone-600 rounded-2xl p-4 flex flex-col flex-wrap gap-y-4 2xl:gap-y-6 -mx-2 2xl:-mx-3 justify-center text-center">
+            <div className="w-9/12 md:w-4/12 mx-auto">
               <HeroUnderFrameVid />
             </div>
-            <h1 className="text-stone-400 text-5xl md:text-6xl">
-              Hey ! my name is Flo
+            <h1 className="text-stone-400 text-4xl md:text-6xl">
+              Hey ! my name is Floo
               <br />
             </h1>
 
-            <p className="text-xl md:text-4xl">
-              I am a web designer and a front end developper <br />
+            <p className=" md:text-4xl text-lg">
+              I am a web designer <br />
+              and a front end developper <br />
               based in France
             </p>
-            <p className="text-xl max-w-prose text-pretty mx-auto">
-              {" "}
-              I have been working as a UI/UX designer and front-end developer
-              since 2009. I’ve always been someone who has both a creative and a
-              logical side. When I discovered web design in college, I realized
-              it would be the perfect fit. I could use my creative side to
-              design and my logical side to code. As a bonus, being both
-              designer and developer allows me to make sure no detail is lost in
-              translation.
+            <p className="md:text-xl text-base text-gray-700 dark:text-gray-300 max-w-prose text-pretty mx-auto">
+              {/* <p className=""> */} I have been working as a UI/UX designer
+              and front-end developer since 2009. I’ve always been someone who
+              has both a creative and a logical side. When I discovered web
+              design, I realized it would be the perfect fit. I could use my
+              creative side to design and my logical side to code. As a bonus,
+              being both designer and developer allows me to make sure no detail
+              is lost in translation.
             </p>
           </div>
         </div>
@@ -139,7 +140,7 @@ const PageSandbox = () => {
             </div>
           </TitleCut>
           <TitleCut>
-            <h2 className="text-center text-4xl">My Dev Stack</h2>
+            <p className="text-center text-4xl">My Dev Stack</p>
           </TitleCut>
           <TitleCut>
             <p className="text-center p-4 text-xl dark:text-gray-400">
@@ -227,11 +228,13 @@ const PageSandbox = () => {
             </div>
           </TitleCut>
           <TitleCut>
-            <h2 className="text-center text-4xl">My Design Stack</h2>
+            <p className="text-center text-4xl">My Design Stack</p>
           </TitleCut>
           <TitleCut>
             <p className="text-center p-4 text-xl dark:text-gray-400">
-              These tools allow me to create and design visual content. <br />
+              Formed Art school, I know how to create, draw and build logos,
+              branding, or icons. These tools allow me to create and design
+              visual content. <br />
               Draw prototypes and manage design systems. Draw all I want and
               know how to animate it as vectorial images.
             </p>
