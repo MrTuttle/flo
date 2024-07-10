@@ -16,15 +16,12 @@ const NavBarGlass = ({ children }: NavBarGlassProps) => {
   const [menuHeight, setMenuHeight] = useState(false);
   const [menuOpenF, setMenuOpenF] = useState(false);
   return (
-    <div // this div is just to define darkmode colors without touch tailwins shadcn variables
-      // it wrap all page content
-      className=" bg-gray-50 dark:bg-black  "
-    >
-      {/* the page contentent */}
-      <div className="flex justify-center px-8">
+    <>
+      {/* center menu, wrapp all */}
+      <div className=" flex justify-center">
         {/* glass menu */}
         <div
-          className="w-11/12 p-2 sm:w-10/12 rounded-xl mt-4 sm:m-4 fixed flex justify-center z-50 ease-in-out duration-300"
+          className=" backdrop-blur-xl w-11/12 p-2 sm:w-10/12 rounded-xl mt-4 sm:m-4 fixed flex justify-center z-50 ease-in-out duration-300"
           style={
             menuHeight
               ? {
@@ -40,7 +37,7 @@ const NavBarGlass = ({ children }: NavBarGlassProps) => {
                 }
           }
         >
-          <div className="px-7 flex flex-col w-full max-w-7xl overflow-hidden  transition-all ease-in-out duration-1000">
+          <div className=" px-7 flex flex-col w-full max-w-7xl overflow-hidden  transition-all ease-in-out duration-1000">
             <div className="   py-2 flex justify-between items-baseline text-base gap-4 sm:gap-10 ">
               <div className="text-xl translate-y-1">
                 {" "}
@@ -111,23 +108,23 @@ const NavBarGlass = ({ children }: NavBarGlassProps) => {
             </div>
           </div>
         </div>
+        <div // this div is the page content, contain styles for menuHeight state
+          // it wrap children ( all page content ) and blur when menu is over
+          className="  ease-in-out duration-300"
+          style={
+            menuHeight
+              ? {
+                  marginTop: "9rem",
+                  transform: "scale(0.90)",
+                  filter: "blur(24px)",
+                }
+              : { marginTop: "7rem", transform: "scale(1)" }
+          }
+        >
+          {children}
+        </div>
       </div>
-      <div // this div is the page content, contain styles for menuHeight state
-        // it wrap children ( all page content ) and blur when menu is over
-        className="  ease-in-out duration-300"
-        style={
-          menuHeight
-            ? {
-                marginTop: "9rem",
-                transform: "scale(0.90)",
-                filter: "blur(24px)",
-              }
-            : { marginTop: "7rem", transform: "scale(1)" }
-        }
-      >
-        {children}
-      </div>
-    </div>
+    </>
   );
 };
 

@@ -4,6 +4,7 @@ import { Outfit } from "next/font/google";
 import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/app/components/theme-provider";
+import NavBarGlass from "./components/ui/nav/NavBarGlass";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 const outfit = Outfit({ subsets: ["latin"], display: "swap" });
@@ -29,7 +30,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <NavBarGlass>{children}</NavBarGlass>
         </ThemeProvider>
       </body>
     </html>
