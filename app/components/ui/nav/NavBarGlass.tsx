@@ -2,25 +2,9 @@
 import React, { useState } from "react";
 
 import { ModeToggle } from "../ModeToggle";
-import SectionCards from "../sections/SectionCards";
-import { IconCard } from "../cards/IconCard";
-import { FiCodesandbox } from "react-icons/fi";
-import { Badge } from "@/components/ui/badge";
-import { GrPaint } from "react-icons/gr";
 
-import {
-  Drawer,
-  DrawerClose,
-  DrawerContent,
-  DrawerDescription,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerTrigger,
-} from "@/components/ui/drawer";
-import { Button } from "@/components/ui/button";
-import HeroUnderFrameVid from "../../../components/home/HeroUnderFrameVid";
-import TitleCut from "../TitleCut";
+import { FiCodesandbox } from "react-icons/fi";
+
 import ItemNav from "./ItemNav";
 
 type NavBarGlassProps = {
@@ -129,8 +113,8 @@ const NavBarGlass = ({ children }: NavBarGlassProps) => {
         </div>
       </div>
       <div // this div is the page content, contain styles for menuHeight state
-        // it wrap all page content and blur when menu is over
-        className="border border-green-500 ease-in-out duration-300"
+        // it wrap children ( all page content ) and blur when menu is over
+        className="  ease-in-out duration-300"
         style={
           menuHeight
             ? {
