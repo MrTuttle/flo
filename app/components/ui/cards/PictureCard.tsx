@@ -8,7 +8,7 @@ type PictureCardProps = {
   // children?: React.ReactNode;
   bgImage?: string;
   title?: string;
-  bgcolor?: "rose" | "teal" | "gray" | "yellow";
+  bgcolor?: "rose" | "teal" | "yellow" | "cyan" | "salmon";
 };
 
 export const PictureCard = ({
@@ -21,8 +21,9 @@ export const PictureCard = ({
     if (bgcolor === "rose") return "rgb(244 63 94)";
     // if (bgcolor === "teal") return "rgb(20 184 166)";
     if (bgcolor === "teal") return "rgb(13 148 136)";
-    if (bgcolor === "gray") return "rgb(38 38 38)";
+    if (bgcolor === "cyan") return "rgb(22 78 99)";
     if (bgcolor === "yellow") return "rgb(244 244 94)";
+    if (bgcolor === "salmon") return "rgb(250 92 64)";
   };
   const lightTxt = "rgb(244 244 244)";
   const darkTxt = "rgb(31 41 55)";
@@ -32,12 +33,12 @@ export const PictureCard = ({
   };
 
   return (
-    <li className=" list-none group/item hover:cursor-pointer w-full hover:w-[120%] transition-all ease-in-out duration-300">
+    <li className=" list-none group/item hover:cursor-pointer w-full md:hover:w-[160%] transition-all ease-in-out duration-300">
       <div
         // style={{
         //   backgroundImage: `url("/revolver.png")`,
         // }}
-        className="relative overflow-hidden rounded-xl h-full bg-stone-100 dark:bg-neutral-800/95 dark:text-white text-gray-800 transition-all ease-in-out duration-300"
+        className="md:relative overflow-hidden  rounded-xl h-full bg-stone-100 dark:bg-neutral-800/95 dark:text-white text-gray-800 transition-all ease-in-out duration-300"
         // style={{ backgroundImage: `url(${Picture})` }}
         style={{
           // backgroundColor: "rgb(244 63 94)",
@@ -45,31 +46,40 @@ export const PictureCard = ({
         }}
       >
         <div
-          className="absolute  w-full h-full bg-center bg-cover group-hover/item:opacity-0 transition-all ease-in-out duration-300"
+          className="aspect-video md:aspect-auto md:absolute w-auto   md:w-full md:h-full bg-center bg-cover md:group-hover/item:opacity-0 transition-all ease-in-out duration-300"
           style={{
             backgroundImage: `url("/${bgImage}.png")`,
           }}
         ></div>
-        {/* <div className="absolute min-w-full border border-green-400 rounded-xl overflow-hidden">
+
+        {/* <div
+          className="md:hidden aspect-video border border-green-400 rounded-xl overflow-hidden bg-center bg-cover"
+          style={{
+            backgroundImage: `url("/${bgImage}.png")`,
+          }}
+        >
+          <Image src={Picture} height="100" alt="gh" className="cover" />
+        </div> */}
+        {/* <div className="md:hidden min-w-full border border-green-400 rounded-xl overflow-hidden">
           <Image src={Picture} height="100" alt="gh" className="cover" />
         </div> */}
         <div className="overflow-hidden h-full flex flex-col md:p-12 justify-between transition-all ease-in-out duration-300">
-          <div className="pt-4">
-            <div className="  flex flex-col justify-end  w-72 ">
+          <div className="pt-4 px-4 md:px-0">
+            <div className="  flex flex-col justify-end  md:w-72 ">
               <h3
-                className="translate-y-52 capitalize font-headings tracking-tight scroll-mt-[120px] text-5xl 2xl:2xl font-medium wrap-balance group-hover/item:-translate-y-1 ease-in-out duration-500 "
+                className="md:translate-y-52 font-headings tracking-tight scroll-mt-[120px] text-4xl font-light md:text-5xl 2xl:2xl md:font-medium md:group-hover/item:-translate-y-1 ease-in-out duration-500 "
                 style={bgImage ? { color: lightTxt } : { color: darkTxt }}
               >
                 {title}
               </h3>
-              <div className="translate-y-52 flex flex-col gap-8 opacity-0 group-hover/item:opacity-100   text-2xl my-6 print:my-2 text-gray-500 dark:text-gray-400/80 group-hover/item:-translate-y-1 ease-in-out duration-700 ">
+              <div className="md:translate-y-52 flex flex-col gap-8 md:opacity-0 md:group-hover/item:opacity-100 text-xl md:text-2xl my-6 print:my-2 text-gray-500 dark:text-gray-400/80 md:group-hover/item:-translate-y-1 ease-in-out duration-700 ">
                 <p
                   className="line-clamp-3"
                   style={bgImage ? { color: lightTxt } : { color: darkTxt }}
                 >
                   {children}
                 </p>
-                <div className="bg-white w-12 h-12 rounded-full text-black flex justify-center items-center">
+                <div className="bg-white w-8 h-8 md:w-12 md:h-12 rounded-full text-black flex justify-center items-center">
                   <GoArrowRight className="" />
                 </div>
               </div>

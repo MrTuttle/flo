@@ -59,42 +59,7 @@ const PageSandbox = () => {
           </p>
         </div>
       </div>
-      <div className="mt-28 mx-auto px-8 border">
-        <div className="flex justify-between gap-4">
-          <PictureCard
-            bgImage="les-cousines"
-            title="Bang! you are dead !"
-            bgcolor="rose"
-          >
-            <p>This is a beautiful card with smooth transitions</p>
-          </PictureCard>
-          <PictureCard
-            bgImage="revolver"
-            title="Bang! you are red !"
-            bgcolor="teal"
-          >
-            <p>Beautiful red clothes for the eternal</p>
-          </PictureCard>
-        </div>
-      </div>
-      <div className="mt-28 mx-auto px-8 border">
-        <div className="flex justify-between gap-4">
-          <PictureCard
-            bgImage="revolver"
-            title="Bang! you are dead !"
-            // bgcolor="rose"
-          >
-            <p>This is a beautiful card with smooth transitions</p>
-          </PictureCard>
-          <PictureCard
-            // bgImage="les-cousines"
-            title="Bang! you are red !"
-            bgcolor="yellow"
-          >
-            <p>Beautiful red clothes for the eternal</p>
-          </PictureCard>
-        </div>
-      </div>
+
       <div className="mt-28">
         <TitleCut>
           <div className=" flex justify-center text-4xl">
@@ -223,6 +188,44 @@ const PageSandbox = () => {
           l’application tout au long de l’évolution du projet.
         </IconCard>
       </SectionCards>
+
+      <div className="mt-28 mx-auto px-8 border">
+        <div className="flex flex-col md:flex-row justify-between gap-4 ">
+          <PictureCard
+            bgImage="l-exploratrice"
+            title="Bang! you are dead!"
+            bgcolor="cyan"
+          >
+            <p>This is a beautiful card with smooth transitions</p>
+          </PictureCard>
+          <PictureCard
+            bgImage="revolver"
+            title="Bang! you are red!"
+            bgcolor="salmon"
+          >
+            <p>Beautiful red clothes for the eternal</p>
+          </PictureCard>
+        </div>
+      </div>
+      <div className="mt-4 mx-auto px-8 border">
+        <div className="flex flex-col md:flex-row justify-between gap-4 ">
+          <PictureCard
+            bgImage="le-nuage-noir"
+            title="Bang! you are dead!"
+            // bgcolor="rose"
+          >
+            <p>This is a beautiful card with smooth transitions</p>
+          </PictureCard>
+          <PictureCard
+            bgImage="les-cousines"
+            title="Bang! you are red!"
+            bgcolor="yellow"
+          >
+            <p>Beautiful red clothes for the eternal</p>
+          </PictureCard>
+        </div>
+      </div>
+
       <div className="mt-8 2xl:mt-14 first:mt-0 p-8 border flex justify-center">
         <Drawer shouldScaleBackground={true}>
           <DrawerTrigger asChild>

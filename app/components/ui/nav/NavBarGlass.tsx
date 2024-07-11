@@ -21,7 +21,7 @@ const NavBarGlass = ({ children }: NavBarGlassProps) => {
       <div className=" flex justify-center">
         {/* glass menu */}
         <div
-          className=" backdrop-blur-xl w-11/12 p-2 sm:w-10/12 rounded-xl mt-4 sm:m-4 fixed flex justify-center z-50 ease-in-out duration-300"
+          className=" backdrop-blur-xl bg-white/50 dark:bg-black/50 w-11/12 p-2 sm:w-10/12 rounded-xl mt-4 sm:m-4 fixed flex justify-center z-50 ease-in-out duration-300"
           style={
             menuHeight
               ? {
