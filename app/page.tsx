@@ -61,8 +61,8 @@ const PageSandbox = () => {
       </div>
       <div className="mt-28 mx-auto px-8 border">
         <div className="flex justify-between gap-4">
-          <PictureCard />
-          <PictureCard />
+          <PictureCard bgImage="revolver" />
+          <PictureCard bgImage="les-cousines" />
         </div>
       </div>
       <div className="mt-28">
