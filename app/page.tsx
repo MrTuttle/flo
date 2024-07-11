@@ -61,8 +61,38 @@ const PageSandbox = () => {
       </div>
       <div className="mt-28 mx-auto px-8 border">
         <div className="flex justify-between gap-4">
-          <PictureCard bgImage="revolver" />
-          <PictureCard bgImage="les-cousines" />
+          <PictureCard
+            bgImage="les-cousines"
+            title="Bang! you are dead !"
+            bgcolor="rose"
+          >
+            <p>This is a beautiful card with smooth transitions</p>
+          </PictureCard>
+          <PictureCard
+            bgImage="revolver"
+            title="Bang! you are red !"
+            bgcolor="teal"
+          >
+            <p>Beautiful red clothes for the eternal</p>
+          </PictureCard>
+        </div>
+      </div>
+      <div className="mt-28 mx-auto px-8 border">
+        <div className="flex justify-between gap-4">
+          <PictureCard
+            bgImage="revolver"
+            title="Bang! you are dead !"
+            // bgcolor="rose"
+          >
+            <p>This is a beautiful card with smooth transitions</p>
+          </PictureCard>
+          <PictureCard
+            // bgImage="les-cousines"
+            title="Bang! you are red !"
+            bgcolor="yellow"
+          >
+            <p>Beautiful red clothes for the eternal</p>
+          </PictureCard>
         </div>
       </div>
       <div className="mt-28">
