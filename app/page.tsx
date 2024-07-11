@@ -189,6 +189,23 @@ const PageSandbox = () => {
         </IconCard>
       </SectionCards>
 
+      <div className="mt-28">
+        <TitleCut>
+          <div className=" flex justify-center text-4xl">
+            <FiCodesandbox />
+          </div>
+        </TitleCut>
+        <TitleCut>
+          <p className="text-center text-4xl">Sandbox</p>
+        </TitleCut>
+        <TitleCut>
+          <p className="text-center p-4 text-xl dark:text-gray-400">
+            Playing playing... Try to do something smooth with images cards, it
+            must display correctly on mobile devices{" "}
+          </p>
+        </TitleCut>
+      </div>
+
       <div className="mt-28 mx-auto px-8 border">
         <div className="flex flex-col md:flex-row justify-between gap-4 ">
           <PictureCard
@@ -207,21 +224,23 @@ const PageSandbox = () => {
           </PictureCard>
         </div>
       </div>
+
       <div className="mt-4 mx-auto px-8 border">
         <div className="flex flex-col md:flex-row justify-between gap-4 ">
-          <PictureCard
-            bgImage="le-nuage-noir"
-            title="Bang! you are dead!"
-            // bgcolor="rose"
-          >
+          <PictureCard bgImage="le-nuage-noir" title="Cold" bgcolor="rose">
             <p>This is a beautiful card with smooth transitions</p>
           </PictureCard>
           <PictureCard
             bgImage="les-cousines"
             title="Bang! you are red!"
-            bgcolor="yellow"
+            bgcolor="teal"
           >
             <p>Beautiful red clothes for the eternal</p>
+          </PictureCard>
+          <PictureCard bgImage="les-ophelies" bgcolor="yellow">
+            <p className="text-slate-800">
+              Beautiful red clothes for the eternal
+            </p>
           </PictureCard>
         </div>
       </div>
