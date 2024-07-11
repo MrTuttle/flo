@@ -196,12 +196,12 @@ const PageSandbox = () => {
           </div>
         </TitleCut>
         <TitleCut>
-          <p className="text-center text-4xl">Sandbox</p>
+          <p className="text-center text-4xl">Sandbox section</p>
         </TitleCut>
         <TitleCut>
           <p className="text-center p-4 text-xl dark:text-gray-400">
-            Playing playing... Try to do something smooth with images cards, it
-            must display correctly on mobile devices{" "}
+            Playing playing... Here I tried to do something smooth with images
+            cards, it must display correctly on mobile devices{" "}
           </p>
         </TitleCut>
       </div>
@@ -210,17 +210,13 @@ const PageSandbox = () => {
         <div className="flex flex-col md:flex-row justify-between gap-4 ">
           <PictureCard
             bgImage="l-exploratrice"
-            title="Bang! you are dead!"
+            title="Found it!"
             bgcolor="cyan"
           >
             <p>This is a beautiful card with smooth transitions</p>
           </PictureCard>
-          <PictureCard
-            bgImage="revolver"
-            title="Bang! you are red!"
-            bgcolor="salmon"
-          >
-            <p>Beautiful red clothes for the eternal</p>
+          <PictureCard bgImage="revolver" title="Bang!" bgcolor="salmon">
+            <p>We can pick background colors in a list</p>
           </PictureCard>
         </div>
       </div>
@@ -228,19 +224,20 @@ const PageSandbox = () => {
       <div className="mt-4 mx-auto px-8 border">
         <div className="flex flex-col md:flex-row justify-between gap-4 ">
           <PictureCard bgImage="le-nuage-noir" title="Cold" bgcolor="rose">
-            <p>This is a beautiful card with smooth transitions</p>
+            <p>
+              Colors works on dark modes, hover effects are disabled on tactile
+              devices
+            </p>
           </PictureCard>
           <PictureCard
             bgImage="les-cousines"
             title="Bang! you are red!"
             bgcolor="teal"
           >
-            <p>Beautiful red clothes for the eternal</p>
+            <p>Redrum! redrum! redrum!...</p>
           </PictureCard>
           <PictureCard bgImage="les-ophelies" bgcolor="yellow">
-            <p className="text-slate-800">
-              Beautiful red clothes for the eternal
-            </p>
+            <p className="text-slate-800">Content is optional</p>
           </PictureCard>
         </div>
       </div>
