@@ -24,6 +24,7 @@ import { Button } from "@/components/ui/button";
 import HeroUnderFrameVid from "./components/home/HeroUnderFrameVid";
 import TitleCut from "./components/ui/TitleCut";
 import NavBarGlass from "./components/ui/nav/NavBarGlass";
+import { PictureCard } from "./components/ui/cards/PictureCard";
 
 const PageSandbox = () => {
   return (
@@ -56,6 +57,12 @@ const PageSandbox = () => {
             designer and developer allows me to make sure no detail is lost in
             translation.
           </p>
+        </div>
+      </div>
+      <div className="mt-28 mx-auto px-8 border">
+        <div className="flex justify-between gap-4">
+          <PictureCard />
+          <PictureCard />
         </div>
       </div>
       <div className="mt-28">
