@@ -65,9 +65,11 @@ export const PictureCard = ({
         </div> */}
         <div className="overflow-hidden h-full flex flex-col md:p-12 justify-between transition-all ease-in-out duration-300">
           <div className="pt-4 px-4 md:px-0">
-            <div className="  flex flex-col justify-end  md:w-72 ">
+            <div
+              className="  flex flex-col justify-end w-60   " /** important to fix width (w-60) to prevent height jump in hover when title add a line of text */
+            >
               <h3
-                className="md:translate-y-52 font-headings tracking-tight scroll-mt-[120px] text-4xl font-light md:text-5xl 2xl:2xl md:font-medium md:group-hover/item:-translate-y-1 ease-in-out duration-500 "
+                className="md:translate-y-52 font-headings tracking-tight text-4xl font-light md:text-5xl 2xl:2xl md:font-medium md:group-hover/item:-translate-y-1 ease-in-out duration-500 "
                 style={bgImage ? { color: lightTxt } : { color: darkTxt }}
               >
                 {title}

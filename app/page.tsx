@@ -208,7 +208,7 @@ const PageLanding = () => {
         </TitleCut>
       </div>
 
-      <div className="mt-28 mx-auto px-8 border">
+      <div className="mt-28 ">
         <div className="flex flex-col md:flex-row justify-between gap-4 ">
           <PictureCard
             bgImage="l-exploratrice"
@@ -223,7 +223,7 @@ const PageLanding = () => {
         </div>
       </div>
 
-      <div className="mt-4 mx-auto px-8 border">
+      <div className="mt-4 ">
         <div className="flex flex-col md:flex-row justify-between gap-4 ">
           <PictureCard bgImage="le-nuage-noir" title="Cold" bgcolor="rose">
             <p>

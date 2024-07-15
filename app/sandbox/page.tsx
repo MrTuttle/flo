@@ -20,13 +20,17 @@ const Page = () => {
         >
           <p>Redrum! redrum! redrum!...</p>
         </PictureCard>
-        <PictureCard bgImage="les-ophelies" bgcolor="yellow">
-          <p className="text-slate-800">Content is optional</p>
+        <PictureCard
+          bgImage="les-cousines"
+          title="Bang! you are red!"
+          bgcolor="teal"
+        >
+          <p>Redrum! redrum! redrum!...</p>
         </PictureCard>
       </div>
       {/* </div> */}
 
-      <div className="mt-4 mx-auto px-8 border">
+      <div className="mt-4 mx-auto">
         <div className="flex flex-col md:flex-row justify-between gap-4 ">
           <PictureCard
             bgImage="les-cousines"
@@ -36,6 +40,7 @@ const Page = () => {
             <p>Redrum! redrum! redrum!...</p>
           </PictureCard>
           <AreaChartGradient />
+          <Chart />
         </div>
       </div>
     </>
