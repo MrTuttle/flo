@@ -162,8 +162,8 @@ const PageLanding = () => {
         <TitleCut>
           <p className="text-center p-4 text-xl dark:text-gray-400">
             Formed Art school, I know how to create, draw and build logos,
-            branding, or icons. These tools allow me to create and design visual
-            content. <br />
+            branding, or icons. The tools below allows me to create and design
+            visual content. <br />
             Draw prototypes and manage design systems. Draw all I want and know
             how to animate it as vectorial images.
           </p>
@@ -176,7 +176,7 @@ const PageLanding = () => {
           linkName="Lien behance"
         >
           Depuis son premier lancement, j’utilise la suite creative Cloud pour
-          créer et concevoir des contenus visuels. Animation d‘illustrations
+          créer et concevoir des contenus visuels. Animation d’illustrations
           motion design avec after effect, créations / retouches d’illustrations
           d’icones ou de logos avec illustrator, montages avancés de
           compositions Photoshop... Et je guette l’évolution de l’IA qui va
