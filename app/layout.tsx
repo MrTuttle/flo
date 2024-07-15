@@ -22,15 +22,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
-      <body className={space_grotesk.className}>
+    <html lang="fr" className={space_grotesk.className}>
+      <body className="bg-gray-50 dark:bg-black">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          <NavBarGlass>{children}</NavBarGlass>
+          <div className="bg-gray-50 dark:bg-black">
+            <NavBarGlass>{children}</NavBarGlass>
+          </div>
         </ThemeProvider>
       </body>
     </html>
