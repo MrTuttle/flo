@@ -3,7 +3,7 @@ import React from "react";
 import Picture from "@/public/les-cousines.png";
 import { GoArrowRight } from "react-icons/go";
 
-type PictureCardProps = {
+export type PictureCardProps = {
   children?: React.JSX.Element;
   // children?: React.ReactNode;
   bgImage?: string;
