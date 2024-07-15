@@ -10,6 +10,8 @@ import { FiCodesandbox } from "react-icons/fi";
 import { Badge } from "@/components/ui/badge";
 import { GrPaint } from "react-icons/gr";
 
+import { AreaChartGradient } from "./components/charts/AreaChartGradient";
+
 import {
   Drawer,
   DrawerClose,
@@ -26,7 +28,7 @@ import TitleCut from "./components/ui/TitleCut";
 import NavBarGlass from "./components/ui/nav/NavBarGlass";
 import { PictureCard } from "./components/ui/cards/PictureCard";
 
-const PageSandbox = () => {
+const PageLanding = () => {
   return (
     <div // this div is just to define darkmode colors without touch tailwins shadcn variables
       // it wrap all page content
@@ -308,4 +310,4 @@ const PageSandbox = () => {
   );
 };
 
-export default PageSandbox;
+export default PageLanding;

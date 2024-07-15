@@ -73,12 +73,12 @@ export const PictureCard = ({
                 {title}
               </h3>
               <div className="md:translate-y-52 flex flex-col gap-8 md:opacity-0 md:group-hover/item:opacity-100 text-xl md:text-2xl my-6 print:my-2 text-gray-500 dark:text-gray-400/80 md:group-hover/item:-translate-y-1 ease-in-out duration-700 ">
-                <p
+                <span
                   className="line-clamp-3"
                   style={bgImage ? { color: lightTxt } : { color: darkTxt }}
                 >
                   {children}
-                </p>
+                </span>
                 <div className="bg-white w-8 h-8 md:w-12 md:h-12 rounded-full text-black flex justify-center items-center">
                   <GoArrowRight className="" />
                 </div>
