@@ -1,15 +1,16 @@
 import prisma from "@/prisma/client";
 import React from "react";
 import ListPost from "../components/ui/ListPost";
+import { SectionBorder } from "../components/ui/containers/SectionBorder";
 
-const page = async () => {
-  const posts = await prisma.post.findMany();
+const pagePost = async () => {
+  const posts = await prisma.post.findMany({ where: { published: true } });
 
   return (
-    <div>
+    <SectionBorder>
       <ListPost posts={posts} />
-    </div>
+    </SectionBorder>
   );
 };
 
-export default page;
+export default pagePost;
