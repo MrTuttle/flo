@@ -5,6 +5,7 @@ import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/app/components/theme-provider";
 import NavBarGlass from "./components/ui/nav/NavBarGlass";
+import NavBarGlassII from "./components/ui/nav/NavBarGlassII";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 const outfit = Outfit({ subsets: ["latin"], display: "swap" });
@@ -32,6 +33,7 @@ export default function RootLayout({
         >
           <div className="bg-gray-50 dark:bg-black">
             <NavBarGlass>{children}</NavBarGlass>
+            {/* <NavBarGlassII>{children}</NavBarGlassII> */}
           </div>
         </ThemeProvider>
       </body>

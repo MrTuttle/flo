@@ -25,18 +25,23 @@ import {
 import { Button } from "@/components/ui/button";
 import HeroUnderFrameVid from "./components/home/HeroUnderFrameVid";
 import TitleCut from "./components/ui/TitleCut";
+import { ScrollReveal } from "./components/ui/scrollReveal/scrollReveal";
 import NavBarGlass from "./components/ui/nav/NavBarGlass";
 import { PictureCard } from "./components/ui/cards/PictureCard";
+import {
+  SectionBorder,
+  SectionWide,
+} from "./components/ui/containers/SectionBorder";
 
 const PageLanding = () => {
   return (
     <div // this div is just to define darkmode colors without touch tailwins shadcn variables
-      // it wrap all page content
-      className=" bg-gray-50 dark:bg-black  "
+    // it wrap all page content
+    // className=" bg-gray-50 dark:bg-black  "
     >
-      <div className=" px-8 flex justify-center">
+      <SectionBorder>
         {/* <div className=" bg-stone-50 max-w-7xl dark:bg-stone-600 rounded-2xl p-4 h-svh flex flex-col flex-wrap gap-y-4 2xl:gap-y-6 -mx-2 2xl:-mx-3 justify-center text-center"> */}
-        <div className="min-h-[90svh] bg-stone-50 max-w-7xl dark:bg-stone-600 rounded-2xl p-4 flex flex-col flex-wrap gap-y-4 2xl:gap-y-6  2xl:-mx-3 justify-center text-center">
+        <div className="min-h-[90svh] w-full p-4 bg-stone-50 max-w-7xl dark:bg-stone-600 rounded-2xl flex flex-col flex-wrap gap-y-4 2xl:gap-y-6  2xl:-mx-3 justify-center text-center">
           <div className="w-9/12 md:w-4/12 mx-auto">
             <HeroUnderFrameVid />
           </div>
@@ -60,68 +65,76 @@ const PageLanding = () => {
             translation.
           </p>
         </div>
-      </div>
+      </SectionBorder>
 
-      <div className="mt-28">
-        <TitleCut>
-          <div className=" flex justify-center text-4xl">
-            <FiCodesandbox />
-          </div>
-        </TitleCut>
-        <TitleCut>
-          <p className="text-center text-4xl">My Dev Stack</p>
-        </TitleCut>
-        <TitleCut>
-          <p className="text-center p-4 text-xl dark:text-gray-400">
-            My developper stack allows me to quickly build SaaS <br />
-            or website with a total control on the interface{" "}
-          </p>
-        </TitleCut>
-      </div>
+      <SectionBorder>
+        <div className="mt-28 mb-8 w-full">
+          <TitleCut>
+            <div className=" flex justify-center text-4xl">
+              <FiCodesandbox />
+            </div>
+          </TitleCut>
+          <TitleCut>
+            <p className="text-center text-4xl">My Dev Stack</p>
+          </TitleCut>
+          <TitleCut>
+            <p className="text-center p-4 text-xl dark:text-gray-400">
+              My developper stack allows me to quickly build SaaS <br />
+              or website with a total control on the interface{" "}
+            </p>
+          </TitleCut>
+        </div>
+      </SectionBorder>
 
-      <SectionCards id="front">
-        <IconCard
-          icon="react"
-          titre="Développement front"
-          linkName="Lien"
-          linkUrl="#"
-        >
-          Avec Javascript et React, je conçois des composants d’interface
-          modulaire et réutilisables au typage fort (Typescript).
-        </IconCard>
-        <IconCard
-          icon="next"
-          titre="Développement Backend"
-          linkName="Lien"
-          linkUrl="#"
-        >
-          {" "}
-          Compatibles avec tous type de routers (PHP, Rails...) c’est avec Next
-          JS router que je connecte mes composants au back end. Prérendu serveur
-          et optimisation SEO en prime.
-        </IconCard>
-        <IconCard
-          icon="tailwind"
-          titre="Optimisation SCSS"
-          linkName="Lien"
-          linkUrl="#"
-        >
-          {" "}
-          Pour faire une interface impecable, il faut une bonne connaissance du
-          code CSS. Aujourd’hui c’est Tailwind qui me permet d’en exploiter au
-          mieux les possibilité. organisation rapide et optimale. Je peux aussi
-          mettre en place une bibliothèque SCSS sur mesure.
-        </IconCard>
-        <IconCard
-          icon="git"
-          titre="Intégration continue"
-          linkName="lien github"
-        >
-          Je pratique le CI/CD avec Git et Vercel, c’est à dire l’intégration et
-          le déploiement continue du code. Le code est systématiquemet versionné
-          sur Git.
-        </IconCard>
-      </SectionCards>
+      <ScrollReveal>
+        <SectionBorder>
+          <SectionCards id="front">
+            <IconCard
+              icon="react"
+              titre="Développement front"
+              linkName="Lien"
+              linkUrl="#"
+            >
+              Avec Javascript et React, je conçois des composants d’interface
+              modulaire et réutilisables au typage fort (Typescript).
+            </IconCard>
+            <IconCard
+              icon="next"
+              titre="Développement Backend"
+              linkName="Lien"
+              linkUrl="#"
+            >
+              {" "}
+              Compatibles avec tous type de routers (PHP, Rails...) c’est avec
+              Next JS router que je connecte mes composants au back end.
+              Prérendu serveur et optimisation SEO en prime.
+            </IconCard>
+            <IconCard
+              icon="tailwind"
+              titre="Optimisation SCSS"
+              linkName="Lien"
+              linkUrl="#"
+            >
+              {" "}
+              Pour faire une interface impecable, il faut une bonne connaissance
+              du code CSS. Aujourd’hui c’est Tailwind qui me permet d’en
+              exploiter au mieux les possibilité. organisation rapide et
+              optimale. Je peux aussi mettre en place une bibliothèque SCSS sur
+              mesure.
+            </IconCard>
+            <IconCard
+              icon="git"
+              titre="Intégration continue"
+              linkName="lien github"
+            >
+              Je pratique le CI/CD avec Git et Vercel, c’est à dire
+              l’intégration et le déploiement continue du code. Le code est
+              systématiquemet versionné sur Git.
+            </IconCard>
+          </SectionCards>
+        </SectionBorder>
+      </ScrollReveal>
+
       <div className="mt-8 2xl:mt-14 first:mt-0 p-8 border flex justify-center">
         <Drawer shouldScaleBackground={true}>
           <DrawerTrigger asChild>
@@ -150,46 +163,54 @@ const PageLanding = () => {
         </Drawer>
       </div>
 
-      <div className="mt-28">
-        <TitleCut>
-          <div className=" flex justify-center text-4xl">
-            <GrPaint />
-          </div>
-        </TitleCut>
-        <TitleCut>
-          <p className="text-center text-4xl">My Design Stack</p>
-        </TitleCut>
-        <TitleCut>
-          <p className="text-center p-4 text-xl dark:text-gray-400">
-            Formed Art school, I know how to create, draw and build logos,
-            branding, or icons. The tools below allows me to create and design
-            visual content. <br />
-            Draw prototypes and manage design systems. Draw all I want and know
-            how to animate it as vectorial images.
-          </p>
-        </TitleCut>
-      </div>
-      <SectionCards>
-        <IconCard
-          icon="ae"
-          titre="Expert Créative Cloud"
-          linkName="Lien behance"
-        >
-          Depuis son premier lancement, j’utilise la suite creative Cloud pour
-          créer et concevoir des contenus visuels. Animation d’illustrations
-          motion design avec after effect, créations / retouches d’illustrations
-          d’icones ou de logos avec illustrator, montages avancés de
-          compositions Photoshop... Et je guette l’évolution de l’IA qui va
-          changer en profondeur l’utilisation de ces vieux logiciels.
-        </IconCard>
+      <SectionBorder>
+        <div className="mt-28 mb-8 w-full">
+          <TitleCut>
+            <div className=" flex justify-center text-4xl">
+              <GrPaint />
+            </div>
+          </TitleCut>
+          <TitleCut>
+            <p className="text-center text-4xl">My Design Stack</p>
+          </TitleCut>
+          <ScrollReveal>
+            <p className="text-center p-4 text-xl dark:text-gray-400">
+              Formed Art school, I know how to create, draw and build logos,
+              branding, or icons. The tools below allows me to create and design
+              visual content. <br />
+              Draw prototypes and manage design systems. Draw all I want and
+              know how to animate it as vectorial images.
+            </p>
+          </ScrollReveal>
+        </div>
+      </SectionBorder>
 
-        <IconCard icon="figma">
-          Avec Figma ou Sketch, je modélise des maquettes interactive pour
-          tester et valider les interfaces. Je met en place des librairies pour
-          référencer les composants et maintenir la cohérence graphique de
-          l’application tout au long de l’évolution du projet.
-        </IconCard>
-      </SectionCards>
+      <ScrollReveal>
+        <SectionBorder>
+          <SectionCards>
+            <IconCard
+              icon="ae"
+              titre="Expert Créative Cloud"
+              linkName="Lien behance"
+            >
+              Depuis son premier lancement, j’utilise la suite creative Cloud
+              pour créer et concevoir des contenus visuels. Animation
+              d’illustrations motion design avec after effect, créations /
+              retouches d’illustrations d’icones ou de logos avec illustrator,
+              montages avancés de compositions Photoshop... Et je guette
+              l’évolution de l’IA qui va changer en profondeur l’utilisation de
+              ces vieux logiciels.
+            </IconCard>
+
+            <IconCard icon="figma">
+              Avec Figma ou Sketch, je modélise des maquettes interactive pour
+              tester et valider les interfaces. Je met en place des librairies
+              pour référencer les composants et maintenir la cohérence graphique
+              de l’application tout au long de l’évolution du projet.
+            </IconCard>
+          </SectionCards>
+        </SectionBorder>
+      </ScrollReveal>
 
       <div className="mt-28">
         <TitleCut>
@@ -209,7 +230,7 @@ const PageLanding = () => {
       </div>
 
       <div className="mt-28 ">
-        <div className="flex flex-col md:flex-row justify-between gap-4 ">
+        <SectionBorder>
           <PictureCard
             bgImage="l-exploratrice"
             title="Found it!"
@@ -220,11 +241,11 @@ const PageLanding = () => {
           <PictureCard bgImage="revolver" title="Bang!" bgcolor="salmon">
             <p>We can pick background colors in a list</p>
           </PictureCard>
-        </div>
+        </SectionBorder>
       </div>
 
       <div className="mt-4 ">
-        <div className="flex flex-col md:flex-row justify-between gap-4 ">
+        <SectionBorder>
           <PictureCard bgImage="le-nuage-noir" title="Cold" bgcolor="rose">
             <p>
               Colors works on dark modes, hover effects are disabled on tactile
@@ -241,7 +262,7 @@ const PageLanding = () => {
           <PictureCard bgImage="les-ophelies" bgcolor="yellow">
             <p className="text-slate-800">Content is optional</p>
           </PictureCard>
-        </div>
+        </SectionBorder>
       </div>
 
       <div className="mt-8 2xl:mt-14 first:mt-0 p-8 border flex justify-center">
