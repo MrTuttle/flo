@@ -3,7 +3,7 @@ import React, { Suspense, useState } from "react";
 import HeroUnderFrameVid from "./HeroUnderFrameVid";
 import { Skeleton } from "@/components/ui/skeleton";
 
-const HeroBento = async () => {
+const HeroBento = () => {
   // const [loading, setLoading] = useState<boolean>(false);
   // const showSkeleton = () => {
   //   setLoading(true);

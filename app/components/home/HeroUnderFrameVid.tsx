@@ -19,13 +19,14 @@ type HeroUnderFrameVidProps = {
   height?: string;
 };
 
-const HeroUnderFrameVid = async () => {
+const HeroUnderFrameVid = () => {
   const darkmodeSrc =
     "https://res.cloudinary.com/dc8rzbrbr/video/upload/v1720106984/Square-stone_cvs9hu.mov";
   const lightmodeSrc =
     "https://res.cloudinary.com/dc8rzbrbr/video/upload/v1720106966/Square-light_o5nb9y.mov";
 
-  await delay(2000);
+  // put async in front of the function and uncoment the await delay(2000) to test the skeleton
+  // await delay(2000);
 
   return (
     <>
