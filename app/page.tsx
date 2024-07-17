@@ -32,6 +32,7 @@ import {
   SectionBorder,
   SectionWide,
 } from "./components/ui/containers/SectionBorder";
+import HeroBento from "./components/home/HeroBento";
 
 const PageLanding = () => {
   return (
@@ -41,30 +42,7 @@ const PageLanding = () => {
     >
       <SectionBorder>
         {/* <div className=" bg-stone-50 max-w-7xl dark:bg-stone-600 rounded-2xl p-4 h-svh flex flex-col flex-wrap gap-y-4 2xl:gap-y-6 -mx-2 2xl:-mx-3 justify-center text-center"> */}
-        <div className="min-h-[90svh] w-full p-4 bg-stone-50 max-w-7xl dark:bg-stone-600 rounded-2xl flex flex-col flex-wrap gap-y-4 2xl:gap-y-6  2xl:-mx-3 justify-center text-center">
-          <div className="w-9/12 md:w-4/12 mx-auto">
-            <HeroUnderFrameVid />
-          </div>
-          <h1 className="text-stone-400 text-4xl md:text-6xl">
-            Hey ! my name is Flo
-            <br />
-          </h1>
-
-          <p className=" md:text-4xl text-lg">
-            I am a web designer <br />
-            and a front end developper <br />
-            based in France
-          </p>
-          <p className="md:text-xl text-base text-gray-700 dark:text-gray-300 max-w-prose text-pretty mx-auto">
-            {/* <p className=""> */} I have been working as a UI/UX designer and
-            front-end developer since 2009. I’ve always been someone who has
-            both a creative and a logical side. When I discovered web design, I
-            realized it would be the perfect fit. I could use my creative side
-            to design and my logical side to code. As a bonus, being both
-            designer and developer allows me to make sure no detail is lost in
-            translation.
-          </p>
-        </div>
+        <HeroBento />
       </SectionBorder>
 
       <SectionBorder>

@@ -3,11 +3,14 @@ import Image from "next/image";
 import flo from "@/public/avatar/Florent-Vincerot-avatar.jpg";
 import WindowsSizeDetector from "../utlis/WindowsSizeDetector";
 import { Video } from "../ui/Video";
+import delay from "delay";
 
 import { SiGithub } from "react-icons/si";
 import { SiLinkedin } from "react-icons/si";
 import Link from "next/link";
 import FloShadow from "@/public/avatar/floShadow.png";
+
+import { Skeleton } from "@/components/ui/skeleton";
 
 type HeroUnderFrameVidProps = {
   // src: string;
@@ -16,14 +19,17 @@ type HeroUnderFrameVidProps = {
   height?: string;
 };
 
-const HeroUnderFrameVid = () => {
+const HeroUnderFrameVid = async () => {
   const darkmodeSrc =
     "https://res.cloudinary.com/dc8rzbrbr/video/upload/v1720106984/Square-stone_cvs9hu.mov";
   const lightmodeSrc =
     "https://res.cloudinary.com/dc8rzbrbr/video/upload/v1720106966/Square-light_o5nb9y.mov";
 
+  await delay(2000);
+
   return (
     <>
+      {/* <Skeleton className="w-[320px] h-[320px] rounded-full" /> */}
       <div className=" dark:hidden bg-grayflo flex items-center justify-center">
         <video
           width="320"
