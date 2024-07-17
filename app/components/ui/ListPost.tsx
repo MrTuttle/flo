@@ -36,6 +36,11 @@ const ListPost = ({ posts }: ListPostProps) => {
           style={{ background: `${grads2[index]}` }}
         >
           <h1 className="text-xl md:text-2xl">{e.title}</h1>
+          <ul className="flex">
+            <li className=" px-2 text-sm border border-white rounded-full">
+              {e.published ? "published" : "unpublished"}
+            </li>
+          </ul>
           <p className=" bg- text-base md:text-base text-white/80">
             {e.content}
           </p>

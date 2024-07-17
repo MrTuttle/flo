@@ -8,6 +8,7 @@ import prisma from "@/prisma/client";
 export async function GET(request: NextRequest) {
   const posts = prisma.post.findMany({
     // where: {email: ''} look at documentation, many conditions are possibles here
+    // where: { published: true },
   });
 
   return NextResponse.json(posts);

@@ -10,6 +10,33 @@ const pagePost = async () => {
   const postsNotPublished = await prisma.post.findMany({
     where: { published: false },
   });
+  // const postPublishedCategory = await prisma.post.findMany({
+  //   where: {
+  //     categories: {
+  //       some: {
+  //         category: {
+  //           name: "stack",
+  //         },
+  //       },
+  //     },
+  //   },
+  // });
+  const postStack = await prisma.post.findMany({
+    where: {
+      published: true,
+      categories: { some: { category: { name: "stack" } } },
+    },
+    include: {
+      categories: {},
+    },
+    // include:{
+    //   categories: {
+    //     select: {
+    //       category: true,
+    //     },
+    //   }
+    // }
+  });
 
   return (
     <div>
@@ -38,6 +65,17 @@ const pagePost = async () => {
             </h1>
           </div>
           <ListPost posts={postsNotPublished} />
+        </SectionBorder>
+      </div>
+      <div className="py-2">
+        <SectionBorder>
+          <div className="text-3xl w-[400px] border">
+            <h1 className="">
+              Posts <br />
+              stack
+            </h1>
+          </div>
+          <ListPost posts={postStack} />
         </SectionBorder>
       </div>
     </div>
