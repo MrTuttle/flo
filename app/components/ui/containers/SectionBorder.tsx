@@ -13,7 +13,7 @@ export const SectionBorder = ({ children }: SectionBorderProps) => {
 
   return (
     <div className="px-4 xl:px-0 sm:max-w-7xl sm:mx-auto ">
-      <div className="flex flex-col md:flex-row justify-between gap-4 ">
+      <div className="flex flex-col md:flex-row justify-between gap-4 flex-1 ">
         {children}
       </div>
     </div>

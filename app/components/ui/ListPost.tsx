@@ -17,12 +17,24 @@ const ListPost = ({ posts }: ListPostProps) => {
     " dark:from-sky-700/50 dark:via-sky-900/50 dark:to-sky-950/50 dark:hover:from-sky-700/80 dark:hover:via-sky-900/80 dark:hover:to-sky-950/80 from-sky-700 via-sky-900 to-sky-950",
     " dark:from-blue-700/50 dark:via-blue-900/50 dark:to-blue-950/50 dark:hover:from-blue-700/80 dark:hover:via-blue-900/80 dark:hover:to-blue-950/80 from-blue-700 via-blue-900 to-blue-950",
   ];
+  const grads2 = [
+    "linear-gradient(180deg,rgba(23,12,89,0),#170c59 164.01%),#850fba",
+    "linear-gradient(180deg,rgba(23,12,89,0) -6.18%,#170c59 160.3%),#c51ad3",
+    "linear-gradient(177deg,rgba(23,12,89,0) 2.39%,#170c59 145.42%),#e858a6",
+    "linear-gradient(177deg,rgba(23,12,89,0) 2.39%,#170c59 145.42%),#f57462",
+    ,
+  ];
   const shape: string =
     "rounded-xl p-8 flex flex-col gap-4 justify-end flex-1 text-white bg-gradient-to-br  ";
   return (
     <>
       {posts.map((e, index) => (
-        <div key={e.id} className={shape + " " + grads[index]}>
+        // <div key={e.id} className={shape + " " + grads[index]}>
+        <div
+          key={e.id}
+          className={shape}
+          style={{ background: `${grads2[index]}` }}
+        >
           <h1 className="text-xl md:text-2xl">{e.title}</h1>
           <p className=" bg- text-base md:text-base text-white/80">
             {e.content}
