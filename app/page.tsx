@@ -46,7 +46,7 @@ const PageLanding = () => {
             <HeroUnderFrameVid />
           </div>
           <h1 className="text-stone-400 text-4xl md:text-6xl">
-            Hey ! my name is Floo
+            Hey ! my name is Flo
             <br />
           </h1>
 
@@ -171,15 +171,15 @@ const PageLanding = () => {
             </div>
           </TitleCut>
           <TitleCut>
-            <p className="text-center text-4xl">My Design Stack</p>
+            <p className="text-center text-4xl">My Design Skills</p>
           </TitleCut>
           <ScrollReveal>
             <p className="text-center p-4 text-xl dark:text-gray-400">
-              Formed Art school, I know how to create, draw and build logos,
-              branding, or icons. The tools below allows me to create and design
-              visual content. <br />
-              Draw prototypes and manage design systems. Draw all I want and
-              know how to animate it as vectorial images.
+              Formed Art school, and Artistic director for 15 past years, <br />
+              I know how to create visual contents like illustrations, icons,
+              logos & branding. <br />
+              My missions was also to design interfaces, prototypes and manage
+              design systems.
             </p>
           </ScrollReveal>
         </div>
@@ -188,25 +188,26 @@ const PageLanding = () => {
       <ScrollReveal>
         <SectionBorder>
           <SectionCards>
-            <IconCard
-              icon="ae"
-              titre="Expert Créative Cloud"
-              linkName="Lien behance"
-            >
-              Depuis son premier lancement, j’utilise la suite creative Cloud
-              pour créer et concevoir des contenus visuels. Animation
-              d’illustrations motion design avec after effect, créations /
-              retouches d’illustrations d’icones ou de logos avec illustrator,
-              montages avancés de compositions Photoshop... Et je guette
-              l’évolution de l’IA qui va changer en profondeur l’utilisation de
-              ces vieux logiciels.
+            <IconCard icon="hotjar" titre="user behavior analysis">
+              It’s impossible to create a successful product without knowing who
+              will be using it. A/B testings, heatmaps, user journey, personas
+              help us to increase the user experience.
             </IconCard>
-
-            <IconCard icon="figma">
+            <IconCard icon="figma" titre="prototyping">
               Avec Figma ou Sketch, je modélise des maquettes interactive pour
               tester et valider les interfaces. Je met en place des librairies
               pour référencer les composants et maintenir la cohérence graphique
               de l’application tout au long de l’évolution du projet.
+            </IconCard>
+            <IconCard
+              icon="ae"
+              titre="Expert Creative Cloud"
+              linkName="Lien behance"
+            >
+              Motion design avec After Effect, créations / retouches
+              d’illustrations, d’icones ou logos avec illustrator, compos
+              Photoshop professionelles... je suis votre couteau suisse pour
+              tout ce qui touche à l’image.
             </IconCard>
           </SectionCards>
         </SectionBorder>

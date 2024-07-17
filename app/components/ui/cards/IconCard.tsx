@@ -11,6 +11,7 @@ import { SiAdobeillustrator } from "react-icons/si";
 import { SiAdobephotoshop } from "react-icons/si";
 import { SiFigma } from "react-icons/si";
 import { RxSketchLogo } from "react-icons/rx";
+import { FaHotjar } from "react-icons/fa6";
 
 import { link } from "fs";
 // import type { IconType } from "../lib/index";
@@ -30,6 +31,7 @@ type Props = {
     | "ts"
     | "figma"
     | "sketch"
+    | "hotjar"
     | "none";
   linkName?: string;
   linkUrl?: string;
@@ -101,6 +103,13 @@ const ItemSiTailwindcss = () => {
     </div>
   );
 };
+const ItemHotJar = () => {
+  return (
+    <div className=" group-hover/item:scale-150 ease-in-out duration-300 rounded-lg w-12 h-12 mb-12  dark:bg-orange-500/20 bg-orange-500 dark:text-orange-500 text-gray-100 flex items-center justify-center">
+      <FaHotjar className="text-[2rem] group-hover/item:scale-110  ease-in duration-300" />
+    </div>
+  );
+};
 const ItemGithub = () => {
   return (
     <div className=" group-hover/item:scale-150 ease-out duration-300 rounded-lg w-12 h-12 mb-12  dark:bg-amber-500/20 bg-amber-500 dark:text-amber-500 text-gray-100 flex items-center justify-center">
@@ -125,6 +134,7 @@ export const IconCard = ({
             {icon === "react" && <ItemReact />}
             {icon === "next" && <ItemTbBrandNextjs />}
             {icon === "tailwind" && <ItemSiTailwindcss />}
+            {icon === "hotjar" && <ItemHotJar />}
             {icon === "ae" && <ItemSiAdobeaftereffects />}
             {icon === "psd" && <ItemSiAdobephotoshop />}
             {icon === "ai" && <ItemSiAdobeillustrator />}

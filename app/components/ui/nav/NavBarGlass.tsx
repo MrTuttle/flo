@@ -6,6 +6,7 @@ import { ModeToggle } from "../ModeToggle";
 import { FiCodesandbox } from "react-icons/fi";
 
 import ItemNav from "./ItemNav";
+import Link from "next/link";
 
 type NavBarGlassProps = {
   // children?: React.JSX.Element;
@@ -38,10 +39,13 @@ const NavBarGlass = ({ children }: NavBarGlassProps) => {
           }
         >
           <div className=" px-4 xl:px-2 flex flex-col w-full max-w-7xl overflow-hidden  transition-all ease-in-out duration-1000">
-            <div className="   py-2 flex justify-between items-baseline text-base gap-4 sm:gap-10 ">
-              <div className="text-xl translate-y-1">
-                {" "}
-                <FiCodesandbox />
+            <div className="  py-2 flex justify-between items-baseline text-base gap-4 sm:gap-10 ">
+              <div className=" p-1 rounded text-xl ">
+                <div className="absolute translate-y-[-50%]">
+                  <Link href="/">
+                    <FiCodesandbox className=" hover:text-2xl transition-all ease-in-out duration-300" />
+                  </Link>
+                </div>
               </div>
               <div className="">
                 <ul
