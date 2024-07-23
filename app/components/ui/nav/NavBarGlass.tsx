@@ -19,7 +19,7 @@ const NavBarGlass = ({ children }: NavBarGlassProps) => {
   const bgMenuOn =
     " backdrop-blur-0 bg-white/50 dark:bg-black/50 w-11/12 h-full sm:w-full rounded-xl fixed translate-y-0 pt-2 flex justify-center z-50 ease-in-out duration-300";
   const bgMenuOff =
-    "backdrop-blur-xl bg-white/50 dark:bg-black/50 w-11/12 sm:w-10/12 rounded-xl fixed translate-y-2 flex justify-center z-50 ease-in-out duration-300";
+    "border backdrop-blur-xl bg-white/50 dark:bg-black/50 w-11/12 sm:w-10/12 rounded-xl fixed translate-y-2 flex justify-center z-50 ease-in-out duration-300";
 
   return (
     <>
@@ -58,7 +58,7 @@ const NavBarGlass = ({ children }: NavBarGlassProps) => {
                 className={
                   menuHeight
                     ? " bg-red-500/0 w-[50%] h-[20svh] flex justify-center"
-                    : " bg-blue-500/0 w-[50%]  flex justify-center"
+                    : " bg-blue-500/0  flex justify-center"
                 } /* menu Height trigger : bg 0% for trigger exist */
                 onMouseEnter={() => setMenuHeight(true)}
                 onMouseLeave={() => setMenuHeight(false)}
