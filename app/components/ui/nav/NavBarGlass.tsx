@@ -19,7 +19,7 @@ const NavBarGlass = ({ children }: NavBarGlassProps) => {
   const bgMenuOn =
     " backdrop-blur-0 bg-white/50 dark:bg-black/50 w-11/12 h-full sm:w-full rounded-xl fixed translate-y-0 pt-2 flex justify-center z-50 ease-in-out duration-300";
   const bgMenuOff =
-    "border backdrop-blur-xl bg-white/50 dark:bg-black/50 w-11/12 sm:w-10/12 rounded-xl fixed translate-y-2 flex justify-center z-50 ease-in-out duration-300";
+    "border  backdrop-blur-xl bg-white/50 dark:bg-black/50 w-11/12 sm:w-10/12 rounded-xl fixed translate-y-2 pb-2 flex justify-center z-50 ease-in-out duration-300";
 
   return (
     <>
@@ -129,7 +129,7 @@ const NavBarGlass = ({ children }: NavBarGlassProps) => {
       </div>
       <div // this div is the page content, contain styles for menuHeight state
         // it wrap children ( all page content ) and blur when menu is over
-        className="  ease-in-out duration-300"
+        className="  ease-in-out duration-300 pt-20"
         // w-11/12 sm:w-10/12 max-w-7xl dontput theses values here (to fit with menu width), put them in the child div
         style={
           menuHeight
