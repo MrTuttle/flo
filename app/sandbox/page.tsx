@@ -11,11 +11,61 @@ import {
   SectionBorder,
   SectionWide,
 } from "../components/ui/containers/SectionBorder";
+import SectionFlo from "../components/ui/containers/SectionFlo";
+import CarouselTW from "../components/ui/carousels/CarouselTW";
+import Link from "next/link";
+import Image from "next/image";
+import LesCousines from "@/public/les-cousines.png";
+import LesOphelies from "@/public/les-ophelies.png";
+import LeNuageNoir from "@/public/le-nuage-noir.png";
 
 const Page = () => {
   return (
     <>
+      <SectionFlo className="border p-10 *:p-2 *:rounded-xl flex gap-2 text-white">
+        <div className="bg-teal-600">
+          This section is allowed to take children
+        </div>
+        <div className="bg-sky-600">It can takes TW classes</div>
+        <div className="bg-orange-600">
+          It wrap children (these DIVs) in a span block relative
+        </div>
+      </SectionFlo>
       {/* <div className="mt-4 mx-auto px-8 border"> */}
+      <SectionWide>
+        <CarouselTW className=" scroll-pl-20 border bg-slate-700 *:rounded-xl *:bg-slate-800 *:w-[45vw] md:*:w-[75v] *:overflow-hidden">
+          <div className="relative bg-rose-800 w-full h-full ">
+            <div className="absolute w-full h-full border border-white flex justify-center items-center">
+              <p>Allo</p>
+            </div>
+            <Image
+              src={LeNuageNoir}
+              alt="les cousines"
+              width={400}
+              height={400}
+              className=" object-cover p-2"
+            />
+          </div>
+          <div className="border border-red-500 bg-slate-200 ">
+            <Image
+              src={LesOphelies}
+              alt="les cousines"
+              width={400}
+              height={400}
+              className="rounded-lg h-full w-auto"
+            />
+          </div>
+          <div className="border border-red-500 bg-slate-200 ">
+            <Image
+              src={LesCousines}
+              alt="les cousines"
+              width={400}
+              height={400}
+              className="rounded-lg h-full w-auto"
+            />
+          </div>
+        </CarouselTW>
+      </SectionWide>
       <div className="relative w-[100%] overflow-hidden ">
         <div className=" bg-slate-200 dark:bg-slate-800/25 text-white">
           <div className="snap-x flex gap-4  snap-mandatory scroll-pl-12 overflow-x-auto py-14">
