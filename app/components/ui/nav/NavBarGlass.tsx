@@ -87,9 +87,9 @@ const NavBarGlass = ({ children }: NavBarGlassProps) => {
                 <ul className="flex gap-4">
                   <ItemNav title="Front">
                     <div
-                      className={
+                      className={`flex flex-col gap-4 sm:gap-1 ${
                         menuHeight ? "" : "hidden"
-                      } /* hover control : must be hidden if menuHeight is false */
+                      }`} /* hover control : must be hidden if menuHeight is false */
                     >
                       <Pill>Coming soon</Pill>
 
@@ -102,9 +102,9 @@ const NavBarGlass = ({ children }: NavBarGlassProps) => {
 
                   <ItemNav title="Design">
                     <div
-                      className={
-                        menuHeight ? undefined : "hidden"
-                      } /* hover control : must be hidden if menuHeight is false */
+                      className={`flex flex-col gap-4 sm:gap-1 ${
+                        menuHeight ? "" : "hidden"
+                      }`} /* hover control : must be hidden if menuHeight is false */
                     >
                       <Pill>Coming soon</Pill>
 
@@ -115,7 +115,11 @@ const NavBarGlass = ({ children }: NavBarGlassProps) => {
                     </div>
                   </ItemNav>
                   <ItemNav title="Back">
-                    <div className={menuHeight ? "" : "hidden"}>
+                    <div
+                      className={`flex flex-col gap-4 sm:gap-1 ${
+                        menuHeight ? "" : "hidden"
+                      }`}
+                    >
                       <Pill>Coming soon</Pill>
 
                       <MenuItem>Next JS</MenuItem>
