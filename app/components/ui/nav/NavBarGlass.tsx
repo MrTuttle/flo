@@ -12,6 +12,9 @@ type NavBarGlassProps = {
   // children?: React.JSX.Element;
   children?: React.ReactNode;
 };
+type PillProps = {
+  children?: React.ReactNode;
+};
 
 const NavBarGlass = ({ children }: NavBarGlassProps) => {
   const [menuHeight, setMenuHeight] = useState(false);
@@ -20,6 +23,24 @@ const NavBarGlass = ({ children }: NavBarGlassProps) => {
     " backdrop-blur-0 bg-white/50 dark:bg-black/50 w-11/12 h-full sm:w-full rounded-xl fixed translate-y-0 pt-2 flex justify-center z-50 ease-in-out duration-300";
   const bgMenuOff =
     "border  backdrop-blur-xl bg-white/50 dark:bg-black/50 w-11/12 sm:w-10/12 rounded-xl fixed translate-y-2 pb-2 flex justify-center z-50 ease-in-out duration-300";
+  const liHoverStyle = "hover:-ml-4 transition-all hover:underline";
+
+  const Pill = ({ children }: PillProps) => {
+    return (
+      <ul className="flex mb-6">
+        <li className=" px-2 text-sm border border-black dark:border-white  rounded-full">
+          {children ? children : "label"}
+        </li>
+      </ul>
+    );
+  };
+  const MenuItem = ({ children }: { children: React.ReactNode }) => {
+    return (
+      <a href="#">
+        <li className={liHoverStyle}>{children}</li>
+      </a>
+    );
+  };
 
   return (
     <>
@@ -70,18 +91,12 @@ const NavBarGlass = ({ children }: NavBarGlassProps) => {
                         menuHeight ? "" : "hidden"
                       } /* hover control : must be hidden if menuHeight is false */
                     >
-                      <a href="#front">
-                        <li>Composants React</li>
-                      </a>
-                      <a href="#">
-                        <li>API Rest</li>
-                      </a>
-                      <a href="#">
-                        <li>Typescript</li>
-                      </a>
-                      <a href="#">
-                        <li>Tailwind CSS ou SCSS</li>
-                      </a>
+                      <Pill>Coming soon</Pill>
+
+                      <MenuItem>Composant React</MenuItem>
+                      <MenuItem>API Rest</MenuItem>
+                      <MenuItem>Typescript</MenuItem>
+                      <MenuItem>Tailwind CSS ou SCSS</MenuItem>
                     </div>
                   </ItemNav>
 
@@ -91,31 +106,21 @@ const NavBarGlass = ({ children }: NavBarGlassProps) => {
                         menuHeight ? undefined : "hidden"
                       } /* hover control : must be hidden if menuHeight is false */
                     >
-                      <a href="#">
-                        <li>Maquettes Figma</li>
-                      </a>
-                      <a href="#">
-                        <li>Parcours utilisateurs</li>
-                      </a>
-                      <a href="#">
-                        <li>Création d’icones</li>
-                      </a>
-                      <a href="#">
-                        <li>Illustrations</li>
-                      </a>
+                      <Pill>Coming soon</Pill>
+
+                      <MenuItem>Maquettes Figma</MenuItem>
+                      <MenuItem>Parcours utilisateurs</MenuItem>
+                      <MenuItem>Création d’icones</MenuItem>
+                      <MenuItem>Illustrations</MenuItem>
                     </div>
                   </ItemNav>
                   <ItemNav title="Back">
                     <div className={menuHeight ? "" : "hidden"}>
-                      <a href="#" className="">
-                        <li>Next JS</li>
-                      </a>
-                      <a href="#">
-                        <li>Ruby on Rails</li>
-                      </a>
-                      <a href="#">
-                        <li>Schema de bases de données</li>
-                      </a>
+                      <Pill>Coming soon</Pill>
+
+                      <MenuItem>Next JS</MenuItem>
+                      <MenuItem>Ruby on Rails</MenuItem>
+                      <MenuItem>Schema de bases de données</MenuItem>
                     </div>
                   </ItemNav>
                 </ul>
