@@ -39,11 +39,12 @@ const pagePost = async () => {
   });
 
   return (
-    <div>
+    <div className="border-8 w-svw">
       <SectionBorder>
-        <h1 className="py-20 text-7xl bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-rose-300">
+        <h1 className="  text-wrap py-20 text-6xl bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-rose-300">
           Gradient <br />
-          Californian style
+          Californian <br />
+          style
         </h1>
       </SectionBorder>
 
