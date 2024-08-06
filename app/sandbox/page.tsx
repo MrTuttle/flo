@@ -22,6 +22,156 @@ import LeNuageNoir from "@/public/le-nuage-noir.png";
 const Page = () => {
   return (
     <>
+      <SectionFlo className="p-10 flex flex-wrap gap-2">
+        <div className="font-bold">Experimentation :</div>
+        <div>Flex wide component</div>
+        <div className="font-bold">Usage :</div>
+        <div>need to change last child order in mobile</div>
+        <div className="font-bold">Carreful :</div>
+        <div>
+          must add a div container if we wrapped in SectionBorder component
+        </div>
+      </SectionFlo>
+      <SectionBorder>
+        <div className="py-20" /* div container*/>
+          <div className="flex flex-wrap">
+            <div className="border basis-full sm:basis-1/2 flex flex-col justify-center gap-4 p-20  w-full   border-cyan-500">
+              <h1 className="text-slate-950 text-4xl font-bold">Allure</h1>
+              <p className="text-slate-700">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Adipisci quidem ipsam sequi blanditiis inventore consequuntur
+                fugiat fugit corrupti mollitia, facilis doloremque eius, ut,
+                laudantium provident autem ad ipsa nobis commodi.
+              </p>
+            </div>
+            {/* <div className="basis-full sm:basis-1/2 flex flex-col gap-4 p-20 w-full   bg-cyan-500"> */}
+            <Image
+              src={LeNuageNoir}
+              alt="les cousines"
+              width={300}
+              height={300}
+              className="basis-full sm:basis-1/2 object-cover"
+            />
+          </div>
+          {/* </div> */}
+          {/* <div className="basis-full sm:basis-1/2 flex flex-col gap-4 p-20 w-full   bg-cyan-500"> */}
+          <div className="flex flex-wrap-reverse">
+            <Image
+              src={LesOphelies}
+              alt="les cousines"
+              width={300}
+              height={300}
+              className="basis-full sm:basis-1/2 object-cover"
+            />
+            {/* </div> */}
+
+            <div className="basis-full sm:basis-1/2 flex flex-col justify-center gap-4 p-20  w-full border   border-cyan-500">
+              <h1 className="text-slate-950 text-4xl font-bold">Wander</h1>
+              <p className="text-slate-700">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Adipisci quidem ipsam sequi blanditiis inventore consequuntur
+                fugiat fugit corrupti mollitia, facilis doloremque eius, ut,
+                laudantium provident autem ad ipsa nobis commodi.
+              </p>
+            </div>
+          </div>
+        </div>
+      </SectionBorder>
+      <SectionFlo className="p-10 flex flex-wrap gap-2">
+        <div className="font-bold">Experimentation :</div>
+        <div>Flex wide component</div>
+        <div className="font-bold">Usage :</div>
+        <div>need to change last child order in mobile</div>
+      </SectionFlo>
+      <div className="flex flex-wrap">
+        <div className="border basis-full sm:basis-1/2 flex flex-col justify-center gap-4 p-20  w-full   border-cyan-500">
+          <h1 className="text-slate-950 text-4xl font-bold">Allure</h1>
+          <p className="text-slate-700">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
+            quidem ipsam sequi blanditiis inventore consequuntur fugiat fugit
+            corrupti mollitia, facilis doloremque eius, ut, laudantium provident
+            autem ad ipsa nobis commodi.
+          </p>
+        </div>
+        {/* <div className="basis-full sm:basis-1/2 flex flex-col gap-4 p-20 w-full   bg-cyan-500"> */}
+        <Image
+          src={LeNuageNoir}
+          alt="les cousines"
+          width={300}
+          height={300}
+          className="basis-full sm:basis-1/2 object-cover"
+        />
+      </div>
+      {/* </div> */}
+      {/* <div className="basis-full sm:basis-1/2 flex flex-col gap-4 p-20 w-full   bg-cyan-500"> */}
+      <div className="flex flex-wrap-reverse">
+        <Image
+          src={LesOphelies}
+          alt="les cousines"
+          width={300}
+          height={300}
+          className="basis-full sm:basis-1/2 object-cover"
+        />
+        {/* </div> */}
+
+        <div className="basis-full sm:basis-1/2 flex flex-col justify-center gap-4 p-20  w-full border   border-cyan-500">
+          <h1 className="text-slate-950 text-4xl font-bold">Wander</h1>
+          <p className="text-slate-700">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
+            quidem ipsam sequi blanditiis inventore consequuntur fugiat fugit
+            corrupti mollitia, facilis doloremque eius, ut, laudantium provident
+            autem ad ipsa nobis commodi.
+          </p>
+        </div>
+      </div>
+      <SectionFlo className="p-10 flex gap-2 flex-wrap">
+        <div className="font-bold">Experimentation :</div>
+        <div>
+          Flex wide component, fit well in SectioBorder, but doesn’t switch
+          order in mobile
+        </div>
+      </SectionFlo>
+      <SectionBorder>
+        <div className="flex flex-wrap">
+          <div className="border basis-full md:basis-1/2 flex flex-col justify-center gap-4 p-20  w-full   border-cyan-500">
+            <h1 className="text-slate-950 text-4xl font-bold">Allure</h1>
+            <p className="text-slate-700">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
+              quidem ipsam sequi blanditiis inventore consequuntur fugiat fugit
+              corrupti mollitia, facilis doloremque eius, ut, laudantium
+              provident autem ad ipsa nobis commodi.
+            </p>
+          </div>
+          {/* <div className="basis-full md:basis-1/2 flex flex-col gap-4 p-20 w-full   bg-cyan-500"> */}
+          <Image
+            src={LeNuageNoir}
+            alt="les cousines"
+            width={300}
+            height={300}
+            className="basis-full md:basis-1/2 object-cover"
+          />
+          {/* </div> */}
+          {/* <div className="basis-full md:basis-1/2 flex flex-col gap-4 p-20 w-full   bg-cyan-500"> */}
+          <Image
+            src={LesOphelies}
+            alt="les cousines"
+            width={300}
+            height={300}
+            className="basis-full md:basis-1/2 object-cover"
+          />
+          {/* </div> */}
+
+          <div className="basis-full md:basis-1/2 flex flex-col justify-center gap-4 p-20  w-full border   border-cyan-500">
+            <h1 className="text-slate-950 text-4xl font-bold">Wander</h1>
+            <p className="text-slate-700">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
+              quidem ipsam sequi blanditiis inventore consequuntur fugiat fugit
+              corrupti mollitia, facilis doloremque eius, ut, laudantium
+              provident autem ad ipsa nobis commodi.
+            </p>
+          </div>
+        </div>
+      </SectionBorder>
       <SectionFlo className="border p-10 *:p-2 *:rounded-xl flex gap-2 text-white">
         <div className="bg-teal-600">
           This section is allowed to take children
@@ -30,6 +180,10 @@ const Page = () => {
         <div className="bg-orange-600">
           It wrap children (these DIVs) in a span block relative
         </div>
+      </SectionFlo>
+      <SectionFlo className="p-10 flex gap-2">
+        <div className="font-bold">Experimentation :</div>
+        <div>A tailwind carousel component CarouselTW</div>
       </SectionFlo>
       {/* <div className="mt-4 mx-auto px-8 border"> */}
       <SectionWide>
@@ -66,6 +220,10 @@ const Page = () => {
           </div>
         </CarouselTW>
       </SectionWide>
+      <SectionFlo className="p-10 flex gap-2">
+        <div className="font-bold">Experimentation :</div>
+        <div>Manuel setting of Tailwind carousel</div>
+      </SectionFlo>
       <div className="relative w-[100%] overflow-hidden ">
         <div className=" bg-slate-200 dark:bg-slate-800/25 text-white">
           <div className="snap-x flex gap-4  snap-mandatory scroll-pl-12 overflow-x-auto py-14">
@@ -97,6 +255,10 @@ const Page = () => {
           </div>
         </div>
       </div>
+      <SectionFlo className="p-10 flex gap-2 flex-wrap">
+        <div className="font-bold">Experimentation :</div>
+        <div>my PictureCard wraped in my SectionBorder container</div>
+      </SectionFlo>
 
       <SectionBorder>
         <PictureCard
@@ -114,6 +276,10 @@ const Page = () => {
           <p>Redrum! redrum! redrum!...</p>
         </PictureCard>
       </SectionBorder>
+      <SectionFlo className="p-10 flex gap-2 flex-wrap">
+        <div className="font-bold">Experimentation :</div>
+        <div>my PictureCard component with different contents</div>
+      </SectionFlo>
 
       <div className="px-4 pt-4 sm:px-0 sm:max-w-7xl sm:mx-auto ">
         <div className="flex flex-col md:flex-row justify-between gap-4 ">
@@ -128,6 +294,10 @@ const Page = () => {
           <Chart />
         </div>
       </div>
+      <SectionFlo className="p-10 flex gap-2 flex-wrap">
+        <div className="font-bold">Experimentation :</div>
+        <div>first manual try of Tailwind carousel</div>
+      </SectionFlo>
       <div className="px-4 pt-4 sm:px-0 sm:max-w-7xl sm:mx-auto ">
         <div className="relative bg-slate-200 rounded-xl overflow-hidden dark:bg-slate-800/25">
           <div className="snap-x w-full flex gap-8  scroll-pl-12 overflow-x-auto py-14">
@@ -154,6 +324,10 @@ const Page = () => {
           </div>
         </div>
       </div>
+      <SectionFlo className="p-10 flex gap-2 flex-wrap">
+        <div className="font-bold">Experimentation :</div>
+        <div>SectionBorder container</div>
+      </SectionFlo>
       <SectionBorder>
         <div className="mt-4 mx-auto">
           <div className="flex flex-col md:flex-row justify-between gap-4 snap-proximity snap-x *:w-160 ">
@@ -195,6 +369,10 @@ const Page = () => {
           </div>
         </div>
       </SectionBorder>
+      <SectionFlo className="p-10 flex gap-2 flex-wrap">
+        <div className="font-bold">Experimentation :</div>
+        <div>SectionBorder with one PictureCard and natural divs</div>
+      </SectionFlo>
 
       <SectionBorder>
         <PictureCard
@@ -223,6 +401,10 @@ const Page = () => {
           </p>
         </div>
       </SectionBorder>
+      <SectionFlo className="p-10 flex gap-2 flex-wrap">
+        <div className="font-bold">Experimentation :</div>
+        <div>Tailwind carousel in SectionBorder</div>
+      </SectionFlo>
       <SectionBorder>
         <div className="relative w-[100%] overflow-hidden ">
           <div className=" bg-slate-200 dark:bg-slate-800/25 text-white">
@@ -256,6 +438,43 @@ const Page = () => {
           </div>
         </div>
       </SectionBorder>
+      <SectionFlo className="p-10 flex gap-2 flex-wrap">
+        <div className="font-bold">Experimentation :</div>
+        <div>Tailwind carousel in SectionWide</div>
+      </SectionFlo>
+      <SectionWide>
+        <div className="relative w-[100%] overflow-hidden ">
+          <div className=" bg-slate-200 dark:bg-slate-800/25 text-white">
+            <div className="snap-x flex gap-4  snap-mandatory scroll-pl-12 overflow-x-auto py-14">
+              <div className=" snap-center shrink-0 ">
+                <div className="shrink-0 w-[75vw] aspect-video rounded-lg shadow-xl bg-gradient-to-b from-violet-600 via-violet-900 to-violet-950 flex items-center justify-center">
+                  A
+                </div>
+              </div>
+              <div className=" snap-center shrink-0 ">
+                <div className="shrink-0 w-[75vw] aspect-video rounded-lg shadow-xl bg-gradient-to-b from-purple-600 via-purple-900 to-purple-950 flex items-center justify-center">
+                  B
+                </div>
+              </div>
+              <div className=" snap-center shrink-0 ">
+                <div className="shrink-0 w-[75vw] aspect-video rounded-lg shadow-xl bg-gradient-to-b from-fuchsia-600 via-fuchsia-900 to-fuchsia-950 flex items-center justify-center">
+                  C
+                </div>
+              </div>
+              <div className=" snap-center shrink-0 ">
+                <div className="shrink-0 w-[75vw] aspect-video rounded-lg shadow-xl bg-gradient-to-b from-rose-600 via-rose-900 to-rose-950 flex items-center justify-center">
+                  D
+                </div>
+              </div>
+              <div className=" snap-center shrink-0 ">
+                <div className="shrink-0 w-[75vw] aspect-video rounded-lg shadow-xl bg-gradient-to-b bg from-red-600 via-red-900 to-red-950 flex items-center justify-center">
+                  E
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </SectionWide>
     </>
   );
 };

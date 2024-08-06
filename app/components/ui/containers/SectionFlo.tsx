@@ -1,5 +1,7 @@
 // import React from "react";
 import { cn } from "@/lib/utils";
+/** a component with conditional TW classes */
+/** tacke children as props and all classNames */
 
 const SectionFlo = ({
   className,
