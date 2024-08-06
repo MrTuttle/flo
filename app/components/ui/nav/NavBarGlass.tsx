@@ -138,14 +138,15 @@ const NavBarGlass = ({ children }: NavBarGlassProps) => {
       </div>
       <div // this div is the page content, contain styles for menuHeight state
         // it wrap children ( all page content ) and blur when menu is over
-        className="  ease-in-out duration-300 pt-20"
+        className="  ease-in-out duration-300 pt-20 "
         // w-11/12 sm:w-10/12 max-w-7xl dontput theses values here (to fit with menu width), put them in the child div
         style={
           menuHeight
             ? {
                 // marginTop: "9rem",
                 transform: "scale(0.90)",
-                filter: "blur(24px)",
+                filter: "blur(24px)", // blur when menu is open
+                position: "fixed", // avoid scroll when menu is open
               }
             : { transform: "scale(1)" }
         }
