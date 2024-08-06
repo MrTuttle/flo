@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { ModeToggle } from "../ModeToggle";
 
@@ -19,11 +19,18 @@ type PillProps = {
 const NavBarGlass = ({ children }: NavBarGlassProps) => {
   const [menuHeight, setMenuHeight] = useState(false);
   const [menuOpenF, setMenuOpenF] = useState(false);
+
+  // freeze scroll when menu is open
+  useEffect(() => {
+    document.body.style.overflow = menuHeight ? "hidden" : "unset";
+  }, [menuHeight]);
+
   const bgMenuOn =
     " backdrop-blur-0 bg-white/50 dark:bg-black/50 w-11/12 h-full sm:w-full rounded-xl fixed translate-y-0 pt-2 flex justify-center z-50 ease-in-out duration-300";
   const bgMenuOff =
     "border  backdrop-blur-xl bg-white/50 dark:bg-black/50 w-11/12 sm:w-10/12 rounded-xl fixed translate-y-2 pb-2 flex justify-center z-50 ease-in-out duration-300";
-  const liHoverStyle = "hover:-ml-4 transition-all hover:underline";
+  const liHoverStyle =
+    " transition-all duration-500 hover:underline hover:underline-offset-4";
 
   const Pill = ({ children }: PillProps) => {
     return (
@@ -146,7 +153,8 @@ const NavBarGlass = ({ children }: NavBarGlassProps) => {
                 // marginTop: "9rem",
                 transform: "scale(0.90)",
                 filter: "blur(24px)", // blur when menu is open
-                position: "fixed", // avoid scroll when menu is open
+                // position: "fixed",
+                // translate: "0 -50%",
               }
             : { transform: "scale(1)" }
         }
