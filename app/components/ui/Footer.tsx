@@ -5,7 +5,7 @@ const Footer = () => {
 
   return (
     <>
-      <footer className="flex justify-end text-xs p-8 opacity-30">
+      <footer className="flex justify-end text-xs p-8 mb-8 opacity-40">
         <div className="">Made by Flo {year}</div>
       </footer>
     </>
