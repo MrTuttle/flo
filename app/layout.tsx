@@ -6,6 +6,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/app/components/theme-provider";
 import NavBarGlass from "./components/ui/nav/NavBarGlass";
 import NavBarGlassII from "./components/ui/nav/NavBarGlassII";
+import Footer from "./components/ui/Footer";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 const outfit = Outfit({ subsets: ["latin"], display: "swap" });
@@ -32,7 +33,10 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <div className="bg-gray-50 dark:bg-black">
-            <NavBarGlass>{children}</NavBarGlass>
+            <NavBarGlass>
+              {children}
+              <Footer />
+            </NavBarGlass>
             {/* <NavBarGlassII>{children}</NavBarGlassII> */}
           </div>
         </ThemeProvider>
