@@ -1,7 +1,28 @@
 // import React from "react";
 import { cn } from "@/lib/utils";
-/** a component with conditional TW classes */
-/** tacke children as props and all classNames */
+
+/**
+ * a rounded container component height of 6 with conditional TW classes addons
+ * 
+ * @param className: string | undefined - Optionnal, Tailwind classes.
+ * @param  {...props}: React.HTMLAttributes<HTMLDivElement> The Html markup.
+
+ * @returns <span
+      className={cn(
+        "relative block h-6 rounded-md",
+        props.children && "h-auto",
+        className
+      )}
+      {...props}
+    />
+ * @example
+
+ * <SectionFlo className="p-10 flex gap-2">
+ *    <div className="font-bold">A TW bold text div</div>
+ *    <div>A simple div text</div>
+ * </SectionFlo>
+
+ */
 
 const SectionFlo = ({
   className,

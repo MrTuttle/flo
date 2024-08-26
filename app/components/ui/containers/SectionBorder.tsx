@@ -8,6 +8,7 @@ type SectionBorderProps = {
  * container with 1rem / 16px x padding, max width 1280px, centered
  * flex column on mobile, flex row on desktop
  * @returns children props wraped in a flex container
+ * @example <SectionBorder>children</SectionBorder>
  */
 export const SectionBorder = ({ children }: SectionBorderProps) => {
   return (
