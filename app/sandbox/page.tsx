@@ -18,10 +18,25 @@ import Image from "next/image";
 import LesCousines from "@/public/les-cousines.png";
 import LesOphelies from "@/public/les-ophelies.png";
 import LeNuageNoir from "@/public/le-nuage-noir.png";
+import Minipill from "../components/ui/pills/Minipill";
 
 const Page = () => {
+  const bgimg = `w-full relative bg-slate-500 p-10 bg-[url('/les-ophelies.png')] bg-cover bg-center`;
   return (
     <>
+      <SectionFlo className="  p-10 flex flex-wrap gap-2">
+        Experimentation : a dark mode glass pill on a tailwind background image
+        cover -
+      </SectionFlo>
+      <SectionBorder>
+        <div className={bgimg}>
+          {" "}
+          <Minipill>glass minipill</Minipill>
+          <div className=" absolute top-4 right-10">
+            <Minipill />
+          </div>
+        </div>
+      </SectionBorder>
       <SectionFlo className="p-10 flex flex-wrap gap-2">
         <div className="font-bold">Experimentation :</div>
         <div>Flex wide component</div>
@@ -45,6 +60,7 @@ const Page = () => {
               </p>
             </div>
             {/* <div className="basis-full sm:basis-1/2 flex flex-col gap-4 p-20 w-full   bg-cyan-500"> */}
+
             <Image
               src={LeNuageNoir}
               alt="les cousines"
