@@ -11,6 +11,32 @@ export type PictureCardProps = {
   bgcolor?: "rose" | "teal" | "yellow" | "cyan" | "salmon";
 };
 
+/**
+ * Use it wrapped in SectionBorder.tsx component
+ * @param children: React.JSX.Element | undefined
+ * @param bgImage: string | undefined - The image name to be displayed.
+ * @param title: string | undefined - The title to be displayed.
+ * @param bgcolor: "rose" | "teal" | "yellow" | "cyan" | "salmon" | undefined - The background color of the card.
+
+ * @example <SectionBorder>
+        <PictureCard
+          bgImage="les-cousines"
+          title="Bang! you are red!"
+          bgcolor="teal"
+        >
+          <p>Redrum! redrum! redrum!...</p>
+        </PictureCard>
+        <PictureCard
+          bgImage="les-cousines"
+          title="Bang! you are red!"
+          bgcolor="teal"
+        >
+          <p>Redrum! redrum! redrum!...</p>
+        </PictureCard>
+      </SectionBorder>
+
+ */
+
 export const PictureCard = ({
   children,
   bgImage,

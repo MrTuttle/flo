@@ -5,6 +5,7 @@ type SectionBorderProps = {
 };
 
 /**
+ * container for PictureCard.tsx component
  * container with 1rem / 16px x padding, max width 1280px, centered
  * flex column on mobile, flex row on desktop
  * @returns children props wraped in a flex container
