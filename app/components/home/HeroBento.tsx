@@ -38,7 +38,7 @@ const HeroBento = () => {
   };
   return (
     <Suspense fallback={Skeletonn()}>
-      <div className="min-h-[90svh] w-full p-4 bg-stone-50 max-w-7xl dark:bg-stone-600 rounded-2xl flex flex-col flex-wrap gap-y-4 2xl:gap-y-6  2xl:-mx-3 justify-center text-center">
+      <div className="min-h-[90svh] w-full px-4 py-20 bg-stone-50 max-w-7xl dark:bg-stone-800 rounded-2xl flex flex-col flex-wrap gap-y-4 2xl:gap-y-6  2xl:-mx-3 justify-center text-center">
         <div className=" w-9/12 md:w-4/12 mx-auto">
           <HeroUnderFrameVid />
         </div>

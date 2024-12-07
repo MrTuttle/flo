@@ -19,11 +19,47 @@ import LesCousines from "@/public/les-cousines.png";
 import LesOphelies from "@/public/les-ophelies.png";
 import LeNuageNoir from "@/public/le-nuage-noir.png";
 import Minipill from "../components/ui/pills/Minipill";
+import TsTest from "../components/ui/tests/TsTest";
+
+import { Cat, Dog } from "../components/ui/tests/TsTest";
+const cats: Cat[] = [
+  {
+    name: "Felix",
+    age: 2,
+    color: "black",
+  },
+  {
+    name: "Garfield",
+    age: 3,
+    color: "orange",
+  },
+];
+const dogs: Dog[] = [
+  {
+    name: "Rex",
+    age: 5,
+    color: "brown",
+  },
+  {
+    name: "Rexy",
+    age: 4,
+    color: "black",
+  },
+];
 
 const Page = () => {
   const bgimg = `w-full relative bg-slate-500 p-10 bg-[url('/les-ophelies.png')] bg-cover bg-center`;
   return (
     <>
+      <SectionFlo className="  p-10 flex flex-wrap gap-2">
+        Experimentation : Typescript calls
+      </SectionFlo>
+      {/* <SectionBorder>
+        <TsTest />
+        {cats.map((cat) => (
+          <TsTest key={cat.name} cat={cat} />
+        ))}
+      </SectionBorder> */}
       <SectionFlo className="  p-10 flex flex-wrap gap-2">
         Experimentation : a dark mode glass pill on a tailwind background image
         cover -

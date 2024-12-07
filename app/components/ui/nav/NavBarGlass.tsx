@@ -132,6 +132,15 @@ const NavBarGlass = ({ children }: NavBarGlassProps) => {
                       <MenuItem>Next JS</MenuItem>
                       <MenuItem>Ruby on Rails</MenuItem>
                       <MenuItem>Schema de bases de données</MenuItem>
+                      <Link href="/">
+                        <MenuItem>Home</MenuItem>
+                      </Link>
+                      <Link href="/sandbox">
+                        <MenuItem>Sandbox</MenuItem>
+                      </Link>
+                      <Link href="/posts">
+                        <MenuItem>Posts</MenuItem>
+                      </Link>
                     </div>
                   </ItemNav>
                 </ul>

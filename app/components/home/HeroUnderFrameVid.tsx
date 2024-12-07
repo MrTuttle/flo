@@ -19,11 +19,18 @@ type HeroUnderFrameVidProps = {
   height?: string;
 };
 
+const darkurl =
+  "https://res.cloudinary.com/dc8rzbrbr/video/upload/v1720106984/Square-stone_cvs9hu.mov";
+const lighturl =
+  "https://res.cloudinary.com/dc8rzbrbr/video/upload/v1720106966/Square-light_o5nb9y.mov";
+
+const darkurl4 =
+  "https://res.cloudinary.com/dc8rzbrbr/image/upload/v1733589907/Front-end-bg_oulzof.gif";
+
 const HeroUnderFrameVid = () => {
-  const darkmodeSrc =
-    "https://res.cloudinary.com/dc8rzbrbr/video/upload/v1720106984/Square-stone_cvs9hu.mov";
-  const lightmodeSrc =
-    "https://res.cloudinary.com/dc8rzbrbr/video/upload/v1720106966/Square-light_o5nb9y.mov";
+  const darkmodeSrc = darkurl;
+  const lightmodeSrc = lighturl;
+  // "https://res.cloudinary.com/dc8rzbrbr/video/upload/v1720106966/Square-light_o5nb9y.mov";
 
   // put async in front of the function and uncoment the await delay(2000) to test the skeleton
   // await delay(2000);
@@ -32,7 +39,15 @@ const HeroUnderFrameVid = () => {
     <>
       {/* <Skeleton className="w-[320px] h-[320px] rounded-full" /> */}
       <div className=" dark:hidden bg-grayflo flex items-center justify-center">
-        <video
+        <div>
+          <Image
+            src={darkurl4}
+            width={500}
+            height={500}
+            alt="Picture of the author"
+          />
+        </div>
+        {/* <video
           width="320"
           height="240"
           // controls
@@ -52,12 +67,20 @@ const HeroUnderFrameVid = () => {
           // label="English"
           />
           Your browser does not support the video tag.
-        </video>
+        </video> */}
       </div>
       <div className="hidden dark:flex dark:items-center dark:justify-center">
-        <video
-          width="320"
-          height="240"
+        <Image
+          src={darkurl4}
+          width={500}
+          height={500}
+          alt="Picture of the author"
+          // className="transition-all w-full sm:w-2/4 md:w-2/3"
+          style={{ objectFit: "cover" }} // important to preserve ratio on mobile devices
+        />
+        {/* <video
+          width="800"
+          height="800"
           // controls
           autoPlay
           loop
@@ -75,7 +98,7 @@ const HeroUnderFrameVid = () => {
           // label="English"
           />
           Your browser does not support the video tag.
-        </video>
+        </video> */}
       </div>
       {/* <div className=" dark:text-darkflo text-white h-svh w-full absolute flex justify-center items-start sm:items-center sm:justify-end text-5xl md:text-6xl lg:text-7xl">
         <div className="leading-[1.15] mt-[4rem] sm:w-[20rem] md:w-[20rem] sm:mr-[5%] md:mr-[11%] lg:w-[25rem] lg:mr-[10%] xl:mr-[18%] 2xl:mr-[25%]">
