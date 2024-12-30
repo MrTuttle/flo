@@ -35,6 +35,8 @@ const NavBarGlass = ({ children }: NavBarGlassProps) => {
   const Pill = ({ children }: PillProps) => {
     return (
       <ul className="flex mb-6">
+        {" "}
+        {/* the coming soon pill markup */}
         <li className=" px-2 text-sm border border-black dark:border-white  rounded-full">
           {children ? children : "label"}
         </li>
@@ -42,11 +44,7 @@ const NavBarGlass = ({ children }: NavBarGlassProps) => {
     );
   };
   const MenuItem = ({ children }: { children: React.ReactNode }) => {
-    return (
-      <a href="#">
-        <li className={liHoverStyle}>{children}</li>
-      </a>
-    );
+    return <li className={liHoverStyle}>{children}</li>;
   };
 
   return (

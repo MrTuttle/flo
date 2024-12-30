@@ -22,6 +22,8 @@ import Minipill from "../components/ui/pills/Minipill";
 import TsTest from "../components/ui/tests/TsTest";
 
 import { Cat, Dog } from "../components/ui/tests/TsTest";
+
+import RevealText from "../components/text/revealtext";
 const cats: Cat[] = [
   {
     name: "Felix",
@@ -60,6 +62,7 @@ const Page = () => {
           <TsTest key={cat.name} cat={cat} />
         ))}
       </SectionBorder> */}
+
       <SectionFlo className="  p-10 flex flex-wrap gap-2">
         Experimentation : a dark mode glass pill on a tailwind background image
         cover -
@@ -73,6 +76,7 @@ const Page = () => {
           </div>
         </div>
       </SectionBorder>
+
       <SectionFlo className="p-10 flex flex-wrap gap-2">
         <div className="font-bold">Experimentation :</div>
         <div>Flex wide component</div>
@@ -129,6 +133,14 @@ const Page = () => {
           </div>
         </div>
       </SectionBorder>
+      <SectionFlo className="  p-10 flex flex-wrap gap-2 border border-red-300 h-80">
+        <div className="text-4xl p-8">
+          <RevealText>
+            Mon super texte à révéler (composant RevealText) change l’opacité
+            quand il est “inview” pour framer motion
+          </RevealText>
+        </div>
+      </SectionFlo>
       <SectionFlo className="p-10 flex flex-wrap gap-2">
         <div className="font-bold">Experimentation :</div>
         <div>Flex wide component</div>
