@@ -69,45 +69,72 @@ const PageLanding = () => {
           <SectionCards id="front">
             <IconCard
               icon="react"
-              titre="Développement front"
+              titre="Front-end Development"
               linkName="Lien"
               linkUrl="#"
             >
-              Avec Javascript et React, je conçois des composants d’interface
-              modulaire et réutilisables au typage fort (Typescript).
+              With JavaScript and React, I design modular and reusable interface
+              components with strong typing (TypeScript).
+              {/* Avec Javascript et
+              React, je conçois des composants d’interface modulaire et
+              réutilisables au typage fort (Typescript). */}
             </IconCard>
             <IconCard
               icon="next"
-              titre="Développement Backend"
+              titre="Back-end Development"
               linkName="Lien"
               linkUrl="#"
             >
               {" "}
-              Compatibles avec tous type de routers (PHP, Rails...) c’est avec
-              Next JS router que je connecte mes composants au back end.
-              Prérendu serveur et optimisation SEO en prime.
+              I have moved away from Ruby on Rails to explore the innovations of
+              Next.js in a seamless React environment.
+              {/* J'ai délaissé Ruby on
+              Rails pour explorer les innovations de Next JS dans un
+              environnement React homogène. */}
+              {/* Formé à Ruby en rails pour le développement d’applications
+              j’utilise aujourd’huis la souplesse, et les performances de Next
+              JS pour connecter mes composants au Back end. */}
+              {/* Compatibles avec tous type de routers (PHP, Rails...) c’est avec Next JS router que
+              je connecte mes composants au back end. Prérendu serveur et
+              optimisation SEO en prime. */}
             </IconCard>
             <IconCard
               icon="tailwind"
-              titre="Optimisation SCSS"
+              titre="SCSS Optimization"
               linkName="Lien"
               linkUrl="#"
             >
               {" "}
-              Pour faire une interface impecable, il faut une bonne connaissance
-              du code CSS. Aujourd’hui c’est Tailwind qui me permet d’en
-              exploiter au mieux les possibilité. organisation rapide et
-              optimale. Je peux aussi mettre en place une bibliothèque SCSS sur
-              mesure.
+              {/* Pour faire une interface impeccable, il faut une bonne
+              connaissance du code CSS. Aujourd’hui c’est Tailwind qui me permet
+              de gagner du temps et de mieux organiser mon code CSS. */}
+              {/* Mes compétences SCSS sont aujourd'hui décuplées grace à Tailwind
+              pour concevoir des interfaces impecables et dernier cris avec un
+              code organisé.  */}
+              I use Tailwind CSS to organize my SCSS code and create
+              cutting-edge, flawless interfaces.
+              {/* J'utilise Tailwind CSS pour
+              organiser mon code SCSS et concevoir des interfaces impeccables
+              "dernier cris". */}
+              {/* Pour faire
+              une interface impecable, il faut une bonne connaissance du code
+              CSS. Aujourd’hui c’est Tailwind qui me permet d’en exploiter au
+              mieux les possibilité. organisation rapide et optimale. Je peux
+              aussi mettre en place une bibliothèque SCSS sur mesure. */}
             </IconCard>
             <IconCard
               icon="git"
-              titre="Intégration continue"
+              titre="Continuous Integration"
               linkName="lien github"
             >
-              Je pratique le CI/CD avec Git et Vercel, c’est à dire
+              Git and Vercel are the tools that allow me to version my code and
+              deploy it instantly.
+              {/* Git et Vercel sont les outils qui me
+              permettent de versionner mon code et de le déployer
+              instantanément. */}
+              {/* Je pratique le CI/CD avec Git et Vercel, c’est à dire
               l’intégration et le déploiement continue du code. Le code est
-              systématiquemet versionné sur Git.
+              systématiquemet versionné sur Git. */}
             </IconCard>
           </SectionCards>
         </SectionBorder>
@@ -171,21 +198,26 @@ const PageLanding = () => {
               will be using it. A/B testings, heatmaps, user journey, personas
               help us to increase the user experience.
             </IconCard>
-            <IconCard icon="figma" titre="prototyping">
-              Avec Figma ou Sketch, je modélise des maquettes interactive pour
-              tester et valider les interfaces. Je met en place des librairies
-              pour référencer les composants et maintenir la cohérence graphique
-              de l’application tout au long de l’évolution du projet.
+            <IconCard icon="figma" titre="Interactive Prototyping">
+              From Idea to Experience! With Figma and Sketch, I transform
+              concepts into interactive mockups ready to be tested.
+            </IconCard>
+            <IconCard
+              icon="figma"
+              titre="Design system"
+              linkName="Lien behance"
+            >
+              I design scalable design systems wich streamline application
+              design and increasing consistency and productivity.
             </IconCard>
             <IconCard
               icon="ae"
               titre="Expert Creative Cloud"
               linkName="Lien behance"
             >
-              Motion design avec After Effect, créations / retouches
-              d’illustrations, d’icones ou logos avec illustrator, compos
-              Photoshop professionelles... je suis votre couteau suisse pour
-              tout ce qui touche à l’image.
+              Illustration, animation, creation of custom icons, image
+              retouching... with the Adobe toolbox, I know how to bring visuals
+              to life that inspire, engage, and leave a lasting impression.
             </IconCard>
           </SectionCards>
         </SectionBorder>
