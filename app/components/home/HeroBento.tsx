@@ -44,7 +44,7 @@ const HeroBento = () => {
         </div>
 
         <h1 className="text-stone-400 text-4xl md:text-6xl">
-          Hey ! my name is Flo
+          Hey ! my name is Floo
           <br />
         </h1>
 

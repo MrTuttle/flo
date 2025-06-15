@@ -20,17 +20,19 @@ type HeroUnderFrameVidProps = {
 };
 
 const darkurl =
-  "https://res.cloudinary.com/dc8rzbrbr/video/upload/v1720106984/Square-stone_cvs9hu.mov";
+  "https://res.cloudinary.com/dc8rzbrbr/video/upload/v1720106984/Square-stone_cvs9hu.mov"; // -> old dark vid
 const lighturl =
-  "https://res.cloudinary.com/dc8rzbrbr/video/upload/v1720106966/Square-light_o5nb9y.mov";
+  "https://res.cloudinary.com/dc8rzbrbr/video/upload/v1720106966/Square-light_o5nb9y.mov"; // -> old light vid
 
 const darkurl4 =
-  "https://res.cloudinary.com/dc8rzbrbr/image/upload/v1733589907/Front-end-bg_oulzof.gif";
+  "https://res.cloudinary.com/dc8rzbrbr/image/upload/v1733589907/Front-end-bg_oulzof.gif"; // -> replace .movs, one file for dark and light mode
+
+const transparent2025 =
+  "https://res.cloudinary.com/dc8rzbrbr/image/upload/v1749980829/Square-frond-2025-1_qeeozl.gif"; // -> replace haircut illustration, one file for dark and light
 
 const HeroUnderFrameVid = () => {
-  const darkmodeSrc = darkurl;
-  const lightmodeSrc = lighturl;
-  // "https://res.cloudinary.com/dc8rzbrbr/video/upload/v1720106966/Square-light_o5nb9y.mov";
+  const darkmodeSrc = transparent2025;
+  const lightmodeSrc = transparent2025;
 
   // put async in front of the function and uncoment the await delay(2000) to test the skeleton
   // await delay(2000);
@@ -41,7 +43,7 @@ const HeroUnderFrameVid = () => {
       <div className=" dark:hidden bg-grayflo flex items-center justify-center">
         <div>
           <Image
-            src={darkurl4}
+            src={darkmodeSrc}
             width={500}
             height={500}
             alt="Picture of the author"
@@ -71,7 +73,7 @@ const HeroUnderFrameVid = () => {
       </div>
       <div className="hidden dark:flex dark:items-center dark:justify-center">
         <Image
-          src={darkurl4}
+          src={lightmodeSrc}
           width={500}
           height={500}
           alt="Picture of the author"
